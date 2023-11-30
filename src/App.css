@@ -18,6 +18,9 @@
   --white: #ffffff;
 }
 
+h1 {
+  color: var(--black);
+}
 
 body {
   font-family: Helvetica, Arial, sans-serif;
