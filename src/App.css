@@ -17,3 +17,7 @@
   --katlightgrey: #ebebeb;
   --white: #ffffff;
 }
+
+h1 {
+  color: var(--black);
+}
