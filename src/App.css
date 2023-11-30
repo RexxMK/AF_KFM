@@ -122,3 +122,127 @@ nav {
   background-color: var(--headinggrey);
   border: 1px solid var(--headinggrey);
 }
+h2 {
+  color: var(--headinggrey);
+  font-size: 19.25px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  color: var(--headinggrey);
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 87.5%;
+}
+
+/* ============================== VENSTRE SIDE KOMPONENT ============================== */
+
+.venstreBokse {
+  display: flex;
+  flex-direction: column;
+}
+
+.venstreBoks {
+  width: 20.83333%;
+  margin-bottom: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+
+.venstreBoksTitel {
+  font-size: 1.375em;
+  background-color: var(--katdarkgrey);
+  padding: 1em 1em 1em 0.7em;
+  line-height: 1.25;
+}
+
+.venstreBoksLinks {
+  font-size: 0.875em;
+  background-color: var(--katlightgrey);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.kategoriPunkt {
+  text-decoration: none;
+  color: var(--black);
+  padding: 0.5em 0;
+}
+
+.boldTxt {
+  font-weight: bold;
+}
+
+.smallDate {
+  color: var(--darkgrey);
+  font-size: 80%;
+}
+
+.facebookImg {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* BOGKORT */
+.bogkortContainer {
+  width: 249px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 43px;
+}
+
+.bogkortImg {
+  display: flex;
+  justify-content: center;
+  background-color: var(--katlightgrey);
+  height: 230px;
+}
+
+.bogkortImg img {
+  width: 153px;
+}
+
+.bogkortTitel {
+  background-color: var(--white);
+  width: 229px;
+  height: 120px;
+
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  overflow: hidden;
+  border: 1px solid var(--katlightgrey);
+}
+
+.bogkortFooter {
+  height: 164px;
+}
+
+.bogkortFlex {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 21px;
+  background-color: var(--katlightgrey);
+}
+
+.bogkortPris {
+  padding-top: 18px;
+  padding-bottom: 31px;
+  margin-left: 15px;
+}
+
+.bogkortFlexbox {
+  margin-right: 265px;
+  margin-left: 530px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+}
