@@ -17,3 +17,45 @@
   --katlightgrey: #ebebeb;
   --white: #ffffff;
 }
+
+/* BOGKORT */
+.bogkortContainer {
+  width: 232px;
+  height: 496px;
+  background-color: var(--katdarkgrey);
+  display: flex;
+  flex-direction: column;
+}
+
+.bogkortImg {
+  display: flex;
+  justify-content: center;
+}
+
+.bogkortImg img {
+  width: 180px;
+}
+
+.bogkortTitel {
+  background-color: var(--white);
+  width: 230px;
+  height: 105px;
+  margin-left: 1px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  overflow: hidden;
+}
+
+.bogkortFlex {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.bogkortPris {
+  padding-top: 18px;
+  padding-bottom: 31px;
+}

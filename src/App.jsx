@@ -1,21 +1,5 @@
 import "./App.css";
 
-function App() {
-  return (
-
-  <>
-  
-    <p>Halli hallo</p>
-  
-  
-  
-  
-  
-  
-  </>
-  
-  
-  );
-}
+function App() {}
 
 export default App;
