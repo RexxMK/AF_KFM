@@ -3,18 +3,19 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Favoritside from "./pages/Favoritside";
 import KoebBoeger from "./pages/KoebBoeger";
-import MustRead from ".pages/MustRead";
-import Tilbud from ".pages/Tilbud";
-import Nye from ".pages/Nye";
-import Signerede from ".pages/Signerede";
-import Laseklub from ".pages/Laseklub";
-import Skonlitteratur from ".pages/Skonlitteratur";
-import Biografier from ".pages/Biografier";
-import Lyrik from ".pages/Lyrik";
-import Spanding from ".pages/Spanding";
-import Fagboger from ".pages/Fagboger";
-import Gavekort from ".pages/Gavekort";
-import Moleskine from ".pages/Moleskine";
+import MustRead from "./pages/MustRead";
+import Tilbud from "./pages/Tilbud";
+import Nye from "./pages/Nye";
+import Signerede from "./pages/Signerede";
+import Laseklub from "./pages/Laseklub";
+import Skonlitteratur from "./pages/Skonlitteratur";
+import Biografier from "./pages/Biografier";
+import Lyrik from "./pages/Lyrik";
+import Spanding from "./pages/Spanding";
+import Fagboger from "./pages/Fagboger";
+import Borneboger from "./pages/Borneboger";
+import Gavekort from "./pages/Gavekort";
+import Moleskine from "./pages/Moleskine";
 
 
 
