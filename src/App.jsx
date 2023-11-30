@@ -17,6 +17,8 @@ import Borneboger from "./pages/Borneboger";
 import Gavekort from "./pages/Gavekort";
 import Moleskine from "./pages/Moleskine";
 
+import VenstreBokse from "./components/VenstreBokse";
+
 
 
 
@@ -46,6 +48,7 @@ function App() {
   
     
 
+    <VenstreBokse />
   
   
   
