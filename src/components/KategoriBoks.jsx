@@ -47,7 +47,7 @@ export default function KategoriBoks() {
                 <NavLink to="nyegodeboeger" className={kategoriPunkt}>Nye gode bøger</NavLink>
                 <NavLink to="signeredeboger" className={kategoriPunkt}>Signerede bøger</NavLink>
                 <NavLink to="laeseklubbenlaeser" className={kategoriPunkt}>KFM læseklubberne læser</NavLink>
-                <NavLink to="skønlitteratur" className={kategoriPunkt}>Skønlitteratur</NavLink>
+                <NavLink to="skoenlitteratur" className={kategoriPunkt}>Skønlitteratur</NavLink>
                 <NavLink to="biografier" className={kategoriPunkt}>Biografier</NavLink>
                 <NavLink to="lyrik" className={kategoriPunkt}>Lyrik</NavLink>
                 <NavLink to="spaending" className={kategoriPunkt}>Spænding</NavLink>
