@@ -7,3 +7,13 @@
 }
 
 /* FARVER */
+:root {
+  --headerblue: #235d70;
+  --footerblue: #97d0de;
+  --black: #2f2f2f;
+  --headinggrey: #494949;
+  --darkgrey: #777777;
+  --katdarkgrey: #dedede;
+  --katlightgrey: #ebebeb;
+  --white: #ffffff;
+}
