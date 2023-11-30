@@ -54,6 +54,7 @@ export default function Bogkort({ book }) {
               justifyContent: "center",
               alignItems: "center",
               cursor: "pointer",
+              marginLeft: "15px",
             }}
             onClick={handleBoxClick}
           >
@@ -83,6 +84,7 @@ export default function Bogkort({ book }) {
                 border: "none",
                 backgroundColor: "transparent",
                 cursor: "pointer",
+                marginRight: "15px",
               }}
             >
               <div

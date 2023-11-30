@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Bogkort from "./bogkort";
 
-//RMK
+//RK
 export default function BogkortHent() {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
@@ -39,7 +39,7 @@ export default function BogkortHent() {
   return (
     <article className="page">
       {isBooks ? (
-        <div className="flexbox">
+        <div className="bogkortFlexbox">
           {books.map((book) => (
             <Bogkort key={book.id} book={book} />
           ))}

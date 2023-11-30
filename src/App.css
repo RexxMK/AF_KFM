@@ -22,6 +22,17 @@ h1 {
   color: var(--black);
 }
 
+h2 {
+  color: var(--headinggrey);
+  font-size: 19.25px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  color: var(--headinggrey);
+}
+
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 87.5%;
@@ -80,40 +91,58 @@ body {
 
 /* BOGKORT */
 .bogkortContainer {
-  width: 232px;
-  height: 496px;
-  background-color: var(--katdarkgrey);
+  width: 249px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 43px;
 }
 
 .bogkortImg {
   display: flex;
   justify-content: center;
+  background-color: var(--katlightgrey);
+  height: 230px;
 }
 
 .bogkortImg img {
-  width: 180px;
+  width: 153px;
 }
 
 .bogkortTitel {
   background-color: var(--white);
-  width: 230px;
-  height: 105px;
-  margin-left: 1px;
-  padding-left: 14px;
-  padding-right: 14px;
+  width: 229px;
+  height: 120px;
+
+  padding-left: 13px;
+  padding-right: 13px;
   padding-top: 18px;
   padding-bottom: 14px;
   overflow: hidden;
+  border: 1px solid var(--katlightgrey);
+}
+
+.bogkortFooter {
+  height: 164px;
 }
 
 .bogkortFlex {
   display: flex;
   justify-content: space-between;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-bottom: 21px;
+  background-color: var(--katlightgrey);
 }
 
 .bogkortPris {
   padding-top: 18px;
   padding-bottom: 31px;
+  margin-left: 15px;
+}
+
+.bogkortFlexbox {
+  margin-right: 265px;
+  margin-left: 530px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
 }
