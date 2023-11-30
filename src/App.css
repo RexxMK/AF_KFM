@@ -4,6 +4,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* FARVER */
@@ -48,4 +49,230 @@
 .betaling {
   width: 34px;
   padding: 2px;
+}
+/*====================HEADER====================*/
+
+.sog-wrap {
+  background-color: var(--headerblue);
+  padding: 7px;
+  display: flex;
+  justify-content: end;
+}
+
+.sog-wrap input {
+  padding: 5px;
+  font-size: 0.65rem;
+  border: 1px solid var(--katdarkgrey);
+  width: 265px;
+}
+
+.sog-wrap button {
+  padding: 7px 5px;
+  font-size: 0.65rem;
+  color: var(--darkgrey);
+  background-color: var(--katlightgrey);
+  border: 1px solid var(--katdarkgrey);
+}
+
+.logo img {
+  width: 400px;
+  padding: 20px 10px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--headerblue);
+  padding: 15px 0;
+}
+
+.menupunkt {
+  color: var(--katlightgrey);
+  text-decoration: none;
+  padding: 7px;
+  cursor: pointer;
+  position: relative;
+}
+
+.menupunkt.menupunkt.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border: 1.5px solid var(--katdarkgrey);
+  width: 100%;
+
+}
+
+.menupunkt:hover {
+  color: var(--katdarkgrey);
+}
+
+.icon-menu, .txt-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 7px;
+}
+
+.icon p {
+  padding-right: 4px;
+}
+
+.info svg {
+  color: #3B9EBE;
+}
+
+.kurv p {
+  padding: 10px 16px;
+  background-color: var(--black);
+  border: 1px solid var(--headinggrey);
+}
+
+.kurv svg {
+  font-size: 1.2rem;
+}
+
+.icon svg {
+  font-size: 1.5rem;
+}
+
+.kurv-wrap {
+  padding: 7px;
+  background-color: var(--headinggrey);
+  border: 1px solid var(--headinggrey);
+}
+h2 {
+  color: var(--headinggrey);
+  font-size: 19.25px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  color: var(--headinggrey);
+}
+
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 87.5%;
+}
+
+/* ============================== VENSTRE SIDE KOMPONENT ============================== */
+
+.venstreBokse {
+  display: flex;
+  flex-direction: column;
+}
+
+.venstreBoks {
+  width: 20.83333%;
+  margin-bottom: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: left;
+}
+
+.venstreBoksTitel {
+  font-size: 1.375em;
+  background-color: var(--katdarkgrey);
+  padding: 1em 1em 1em 0.7em;
+  line-height: 1.25;
+}
+
+.venstreBoksLinks {
+  font-size: 0.875em;
+  background-color: var(--katlightgrey);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+.kategoriPunkt {
+  text-decoration: none;
+  color: var(--black);
+  padding: 0.5em 0;
+}
+
+.boldTxt {
+  font-weight: bold;
+}
+
+.smallDate {
+  color: var(--darkgrey);
+  font-size: 80%;
+}
+
+.facebookImg {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* BOGKORT */
+.bogkortContainer {
+  width: 249px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 43px;
+}
+
+.bogkortImg {
+  display: flex;
+  justify-content: center;
+  background-color: var(--katlightgrey);
+  height: 230px;
+}
+
+.bogkortImg img {
+  width: 153px;
+}
+
+.bogkortTitel {
+  background-color: var(--white);
+  width: 229px;
+  height: 120px;
+
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  overflow: hidden;
+  border: 1px solid var(--katlightgrey);
+}
+
+.bogkortFooter {
+  height: 164px;
+}
+
+.bogkortFlex {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 21px;
+  background-color: var(--katlightgrey);
+}
+
+.bogkortPris {
+  padding-top: 18px;
+  padding-bottom: 31px;
+  margin-left: 15px;
+}
+
+.bogkortFlexbox {
+  margin-right: 265px;
+  margin-left: 530px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
 }
