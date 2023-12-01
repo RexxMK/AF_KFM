@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
+import { FaCheck } from "react-icons/fa6";
 
 // RK
 export default function Detaljekort({ book }) {
@@ -30,7 +31,7 @@ export default function Detaljekort({ book }) {
         <img src={book.billede} alt="Billede af bogcover" />
       </div>
       <div className="detaljekortTitel">
-        <h2>
+        <h2 style={{fontSize: "42px"}}>
           {book.forfatter}, {book.titel}
         </h2>
       </div>
@@ -42,6 +43,7 @@ export default function Detaljekort({ book }) {
           </div>
           <div className="detaljekortLike"></div>
         </div>
+        <div className="lagerstatus">Lagerstatus: <FaCheck /> På lager</div>
         <div className="detaljekortFlex">
           <div
             className="whiteBox"

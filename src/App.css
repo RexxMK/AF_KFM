@@ -342,6 +342,70 @@ body {
   padding-top: 15px;
 }
 
+/* ------- DETALJESIDE ------- */
+
+.detaljekortContainer {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 43px;
+  display: flex;
+}
+
+.detaljekortImg {
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--katlightgrey);
+  height: 480px;
+}
+
+.detaljekortImg img {
+  width: 270px;
+}
+
+.detaljekortTitel {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 489px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  overflow: hidden;
+}
+
+.detaljekortFooter {
+  height: 164px;
+  width: 489px;
+}
+
+.detaljekortFlex {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 21px;
+}
+
+.detaljekortPris {
+  padding-top: 18px;
+  padding-bottom: 31px;
+  margin-left: 15px;
+}
+
+.detaljekortFlexbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 15px;
+}
+
+.lagerstatus {
+  color: #329013;
+  background-color: #a8df8d;
+  padding: 10px;
+  width: 480px;
+  margin: 10px;
+}
+
 /* --- FOOTER --- */
 
 .footer {
