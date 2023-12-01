@@ -8,12 +8,6 @@ import FacebookImg from "../images/fb_follow.png";
 export default function VenstreBokse() {
 
 
-    
-
-
-
-
-
     return (
 
         <section className="venstreBokse">
