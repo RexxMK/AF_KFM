@@ -19,6 +19,16 @@
   --white: #ffffff;
 }
 
+/* GENERELLE REGLER */
+.pageContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.pageFlex {
+  display: flex;
+  width: 1260px;
 /* BODY */
 body {
   word-wrap: break-word;
@@ -144,7 +154,7 @@ nav {
 }
 
 .info svg {
-  color: #3B9EBE;
+  color: #3b9ebe;
 }
 
 .kurv p {
@@ -187,7 +197,7 @@ body {
 }
 
 .venstreBoks {
-  width: 20.83333%;
+  width: 262px;
   margin-bottom: 1em;
   padding-left: 10px;
   padding-right: 10px;
@@ -231,6 +241,7 @@ body {
 }
 
 /* BOGKORT */
+
 .bogkortContainer {
   width: 249px;
   padding-left: 10px;
@@ -280,12 +291,8 @@ body {
 }
 
 .bogkortFlexbox {
-  margin-right: 265px;
-  margin-left: 530px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  position: absolute;
 }
 
 /* --- FOOTER --- */
