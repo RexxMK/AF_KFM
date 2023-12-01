@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 
+// DK
+
+
 export default function Biografier() {
 
 
@@ -26,5 +29,12 @@ export default function Biografier() {
         }
         getBooks();
     }, []);
+
+
+
+    const bigrafierListe = books.filter((book) => book.kategori.includes("biografier"));
+
+
+
     
 }
