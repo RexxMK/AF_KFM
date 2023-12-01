@@ -64,15 +64,15 @@ export default function Header() {
                             </div>
                         </div>
                         <div className="icon-menu">
-                            <NavLink to="/favoritside" className="menupunkt icon">
-                                <p>Dine Favoritter</p>
-                                <FavoriteSharpIcon/>
-                            </NavLink>
-                            <a className="menupunkt icon">
+                            <a className="iconpunkt">
                                 <p>Min Profil</p>
                                 <PersonSharpIcon/>
                             </a>
-                            <a className="menupunkt icon kurv">
+                            <NavLink to="/favoritside" className="iconpunkt">
+                                <p>Dine Favoritter</p>
+                                <FavoriteSharpIcon/>
+                            </NavLink>
+                            <a className="iconpunkt kurv">
                                 <p>Din indkøbskurv er tom</p>
                                 <div className="kurv-wrap"><ShoppingCartSharpIcon/></div>
                             </a>

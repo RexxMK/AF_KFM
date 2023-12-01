@@ -104,7 +104,7 @@ nav {
   width: 1248px;
 }
 
-.menupunkt {
+.menupunkt, .iconpunkt {
   color: var(--katlightgrey);
   text-decoration: none;
   padding: 7px;
@@ -122,7 +122,22 @@ nav {
   width: 100%;
 }
 
-.menupunkt:hover {
+.iconpunkt.active {
+  background-color: var(--white);
+  border: 2px solid var(--katdarkgrey);
+  color: var(--darkgrey);
+  padding: 8px 7px;
+}
+
+.iconpunkt.active p {
+  color: var(--darkgrey);
+}
+
+.iconpunkt.active:hover {
+  color: var(--darkgrey);
+}
+
+.menupunkt:hover, .iconpunkt:hover {
   color: var(--katdarkgrey);
 }
 
@@ -134,7 +149,7 @@ nav {
   align-items: center;
 }
 
-.icon, .info {
+.iconpunkt, .info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -142,7 +157,7 @@ nav {
   padding: 0 7px;
 }
 
-.icon p, .info p {
+.iconpunkt p, .info p {
   padding-right: 4px;
   color: var(--katlightgrey);
   font-size: medium;
@@ -158,7 +173,7 @@ nav {
   border: 1.5px solid var(--headinggrey);
 }
 
-.icon svg {
+.iconpunkt svg {
   font-size: 1.2rem;
 }
 
@@ -344,11 +359,11 @@ body {
     width: 940px;
   }
 
-  .icon p {
+  .iconpunkt p {
     display: none;
   }
 
-  .icon svg {
+  .iconpunkt svg {
     font-size: 1.5rem;
   }
 
@@ -392,6 +407,13 @@ body {
 
   .menupunkt.active {
     background-color: rgb(59, 158, 191, 0.5);
+  }
+  
+  .iconpunkt.active {
+    background-color: var(--white);
+    border: 2px solid var(--katdarkgrey);
+    color: var(--darkgrey);
+    padding: 8px 7px;
   }
 
   .header-wrap {
