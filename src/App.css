@@ -29,6 +29,10 @@
 .pageFlex {
   display: flex;
   width: 1260px;
+/* BODY */
+body {
+  word-wrap: break-word;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 /*====================HEADER====================*/
@@ -37,36 +41,72 @@
   background-color: var(--headerblue);
   padding: 7px;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
-.sog-wrap input {
+.sog form input {
   padding: 5px;
   font-size: 0.65rem;
   border: 1px solid var(--katdarkgrey);
   width: 265px;
 }
 
-.sog-wrap button {
+.sog form button {
   padding: 7px 5px;
   font-size: 0.65rem;
   color: var(--darkgrey);
   background-color: var(--katlightgrey);
   border: 1px solid var(--katdarkgrey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo img {
+.sog {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: end;
+  width: 1248px;
+}
+
+.sog form {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-wrap {
+  display: flex;
+  justify-content: start;
+  width: 1248px;
+}
+
+.logo-wrap img {
   width: 400px;
   padding: 20px 10px;
 }
 
 nav {
+  background-color: var(--headerblue);
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-wrap {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--headerblue);
-  padding: 15px 0;
+  width: 1248px;
 }
 
 .menupunkt {
@@ -75,9 +115,10 @@ nav {
   padding: 7px;
   cursor: pointer;
   position: relative;
+  font-size: medium;
 }
 
-.menupunkt.menupunkt.active::after {
+.menupunkt.active::after {
   content: "";
   position: absolute;
   left: 0;
@@ -109,6 +150,7 @@ nav {
 .icon p {
   padding-right: 4px;
   color: var(--katlightgrey);
+  font-size: medium;
 }
 
 .info svg {
@@ -118,22 +160,19 @@ nav {
 .kurv p {
   padding: 10px 16px;
   background-color: var(--black);
-  border: 1px solid var(--headinggrey);
-}
-
-.kurv svg {
-  font-size: 1.2rem;
+  border: 1.5px solid var(--headinggrey);
 }
 
 .icon svg {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .kurv-wrap {
-  padding: 7px;
+  padding: 7px 10px;
   background-color: var(--headinggrey);
   border: 1px solid var(--headinggrey);
 }
+
 h2 {
   color: var(--headinggrey);
   font-size: 19.25px;
@@ -262,7 +301,7 @@ body {
   background-color: var(--footerblue);
   color: var(--headinggrey);
   width: 100%;
-  padding: 100px 450px;
+  padding: 50px 400px;
   font-size: 14px;
   text-align: center;
   line-height: 40px;
@@ -271,7 +310,8 @@ body {
 .text {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
 }
@@ -285,4 +325,16 @@ body {
 .betaling {
   width: 34px;
   padding: 2px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer{
+    padding: 50px 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer{
+    padding: 50px 50px;
+  }
 }
