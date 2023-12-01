@@ -38,6 +38,10 @@ body {
 }
 
 /*====================HEADER====================*/
+.burger-menu {
+  display: none;
+}
+
 
 .sog-wrap {
   background-color: var(--headerblue);
@@ -75,6 +79,7 @@ body {
 .sog form {
   display: flex;
   flex-direction: row;
+
 }
 
 .logo {
@@ -100,6 +105,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header-wrap {
@@ -110,7 +116,7 @@ nav {
   width: 1248px;
 }
 
-.menupunkt {
+.menupunkt, .iconpunkt {
   color: var(--katlightgrey);
   text-decoration: none;
   padding: 7px;
@@ -128,19 +134,34 @@ nav {
   width: 100%;
 }
 
-.menupunkt:hover {
+.iconpunkt.active {
+  background-color: var(--white);
+  border: 2px solid var(--katdarkgrey);
+  color: var(--darkgrey);
+  padding: 8px 7px;
+}
+
+.iconpunkt.active p {
+  color: var(--darkgrey);
+}
+
+.iconpunkt.active:hover {
+  color: var(--darkgrey);
+}
+
+.menupunkt:hover, .iconpunkt:hover {
   color: var(--katdarkgrey);
 }
 
-.icon-menu,
-.txt-menu {
+.icon-menu, .menu-wrap {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
-.icon {
+.iconpunkt, .info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -148,14 +169,14 @@ nav {
   padding: 0 7px;
 }
 
-.icon p {
+.iconpunkt p, .info p {
   padding-right: 4px;
   color: var(--katlightgrey);
   font-size: medium;
 }
 
 .info svg {
-  color: #3b9ebe;
+  color: #3B9EBE;
 }
 
 .kurv p {
@@ -164,7 +185,7 @@ nav {
   border: 1.5px solid var(--headinggrey);
 }
 
-.icon svg {
+.iconpunkt svg {
   font-size: 1.2rem;
 }
 
@@ -198,7 +219,7 @@ body {
 }
 
 .venstreBoks {
-  width: 262px;
+  width: 20.83333%;
   margin-bottom: 1em;
   padding-left: 10px;
   padding-right: 10px;
@@ -242,7 +263,6 @@ body {
 }
 
 /* BOGKORT */
-
 .bogkortContainer {
   width: 249px;
   padding-left: 10px;
@@ -292,13 +312,17 @@ body {
 }
 
 .bogkortFlexbox {
+  margin-right: 265px;
+  margin-left: 530px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
+  position: absolute;
 }
 
 /* --- FOOTER --- */
 
-.footer {
+.footer{
   background-color: var(--footerblue);
   color: var(--headinggrey);
   width: 100%;
@@ -308,7 +332,7 @@ body {
   line-height: 40px;
 }
 
-.text {
+.text{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -317,7 +341,7 @@ body {
   width: 100%;
 }
 
-.social {
+.social{
   text-decoration: none;
   color: var(--headinggrey);
   padding: 2px;
@@ -364,13 +388,92 @@ body {
 
 
 @media only screen and (max-width: 1200px) {
-  .footer {
+  .footer{
     padding: 50px 200px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .footer {
+  .footer{
     padding: 50px 50px;
+  }
+}
+
+/*====================RESPONSIVE====================*/
+
+@media only screen and (max-width: 1165px) {
+  .sog, .logo-wrap, .header-wrap {
+    width: 940px;
+  }
+
+  .iconpunkt p {
+    display: none;
+  }
+
+  .iconpunkt svg {
+    font-size: 1.5rem;
+  }
+
+  .kurv-wrap {
+    padding: 7px 10px;
+    background-color: var(--black);
+    border: 1px solid var(--headinggrey);
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .sog, .logo-wrap, .header-wrap, .menu-wrap {
+    width: 730px;
+  }
+
+  .txt-menu {
+    position: absolute;
+    background-color: var(--headerblue);
+    width: 100%;
+    top: 74px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-wrap {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menu-wrap .menupunkt {
+    padding: 10px 7px;
+    width: 100%;
+    justify-content: start;
+  }  
+
+  .menupunkt.active::after {
+    display: none;
+  }
+
+  .menupunkt.active {
+    background-color: rgb(59, 158, 191, 0.5);
+  }
+  
+  .iconpunkt.active {
+    background-color: var(--white);
+    border: 2px solid var(--katdarkgrey);
+    color: var(--darkgrey);
+    padding: 8px 7px;
+  }
+
+  .header-wrap {
+    justify-content: space-between;
+  }
+
+  .burger-menu {
+    display: flex;
+    padding: 7px 10px;
+    background-color: var(--black);
+    border: 1px solid var(--headinggrey);
+    color: var(--katlightgrey);
+    margin: 0 7px;
+    cursor: pointer;
   }
 }
