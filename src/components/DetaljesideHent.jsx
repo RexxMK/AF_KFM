@@ -1,12 +1,8 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import Detaljekort from "./Detaljekort";
 
-
-// DK
-
-
-export default function Biografier() {
-
-
+//RK
+export default function DetaljesideHent() {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [books, setBooks] = useState([]);
@@ -39,34 +35,18 @@ export default function Biografier() {
     getBooks();
   }, []);
 
-
-  // Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
-
-  /* books er en liste over alle bøger og deres attributter, herunder "kategori". 
-  Med filter-metoden oprettes en ny liste ved at filtrere elementerne i books-listen baseret på betingelsen book.kategori.includes(" ").
-  Hvis en bog indeholder tekststrengen biografier i kategoriattributten returneres true. Ellers false.
-  Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
-
-  const kategoriListe = books.filter((book) => 
-    book.kategori.includes("biografier")
-  );
-
-
+  //Hvis "isBooks" er "true", vises en liste af bøger vha. "map" funktionen, ellers vises en besked om, at der ikke er noget at vise.
   return (
-
-    <section>
-
-      
-    </section>
-    
-
-
-
-
-
-  )
-
-
-
-    
+    <article className="page">
+      {isBooks ? (
+        <div className="bogkortFlexbox">
+          {books.map((book) => (
+            <Detaljekort key={book.id} book={book} />
+          ))}
+        </div>
+      ) : (
+        <p>Nothing to show</p>
+      )}
+    </article>
+  );
 }
