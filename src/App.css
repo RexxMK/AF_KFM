@@ -345,13 +345,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 489px;
-  height: 105px;
   padding-left: 13px;
   padding-right: 13px;
   padding-top: 18px;
   padding-bottom: 14px;
   overflow: hidden;
-  border: 1px solid var(--katlightgrey);
 }
 
 .detaljekortFooter {
@@ -364,9 +362,7 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 21px;
-  background-color: var(--katlightgrey);
 }
-
 
 .detaljekortPris {
   padding-top: 18px;
@@ -379,6 +375,14 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   position: absolute;
+}
+
+.lagerstatus {
+  color: #329013;
+  background-color: #A8DF8D;
+  padding: 10px;
+  width: 480px;
+  margin: 10px;
 }
 
 /* --- FOOTER --- */

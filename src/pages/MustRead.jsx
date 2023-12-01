@@ -1,7 +1,6 @@
 import BogkortHent from "../components/BogkortHent";
 import KategoriUnderside from "../components/KategoriUnderside";
 import VenstreBokse from "../components/VenstreBokse";
-import Bogkort from "../components/bogkort";
 
 export default function MustRead() {
   return (
