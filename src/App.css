@@ -320,7 +320,7 @@ body {
   padding-top: 15px;
 }
 
-/* --- DETALJESIDE --- */
+/* ------- DETALJESIDE ------- */
 
 .detaljekortContainer {
   padding-left: 10px;
@@ -346,28 +346,23 @@ body {
   display: flex;
   flex-direction: column;
   width: 489px;
-  height: 105px;
   padding-left: 13px;
   padding-right: 13px;
   padding-top: 18px;
   padding-bottom: 14px;
   overflow: hidden;
-  border: 1px solid var(--katlightgrey);
 }
 
 .detaljekortFooter {
   height: 164px;
   width: 489px;
-  flex-direction: column;
 }
 
 .detaljekortFlex {
   display: flex;
   justify-content: space-between;
   padding-bottom: 21px;
-  background-color: var(--katlightgrey);
 }
-
 
 .detaljekortPris {
   padding-top: 18px;
