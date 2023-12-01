@@ -26,6 +26,10 @@ body {
 }
 
 /*====================HEADER====================*/
+.burger-menu {
+  display: none;
+}
+
 
 .sog-wrap {
   background-color: var(--headerblue);
@@ -89,6 +93,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header-wrap {
@@ -121,14 +126,15 @@ nav {
   color: var(--katdarkgrey);
 }
 
-.icon-menu, .txt-menu {
+.icon-menu, .menu-wrap {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
-.icon {
+.icon, .info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -136,7 +142,7 @@ nav {
   padding: 0 7px;
 }
 
-.icon p {
+.icon p, .info p {
   padding-right: 4px;
   color: var(--katlightgrey);
   font-size: medium;
@@ -328,5 +334,77 @@ body {
 @media only screen and (max-width: 600px) {
   .footer{
     padding: 50px 50px;
+  }
+}
+
+/*====================RESPONSIVE====================*/
+
+@media only screen and (max-width: 1165px) {
+  .sog, .logo-wrap, .header-wrap {
+    width: 940px;
+  }
+
+  .icon p {
+    display: none;
+  }
+
+  .icon svg {
+    font-size: 1.5rem;
+  }
+
+  .kurv-wrap {
+    padding: 7px 10px;
+    background-color: var(--black);
+    border: 1px solid var(--headinggrey);
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .sog, .logo-wrap, .header-wrap, .menu-wrap {
+    width: 730px;
+  }
+
+  .txt-menu {
+    position: absolute;
+    background-color: var(--headerblue);
+    width: 100%;
+    top: 74px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-wrap {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menu-wrap .menupunkt {
+    padding: 10px 7px;
+    width: 100%;
+    justify-content: start;
+  }  
+
+  .menupunkt.active::after {
+    display: none;
+  }
+
+  .menupunkt.active {
+    background-color: rgb(59, 158, 191, 0.5);
+  }
+
+  .header-wrap {
+    justify-content: space-between;
+  }
+
+  .burger-menu {
+    display: flex;
+    padding: 7px 10px;
+    background-color: var(--black);
+    border: 1px solid var(--headinggrey);
+    color: var(--katlightgrey);
+    margin: 0 7px;
+    cursor: pointer;
   }
 }
