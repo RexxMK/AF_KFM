@@ -97,6 +97,7 @@ nav {
 
 .icon p {
   padding-right: 4px;
+  color: var(--katlightgrey);
 }
 
 .info svg {
