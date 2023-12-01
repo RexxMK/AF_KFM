@@ -18,6 +18,8 @@ import Gavekort from "./pages/Gavekort";
 import Moleskine from "./pages/Moleskine";
 
 import VenstreBokse from "./components/VenstreBokse";
+import Detaljeside from "./pages/Detaljeside";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -39,9 +41,12 @@ function App() {
         <Route path="/boerneboeger" element={<Borneboger />} />
         <Route path="/gavekort" element={<Gavekort />} />
         <Route path="/moleskine" element={<Moleskine />} />
+        <Route path="/detaljeside" element={<Detaljeside />} />
       </Routes>
 
       <VenstreBokse />
+
+      <Footer />
       
     </>
   );

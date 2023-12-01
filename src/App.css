@@ -253,6 +253,68 @@ body {
   position: absolute;
 }
 
+/* --- DETALJESIDE --- */
+
+.detaljekortContainer {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 43px;
+  display: flex;
+}
+
+.detaljekortImg {
+  width: 480px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--katlightgrey);
+  height: 480px;
+}
+
+.detaljekortImg img {
+  width: 270px;
+}
+
+.detaljekortTitel {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 489px;
+  height: 105px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 18px;
+  padding-bottom: 14px;
+  overflow: hidden;
+  border: 1px solid var(--katlightgrey);
+}
+
+.detaljekortFooter {
+  height: 164px;
+  width: 489px;
+  flex-direction: column;
+}
+
+.detaljekortFlex {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 21px;
+  background-color: var(--katlightgrey);
+}
+
+
+.detaljekortPris {
+  padding-top: 18px;
+  padding-bottom: 31px;
+  margin-left: 15px;
+}
+
+.detaljekortFlexbox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+}
+
 /* --- FOOTER --- */
 
 .footer{
