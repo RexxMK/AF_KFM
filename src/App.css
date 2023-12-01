@@ -19,24 +19,6 @@
   --white: #ffffff;
 }
 
-/* FONT */
-h1 {
-  color: var(--headinggrey);
-  font-size: 42px;
-  font-weight: 300;
-}
-
-h2 {
-  color: var(--headinggrey);
-  font-size: 19.25px;
-  font-weight: 300;
-}
-
-p {
-  font-size: 14px;
-  color: var(--headinggrey);
-}
-
 /* GENERELLE REGLER */
 .pageContainer {
   width: 100%;
@@ -56,6 +38,9 @@ body {
 }
 
 /*====================HEADER====================*/
+.burger-menu {
+  display: none;
+}
 
 .sog-wrap {
   background-color: var(--headerblue);
@@ -118,6 +103,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header-wrap {
@@ -128,7 +114,8 @@ nav {
   width: 1248px;
 }
 
-.menupunkt {
+.menupunkt,
+.iconpunkt {
   color: var(--katlightgrey);
   text-decoration: none;
   padding: 7px;
@@ -146,19 +133,37 @@ nav {
   width: 100%;
 }
 
-.menupunkt:hover {
+.iconpunkt.active {
+  background-color: var(--white);
+  border: 2px solid var(--katdarkgrey);
+  color: var(--darkgrey);
+  padding: 8px 7px;
+}
+
+.iconpunkt.active p {
+  color: var(--darkgrey);
+}
+
+.iconpunkt.active:hover {
+  color: var(--darkgrey);
+}
+
+.menupunkt:hover,
+.iconpunkt:hover {
   color: var(--katdarkgrey);
 }
 
 .icon-menu,
-.txt-menu {
+.menu-wrap {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
-.icon {
+.iconpunkt,
+.info {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -166,7 +171,8 @@ nav {
   padding: 0 7px;
 }
 
-.icon p {
+.iconpunkt p,
+.info p {
   padding-right: 4px;
   color: var(--katlightgrey);
   font-size: medium;
@@ -182,7 +188,7 @@ nav {
   border: 1.5px solid var(--headinggrey);
 }
 
-.icon svg {
+.iconpunkt svg {
   font-size: 1.2rem;
 }
 
@@ -190,6 +196,17 @@ nav {
   padding: 7px 10px;
   background-color: var(--headinggrey);
   border: 1px solid var(--headinggrey);
+}
+
+h2 {
+  color: var(--headinggrey);
+  font-size: 19.25px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  color: var(--headinggrey);
 }
 
 body {
@@ -205,7 +222,7 @@ body {
 }
 
 .venstreBoks {
-  width: 262px;
+  width: 20.83333%;
   margin-bottom: 1em;
   padding-left: 10px;
   padding-right: 10px;
@@ -248,28 +265,12 @@ body {
   padding-right: 1em;
 }
 
-/* KATEGORIUNDERSIDE */
-.katHeading {
-  padding-left: 0.5vw;
-}
-
-.katHeading h1 {
-  padding-bottom: 15px;
-  border-bottom: 1px solid var(--katlightgrey);
-  margin-bottom: 13px;
-}
-
-.katHeading p {
-  padding-bottom: 15px;
-}
-
 /* BOGKORT */
-
 .bogkortContainer {
   width: 249px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 41px;
+  margin-bottom: 43px;
 }
 
 .bogkortImg {
@@ -314,9 +315,12 @@ body {
 }
 
 .bogkortFlexbox {
+  margin-right: 265px;
+  margin-left: 530px;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 15px;
+  position: absolute;
 }
 
 /* --- FOOTER --- */
@@ -396,5 +400,89 @@ body {
 @media only screen and (max-width: 600px) {
   .footer {
     padding: 50px 50px;
+  }
+}
+
+/*====================RESPONSIVE====================*/
+
+@media only screen and (max-width: 1165px) {
+  .sog,
+  .logo-wrap,
+  .header-wrap {
+    width: 940px;
+  }
+
+  .iconpunkt p {
+    display: none;
+  }
+
+  .iconpunkt svg {
+    font-size: 1.5rem;
+  }
+
+  .kurv-wrap {
+    padding: 7px 10px;
+    background-color: var(--black);
+    border: 1px solid var(--headinggrey);
+  }
+
+  .iconpunkt.active {
+    background-color: var(--white);
+    border: 1px solid var(--katdarkgrey);
+    color: var(--darkgrey);
+    padding: 8px 7px;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .sog,
+  .logo-wrap,
+  .header-wrap,
+  .menu-wrap {
+    width: 730px;
+  }
+
+  .txt-menu {
+    position: absolute;
+    background-color: var(--headerblue);
+    width: 100%;
+    top: 74px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .menu-wrap {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .menu-wrap .menupunkt {
+    padding: 10px 7px;
+    width: 100%;
+    justify-content: start;
+  }
+
+  .menupunkt.active::after {
+    display: none;
+  }
+
+  .menupunkt.active {
+    background-color: rgb(59, 158, 191, 0.5);
+  }
+
+  .header-wrap {
+    justify-content: space-between;
+  }
+
+  .burger-menu {
+    display: flex;
+    padding: 7px 10px;
+    background-color: var(--black);
+    border: 1px solid var(--headinggrey);
+    color: var(--katlightgrey);
+    margin: 0 7px;
+    cursor: pointer;
   }
 }
