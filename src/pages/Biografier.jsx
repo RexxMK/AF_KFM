@@ -44,12 +44,27 @@ export default function Biografier() {
 
   /* books er en liste over alle bøger og deres attributter, herunder "kategori". 
   Med filter-metoden oprettes en ny liste ved at filtrere elementerne i books-listen baseret på betingelsen book.kategori.includes(" ").
-  Hvis en drink indeholder tekststrengen biografier i kategoriattributten returneres true. Ellers false.
+  Hvis en bog indeholder tekststrengen biografier i kategoriattributten returneres true. Ellers false.
   Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
 
-  const biografierListe = books.filter((book) => 
+  const kategoriListe = books.filter((book) => 
     book.kategori.includes("biografier")
   );
+
+
+  return (
+
+    <section>
+
+      
+    </section>
+    
+
+
+
+
+
+  )
 
 
 
