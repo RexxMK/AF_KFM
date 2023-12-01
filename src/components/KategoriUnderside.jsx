@@ -4,7 +4,7 @@ export default function KategoriUnderside({ headingText, katText, antalText }) {
     <div>
       <div className="katHeading">
         <h1>{headingText}</h1>
-        <hr />
+
         <p>{katText}</p>
 
         <div className="katSort">

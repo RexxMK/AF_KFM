@@ -19,6 +19,24 @@
   --white: #ffffff;
 }
 
+/* FONTS */
+h1 {
+  color: var(--headinggrey);
+  font-size: 42px;
+  font-weight: 300;
+}
+
+h2 {
+  color: var(--headinggrey);
+  font-size: 19.25px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  color: var(--headinggrey);
+}
+
 /* GENERELLE REGLER */
 .pageContainer {
   width: 100%;
@@ -198,17 +216,6 @@ nav {
   border: 1px solid var(--headinggrey);
 }
 
-h2 {
-  color: var(--headinggrey);
-  font-size: 19.25px;
-  font-weight: 300;
-}
-
-p {
-  font-size: 14px;
-  color: var(--headinggrey);
-}
-
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 87.5%;
@@ -222,7 +229,7 @@ body {
 }
 
 .venstreBoks {
-  width: 20.83333%;
+  width: 262px;
   margin-bottom: 1em;
   padding-left: 10px;
   padding-right: 10px;
@@ -265,12 +272,27 @@ body {
   padding-right: 1em;
 }
 
+/* KATEGORI UNDERSIDE */
+.katHeading {
+  padding-left: 10px;
+}
+
+.katHeading h1 {
+  border-bottom: 1px solid var(--katlightgrey);
+  padding-bottom: 15px;
+  margin-bottom: 13px;
+}
+
+.katHeading p {
+  padding-bottom: 15px;
+}
+
 /* BOGKORT */
 .bogkortContainer {
   width: 249px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 43px;
+  margin-bottom: 41px;
 }
 
 .bogkortImg {
@@ -315,12 +337,9 @@ body {
 }
 
 .bogkortFlexbox {
-  margin-right: 265px;
-  margin-left: 530px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  position: absolute;
+  padding-top: 15px;
 }
 
 /* --- FOOTER --- */
