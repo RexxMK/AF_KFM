@@ -40,6 +40,9 @@ function App() {
         <Route path="/gavekort" element={<Gavekort />} />
         <Route path="/moleskine" element={<Moleskine />} />
       </Routes>
+
+      <VenstreBokse />
+      
     </>
   );
 }
