@@ -19,6 +19,12 @@
   --white: #ffffff;
 }
 
+/* BODY */
+body {
+  word-wrap: break-word;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
 /*====================HEADER====================*/
 
 .sog-wrap {
