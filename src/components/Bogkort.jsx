@@ -88,6 +88,7 @@ export default function Bogkort({ book }) {
               }}
             >
               <div
+                className="bogkortKurvIkon"
                 style={{
                   backgroundColor: "var(--headinggrey)",
                   height: "32px",

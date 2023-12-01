@@ -1,3 +1,4 @@
+// RK
 export default function KategoriUnderside({ headingText, katText, antalText }) {
   return (
     <div>
