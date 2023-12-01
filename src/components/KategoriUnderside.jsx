@@ -5,10 +5,11 @@ export default function KategoriUnderside({ headingText, katText, antalText }) {
         <h1>{headingText}</h1>
         <hr />
         <p>{katText}</p>
-      </div>
-      <div className="katSort">
-        <p>{antalText}</p>
-        {/* Her skal sorteringsknappen være */}
+
+        <div className="katSort">
+          <p>{antalText}</p>
+          {/* Her skal sorteringsknappen være */}
+        </div>
       </div>
     </div>
   );

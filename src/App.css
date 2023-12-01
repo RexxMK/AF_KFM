@@ -19,6 +19,24 @@
   --white: #ffffff;
 }
 
+/* FONT */
+h1 {
+  color: var(--headinggrey);
+  font-size: 42px;
+  font-weight: 300;
+}
+
+h2 {
+  color: var(--headinggrey);
+  font-size: 19.25px;
+  font-weight: 300;
+}
+
+p {
+  font-size: 14px;
+  color: var(--headinggrey);
+}
+
 /* GENERELLE REGLER */
 .pageContainer {
   width: 100%;
@@ -30,6 +48,7 @@
   display: flex;
   width: 1260px;
 }
+
 /* BODY */
 body {
   word-wrap: break-word;
@@ -173,17 +192,6 @@ nav {
   border: 1px solid var(--headinggrey);
 }
 
-h2 {
-  color: var(--headinggrey);
-  font-size: 19.25px;
-  font-weight: 300;
-}
-
-p {
-  font-size: 14px;
-  color: var(--headinggrey);
-}
-
 body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 87.5%;
@@ -240,13 +248,28 @@ body {
   padding-right: 1em;
 }
 
+/* KATEGORIUNDERSIDE */
+.katHeading {
+  padding-left: 0.5vw;
+}
+
+.katHeading h1 {
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--katlightgrey);
+  margin-bottom: 13px;
+}
+
+.katHeading p {
+  padding-bottom: 15px;
+}
+
 /* BOGKORT */
 
 .bogkortContainer {
   width: 249px;
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 43px;
+  margin-bottom: 41px;
 }
 
 .bogkortImg {
@@ -293,6 +316,7 @@ body {
 .bogkortFlexbox {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 15px;
 }
 
 /* --- FOOTER --- */
@@ -327,7 +351,6 @@ body {
   padding: 2px;
 }
 
-
 /* ============================== KØB BØGER ============================== */
 
 .koebHeader {
@@ -352,15 +375,11 @@ body {
   margin-bottom: 2em;
   padding-left: 10px;
   padding-right: 10px;
-
 }
 
 .kategoriImg {
   width: 100%;
 }
-
-
-
 
 @media only screen and (max-width: 1200px) {
   .footer {
