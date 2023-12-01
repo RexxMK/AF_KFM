@@ -7,8 +7,6 @@ import PersonSharpIcon from '@mui/icons-material/PersonSharp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 
-import React, { useEffect, useState } from "react";
-
 //SD
 export default function Header() {
     
