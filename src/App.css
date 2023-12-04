@@ -419,6 +419,10 @@ body {
   margin: 10px;
 }
 
+.koebantal {
+  border: 1px solid var(--darkgrey);
+}
+
 /* ------ LOGIN/OPRET PROFIL ------- */
 
 .log-in-container {

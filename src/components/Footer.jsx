@@ -16,7 +16,7 @@ export default function Footer() {
         <>
             <div className="footer">
                 <div className="text">
-                    <p>Kristian F. Møller</p>
+                    <p style={{fontWeight:"bold"}}>Kristian F. Møller</p>
                     <p>Store Torv 5</p>
                     <p>8000 Aarhus C</p>
                     <p>Telefonnr.: 86130699</p>
