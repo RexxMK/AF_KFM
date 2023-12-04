@@ -39,6 +39,7 @@ export default function Favoritside() {
     getBooks();
   }, []);
 
+  // favoritListe defineres som et tomt array.
   let favoritListe = [];
 
   // Hvis der allerede er en favoritliste i localstorage, så indlæses den.
@@ -46,7 +47,7 @@ export default function Favoritside() {
     favoritListe = JSON.parse(localStorage.getItem("favoritter"));
   }
 
-  // Her filtrerer jeg de drinks fra, som står på favoritlisten
+  // Her filtrerer vi de bøger fra, som står på favoritlisten
   const skyggeFavoritListe = data.filter((book) =>
     favoritListe.includes(book.id)
   );

@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Bogkort from "../components/bogkort";
+import KategoriUnderside from "../components/KategoriUnderside";
+import VenstreBokse from "../components/VenstreBokse";
 
 
-// DK
+// DK & RK
 
 
 export default function Biografier() {
@@ -54,14 +57,9 @@ export default function Biografier() {
 
   return (
 
-    <section>
-
+    <>
       
-    </section>
-    
-
-
-
+    </>
 
 
   )

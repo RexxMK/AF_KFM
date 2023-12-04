@@ -1,7 +1,10 @@
-/*import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
+import Bogkort from "../components/bogkort";
+import KategoriUnderside from "../components/KategoriUnderside";
+import VenstreBokse from "../components/VenstreBokse";
 
 
-// DK
+// DK & RK
 
 
 export default function Borneboger() {
@@ -37,7 +40,7 @@ export default function Borneboger() {
       }
     }
     getBooks();
-  }, []);*/
+  }, []);
 
 // Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
 
@@ -46,7 +49,7 @@ export default function Borneboger() {
   Hvis en bog indeholder tekststrengen barn i kategoriattributten returneres true. Ellers false.
   Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
 
-/*const kategoriListe = books.filter((book) => 
+const kategoriListe = books.filter((book) => 
     book.kategori.includes("barn")
   );
 
@@ -64,25 +67,4 @@ export default function Borneboger() {
 
 
   )
-}*/
-import { useState } from "react";
-import { FaHeart } from "react-icons/fa";
-import FavoriteSharpIcon from "@mui/icons-material/FavoriteSharp";
-
-export default function FavoritHjerte({ bookid, farve }) {
-  const [iconColor, setIconColor] = useState(farve);
-  const handleIconClick = (e) => {
-    const bookIden = e.currentTarget.getAttribute("data-bookid");
-    let favoritListe = [];
-
-    /*if (localStorage.getItem("favoritter")){
-            favoritListe=JSON.parse(localStorage.getItem)
-        }*/
-  };
-
-  return (
-    <>
-      <FavoriteSharpIcon />
-    </>
-  );
 }

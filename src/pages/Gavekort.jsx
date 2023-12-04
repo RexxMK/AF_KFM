@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Bogkort from "../components/bogkort";
+import KategoriUnderside from "../components/KategoriUnderside";
+import VenstreBokse from "../components/VenstreBokse";
 
 
-// DK
+// DK & RK
 
 
 export default function Gavekort() {
@@ -54,15 +57,25 @@ export default function Gavekort() {
 
   return (
 
-    <section>
-
-      
-    </section>
-    
-
-
-
-
+    <>
+      <div className="pageContainer">
+        <div className="pageFlex">
+          <VenstreBokse />
+          <div className="katUnderside">
+            <KategoriUnderside
+              headingText={"Gavekort"}
+              katText={"Køb et gavekort til Kristian F. Møller"}
+              antalText={"Viser 7 produkter"}
+            />
+            <div className="bogkortFlexbox">
+              {kategoriListe.map((book) => (
+                    <Bogkort key={book.id} book={book} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
 
   )
 }
