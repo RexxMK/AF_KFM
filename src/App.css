@@ -419,7 +419,19 @@ body {
   margin: 10px;
 }
 
-/* --- FOOTER --- */
+/* ------ LOGIN/OPRET PROFIL ------- */
+
+.log-in-container {
+  display: flex;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+/* ------ FOOTER ------- */
 
 .footer {
   background-color: var(--footerblue);

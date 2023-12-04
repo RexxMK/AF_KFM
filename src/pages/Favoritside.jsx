@@ -1,3 +1,6 @@
+import { Authdetaljer } from "../components/Auth/AuthDetaljer";
+import Login from "../components/Auth/Login";
+import Opret from "../components/Auth/Opret";
 import { useEffect, useState } from "react";
 import KategoriUnderside from "../components/KategoriUnderside";
 import VenstreBokse from "../components/VenstreBokse";
