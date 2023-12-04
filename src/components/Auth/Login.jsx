@@ -26,7 +26,7 @@ export default function Login() {
         <div className="log-in-container h1">
             <form onSubmit={Login}> {/* Kalder funktionen Login, som logger brugeren ind */}
                 <h1>Log ind</h1>
-                <p className="size">Indtast dine informationer i felterne.
+                <p className="size login-overskrift">Indtast dine informationer i felterne.
                     Hvis du ikke har en bruger, kan du oprette en profil.
                 </p>
                 <div className="login">

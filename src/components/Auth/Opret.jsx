@@ -8,12 +8,13 @@ export default function Opret() {
 
     // Jeg bruger 'useState' til at oprette to tilstande: email og password
     // Email og password er en værdi der bruges til at logge ind
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
     const Opret = (e) => {
         e.preventDefault();
-        createUserWithEmailAndPassword(auth, email, password)// funktion fra firebase authentication, som opretter en profil med brugernes indtastede email og password. 
+        createUserWithEmailAndPassword(auth, name, email, password)// funktion fra firebase authentication, som opretter en profil med brugernes indtastede email og password. 
         .then((userCredential) => {
             console.log(userCredential); //Hvis oprettelsen er en succes, vil "userCredential" indeholde information om den nye bruger. 
         })
@@ -26,7 +27,7 @@ export default function Opret() {
         <div className="log-in-container">
             <form onSubmit={Opret}> {/* kalder functionen Opret, som opretter en profil */}
                 <h1>Opret Profil</h1>
-                <p className="size">Indtast dine informationer i felterne.</p>
+                <p className="size login-overskrift">Indtast dine informationer i felterne.</p>
                 <div className="login">
                     <h6 className="size">Navn</h6>
                     <h6 className="size">E-mail</h6>
