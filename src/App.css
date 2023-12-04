@@ -342,6 +342,19 @@ body {
   padding-top: 15px;
 }
 
+/* Hjerte */
+.favoritHjerte {
+  margin-right: 42.8px;
+  margin-top: 30px;
+}
+
+.hjerteIkon {
+  color: var(--headerblue);
+  position: absolute;
+  scale: 3;
+  cursor: pointer;
+}
+
 /* ------- DETALJESIDE ------- */
 
 .detaljekortContainer {
