@@ -1,3 +1,5 @@
+// denne side er kodet af: Ellen Bager
+
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import Dk from "../assets/dk.png";

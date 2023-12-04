@@ -410,12 +410,33 @@ body {
 
 .log-in-container {
   display: flex;
+  color: var(--headinggrey);
+}
+
+.input {
+  border: 1px solid var(--darkgrey);
+  font-size: 19.25px;
+  width: 260px;
+  height: 34px;
 }
 
 .login {
   display: flex;
   flex-direction: column;
   max-width: 200px;
+}
+
+.login-submit{
+  background-color: var(--headerblue);
+  color: var(--katlightgrey);
+  border: 1px solid var(--footerblue);
+  width: 157px;
+  height: 41px;
+  font-size: 20.6px;
+}
+
+.size {
+  font-size: 19.25px;
 }
 
 /* ------ FOOTER ------- */
