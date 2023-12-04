@@ -1,8 +1,9 @@
+// denne side er kodet af: Ellen Bager og RK
+
 import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa6";
 
-// RK
 export default function Detaljekort({ book }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
   // number holder værdien af tallet, som vil blive vist i den hvide boks, og isEditing styrer, om brugeren redigerer tallet i boksen.
