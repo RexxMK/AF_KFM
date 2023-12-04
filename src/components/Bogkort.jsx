@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
+import FavoritHjerte from "./FavoritHjerte";
 
 // RK
 export default function Bogkort({ book }) {
@@ -22,6 +23,13 @@ export default function Bogkort({ book }) {
   // Den sætter isEditing til false, hvilket skifter boksen tilbage til visningstilstanden med tallet.
   const handleInputBlur = () => {
     setIsEditing(false);
+
+    let favoritListe = [];
+
+    // Hvis der allerede er en favoritliste i localstorage, så indlæses den.
+    if (localStorage.getItem("favoritter")) {
+      favoritListe = JSON.parse(localStorage.getItem("favoritter"));
+    }
   };
 
   return (
@@ -40,7 +48,9 @@ export default function Bogkort({ book }) {
             <h2>{book.pris}</h2>
             <p>(inkl. moms)</p>
           </div>
-          <div className="bogkortLike"></div>
+          <div className="bogkortLike">
+            <FavoritHjerte bookid={book.id} />
+          </div>
         </div>
         <div className="bogkortFlex">
           <div
