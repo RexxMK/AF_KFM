@@ -60,14 +60,6 @@ export default function Opret() {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     /> {/* bruges til at udfylde Kodeord */} 
-                    <h6 className="size">Kodeord</h6>
-                    <input
-                        className="input"
-                        type="password" 
-                        placeholder="Indtast Kodeord..." 
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    /> {/* bruges til at udfylde Kodeord */} 
                     <button type="submit" className="login-submit" onClick={getName}>Opret Profil</button> 
                     {/* Opretter en profil med firebase. Kalder funktion "getName" som gemmer name i localstorage */} 
                 </div>
