@@ -16,15 +16,17 @@ import Fagboger from "./pages/Fagboger";
 import Borneboger from "./pages/Borneboger";
 import Gavekort from "./pages/Gavekort";
 import Moleskine from "./pages/Moleskine";
-
 import VenstreBokse from "./components/VenstreBokse";
 import Detaljeside from "./pages/Detaljeside";
 import Footer from "./components/Footer";
+import Breadcrumbs from "./components/Breadcrumbs";
 
 function App() {
+  
   return (
     <>
       <Header />
+      <Breadcrumbs />
 
       <div className="pageDisplay">
         <VenstreBokse />
