@@ -3,7 +3,6 @@ import KategoriUnderside from "../components/KategoriUnderside";
 import Bogkort from "../components/bogkort";
 
 export default function Favoritside() {
-
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [data, setData] = useState([]);
