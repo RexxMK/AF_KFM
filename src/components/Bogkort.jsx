@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import FavoritHjerte from "./FavoritHjerte";
+import { useNavigate } from "react-router-dom";
 
 // RK
 export default function Bogkort({ book }) {
@@ -32,12 +33,22 @@ export default function Bogkort({ book }) {
     }
   };
 
+
+  // DK
+  // Når der klikkes på en bogs billede eller forfatter/titel, skal brugeren navigeres til detaljesiden for den pågældende bog.
+  const navigate = useNavigate();
+
+  function handleClick() {
+    navigate(`seBog/${book.id}`);
+  }
+
+
   return (
     <div className="bogkortContainer">
-      <div className="bogkortImg">
+      <div className="bogkortImg" onClick={handleClick}>
         <img src={book.billede} alt="Billede af bogcover" />
       </div>
-      <div className="bogkortTitel">
+      <div className="bogkortTitel" onClick={handleClick}>
         <h2>
           {book.forfatter}, {book.titel}
         </h2>

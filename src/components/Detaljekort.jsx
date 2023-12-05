@@ -31,6 +31,7 @@ export default function Detaljekort({ book }) {
       <div className="detaljekortImg">
         <img src={book.billede} alt="Billede af bogcover" />
       </div>
+      <div>
       <div className="detaljekortTitel">
         <h2 style={{fontSize: "42px"}}>
           {book.forfatter}, {book.titel}
@@ -119,6 +120,7 @@ export default function Detaljekort({ book }) {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

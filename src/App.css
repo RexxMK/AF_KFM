@@ -51,7 +51,6 @@ p {
 
 .pageDisplay {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -303,6 +302,7 @@ nav {
   justify-content: center;
   background-color: var(--katlightgrey);
   height: 230px;
+  cursor: pointer;
 }
 
 .bogkortImg img {
@@ -313,13 +313,13 @@ nav {
   background-color: var(--white);
   width: 229px;
   height: 120px;
-
   padding-left: 13px;
   padding-right: 13px;
   padding-top: 18px;
   padding-bottom: 14px;
   overflow: hidden;
   border: 1px solid var(--katlightgrey);
+  cursor: pointer;
 }
 
 .bogkortFooter {

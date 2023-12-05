@@ -19,11 +19,11 @@ import tilbud from "../images/tilbud.png";
 
 export default function KoebBoeger() {
   return (
-    <section>
+    <>
       <div className="pageContainer">
         <div className="pageFlex">
           
-          <div className="kategoriOversigt">
+          <div className="katUnderside">
             <h1 className="koebHeader">Udvalgte bøger fra KFM</h1>
             <div className="kategoriContainer">
               <NavLink to="mustread" className="kategoriCard">
@@ -150,6 +150,6 @@ export default function KoebBoeger() {
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }
