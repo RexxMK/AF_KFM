@@ -34,6 +34,7 @@ export default function Opret() {
             <form onSubmit={Opret}> {/* kalder functionen Opret, som opretter en profil */}
                 <h1>Opret Profil</h1>
                 <p className="size login-overskrift">Indtast dine informationer i felterne.</p>
+                <span className="line"></span>
                 <div className="login">
                     <h6 className="size">Navn</h6>
                     <input 

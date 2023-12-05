@@ -30,6 +30,7 @@ export default function Login() {
                 <p className="size login-overskrift">Indtast dine informationer i felterne.
                     Hvis du ikke har en bruger, kan du oprette en profil.
                 </p>
+                <span className="line"></span>
                 <div className="login">
                     <h6 className="size">E-mail</h6>
                     <input
