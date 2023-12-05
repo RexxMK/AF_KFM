@@ -61,7 +61,8 @@ export default function Breadcrumbs() {
     
   return (
     <div className="breadcrumbs">
-      <p>Forside / {breadcrumbElements} </p>
+      <p>Forside</p>
+      {breadcrumbElements}
     </div>
   );
 }

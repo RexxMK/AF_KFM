@@ -754,7 +754,42 @@ nav {
   border: 0.5px solid var(--katdarkgrey);
 }
 
-/*====================RESPONSIVE====================*/
+/*====================BREADCRUMBS=====================*/
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 12px;
+  align-items: center;
+}
+
+.breadcrumbs p {
+  color: var(--darkgrey);
+  font-size: 0.8rem;
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: var(--darkgrey);
+  padding: 0 4px;
+  font-size: 0.8rem;
+}
+
+.breadcrumbs a::after {
+  content: '/';
+  margin-left: 4px;
+}
+
+.breadcrumbs a::before {
+  content: '/';
+  margin-right: 4px;
+}
+
+.breadcrumbs a:last-child:after {
+  display: none;
+}
+
+
 /*==================== RESPONSIVE ====================*/
 
 @media only screen and (max-width: 1165px) {
