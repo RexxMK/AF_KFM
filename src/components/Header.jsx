@@ -7,6 +7,8 @@ import PersonSharpIcon from '@mui/icons-material/PersonSharp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
+import Login from "./Auth/Login";
+import Opret from "./Auth/Opret";
 
 //SD
 export default function Header() {
@@ -182,18 +184,12 @@ export default function Header() {
                             </a>
                             <div className={logSlide || opretSlide ? 'profil-wrap active' : 'profil-wrap'}>
                             <section className={logSlide ? 'sidebar active' : 'sidebar'}>
-                                <CloseSharpIcon onClick={showLogSlide}/>
-                                <h1>Log ind</h1>
-                                <p>Indtast dine informationer i felterne. <br></br>
-                                Hvis du ikke har en bruger, kan du oprette en profil.
-                                </p>
-                                <span className="line"></span>
+                              <CloseSharpIcon onClick={showLogSlide}/>
+                              <Login />
                             </section>
                             <section className={opretSlide ? 'sidebar active' : 'sidebar'}>
-                                <CloseSharpIcon onClick={showOpretSlide}/>
-                                <h1>Opret Profil</h1>
-                                <p>Indtast dine informationer i felterne.</p>
-                                <span className="line"></span>
+                              <CloseSharpIcon onClick={showOpretSlide}/>
+                              <Opret />
                             </section>
                             <span className="bg"></span>
                             </div>
