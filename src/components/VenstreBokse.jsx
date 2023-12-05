@@ -23,7 +23,7 @@ export default function VenstreBokse() {
                     <NavLink to="mustread" className="kategoriPunkt">Must Read</NavLink>
                     <NavLink to="ugenstilbud" className="kategoriPunkt">Ugens tilbud</NavLink>
                     <NavLink to="nyegodeboeger" className="kategoriPunkt">Nye gode bøger</NavLink>
-                    <NavLink to="signeredeboger" className="kategoriPunkt">Signerede bøger</NavLink>
+                    <NavLink to="signeredeboeger" className="kategoriPunkt">Signerede bøger</NavLink>
                     <NavLink to="laeseklubbenlaeser" className="kategoriPunkt">KFM læseklubberne læser</NavLink>
                     <NavLink to="skoenlitteratur" className="kategoriPunkt">Skønlitteratur</NavLink>
                     <NavLink to="biografier" className="kategoriPunkt">Biografier</NavLink>
