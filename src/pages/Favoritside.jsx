@@ -63,13 +63,15 @@ export default function Favoritside() {
               antalText={""}
             />
             {isBooks && skyggeFavoritListe.length > 0 ? (
-              <div>
+              <div className="bogkortFlexbox">
                 {skyggeFavoritListe.map((book) => (
                   <Bogkort key={book.id} book={book} />
                 ))}
               </div>
             ) : (
-              <p>Du har ikke tilføjet nogen favoritter</p>
+              <p className="defaultText">
+                Du har ikke tilføjet nogen favoritter
+              </p>
             )}
           </div>
         </div>

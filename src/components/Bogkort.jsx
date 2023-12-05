@@ -34,8 +34,13 @@ export default function Bogkort({ book }) {
 
   return (
     <div className="bogkortContainer">
-      <div className="bogkortImg">
-        <img src={book.billede} alt="Billede af bogcover" />
+      <div className="bogkortLike">
+        <FavoritHjerte bookid={book.id} />
+      </div>
+      <div className="bogkortBog">
+        <div className="bogkortImg">
+          <img src={book.billede} alt="Billede af bogcover" />
+        </div>
       </div>
       <div className="bogkortTitel">
         <h2>
@@ -48,26 +53,9 @@ export default function Bogkort({ book }) {
             <h2>{book.pris}</h2>
             <p>(inkl. moms)</p>
           </div>
-          <div className="bogkortLike">
-            <FavoritHjerte bookid={book.id} />
-          </div>
         </div>
         <div className="bogkortFlex">
-          <div
-            className="whiteBox"
-            style={{
-              backgroundColor: "var(--white)",
-              color: "var(--darkgrey)",
-              width: "51px",
-              height: "32px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              cursor: "pointer",
-              marginLeft: "15px",
-            }}
-            onClick={handleBoxClick}
-          >
+          <div className="whiteBox" onClick={handleBoxClick}>
             {isEditing ? (
               <input
                 type="number"
@@ -75,57 +63,17 @@ export default function Bogkort({ book }) {
                 onChange={handleInputChange}
                 onBlur={handleInputBlur}
                 autoFocus
-                style={{
-                  width: "80%",
-                  height: "80%",
-                  fontSize: "14px",
-                  textAlign: "center",
-                }}
               />
             ) : (
               <span>{number}</span>
             )}
           </div>
           <div className="bogkortKurv">
-            <button
-              style={{
-                display: "flex",
-                alignItems: "center",
-                border: "none",
-                backgroundColor: "transparent",
-                cursor: "pointer",
-                marginRight: "15px",
-              }}
-            >
-              <div
-                className="bogkortKurvIkon"
-                style={{
-                  backgroundColor: "var(--headinggrey)",
-                  height: "32px",
-                  width: "38px",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <FaCartShopping
-                  style={{ color: "var(--katlightgrey)", width: "15px" }}
-                />
+            <button>
+              <div className="bogkortKurvIkon">
+                <FaCartShopping className="bogkortFaCart" />
               </div>
-              <div
-                style={{
-                  backgroundColor: "var(--black)",
-                  fontSize: "12.25px",
-                  height: "32px",
-                  width: "90px",
-                  color: "var(--white)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                Køb
-              </div>
+              <div className="bogkortKurvKoeb">Køb</div>
             </button>
           </div>
         </div>

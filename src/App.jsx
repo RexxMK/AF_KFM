@@ -44,6 +44,8 @@ function App() {
         <Route path="/detaljeside" element={<Detaljeside />} />
       </Routes>
 
+      <VenstreBokse />
+
       <Footer />
     </>
   );
