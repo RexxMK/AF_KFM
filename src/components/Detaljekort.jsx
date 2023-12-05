@@ -1,8 +1,9 @@
+// denne side er kodet af: Ellen Bager og RK
+
 import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa6";
 
-// RK
 export default function Detaljekort({ book }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
   // number holder værdien af tallet, som vil blive vist i den hvide boks, og isEditing styrer, om brugeren redigerer tallet i boksen.
@@ -46,15 +47,14 @@ export default function Detaljekort({ book }) {
         <div className="lagerstatus">Lagerstatus: <FaCheck /> På lager</div>
         <div className="detaljekortFlex">
           <div
-            className="whiteBox"
+            className="whiteBox koebantal"
             style={{
               backgroundColor: "var(--white)",
               color: "var(--darkgrey)",
-              width: "51px",
+              width: "142px",
               height: "32px",
               display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              padding: "6px 12px",
               cursor: "pointer",
               marginLeft: "15px",
             }}
@@ -71,7 +71,6 @@ export default function Detaljekort({ book }) {
                   width: "80%",
                   height: "80%",
                   fontSize: "14px",
-                  textAlign: "center",
                 }}
               />
             ) : (

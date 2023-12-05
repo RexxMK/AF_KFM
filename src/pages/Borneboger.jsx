@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Bogkort from "../components/bogkort";
+import KategoriUnderside from "../components/KategoriUnderside";
+import VenstreBokse from "../components/VenstreBokse";
 
 
-// DK
+// DK & RK
 
 
 export default function Borneboger() {
@@ -39,15 +42,14 @@ export default function Borneboger() {
     getBooks();
   }, []);
 
+// Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
 
-  // Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
-
-  /* books er en liste over alle bøger og deres attributter, herunder "kategori". 
+/* books er en liste over alle bøger og deres attributter, herunder "kategori". 
   Med filter-metoden oprettes en ny liste ved at filtrere elementerne i books-listen baseret på betingelsen book.kategori.includes(" ").
   Hvis en bog indeholder tekststrengen barn i kategoriattributten returneres true. Ellers false.
   Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
 
-  const kategoriListe = books.filter((book) => 
+const kategoriListe = books.filter((book) => 
     book.kategori.includes("barn")
   );
 

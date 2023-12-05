@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Bogkort from "../components/bogkort";
+import KategoriUnderside from "../components/KategoriUnderside";
+import VenstreBokse from "../components/VenstreBokse";
 
 
-// DK
+// DK & RK
 
 
 export default function Signerede() {
@@ -55,7 +58,7 @@ export default function Signerede() {
   return (
 
     <section>
-
+      
       
     </section>
     
