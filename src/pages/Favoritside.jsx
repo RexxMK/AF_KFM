@@ -3,10 +3,15 @@ import Login from "../components/Auth/Login";
 import Opret from "../components/Auth/Opret";
 import { useEffect, useState } from "react";
 import KategoriUnderside from "../components/KategoriUnderside";
-import VenstreBokse from "../components/VenstreBokse";
 import Bogkort from "../components/bogkort";
 
 export default function Favoritside() {
+    return (
+        <>
+         <h1>Hej favoritter</h1>
+        </>
+    )
+} 
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [data, setData] = useState([]);
@@ -56,7 +61,6 @@ export default function Favoritside() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          <VenstreBokse />
           <div className="katUnderside">
             <KategoriUnderside
               headingText={"Mine favoritter"}
@@ -70,7 +74,7 @@ export default function Favoritside() {
                 ))}
               </div>
             ) : (
-              <p>Du har ikke tilføjet nogen favoritter</p>
+              <p className="tomSideTxt">Du har ikke tilføjet nogen favoritter</p>
             )}
           </div>
         </div>
