@@ -18,18 +18,20 @@ export default function Login() {
             console.log(userCredential); //Hvis login er en succes, vil "userCredential" indeholde information om brugeren.
         })
         .catch((error) => {
-            console.log(error);
-        }); // giver en fejl i consollen hvis ikke email og password passer med en bruger oprettet i firebase
+            console.log(error); // giver en fejl i consollen hvis ikke email og password passer med en bruger oprettet i firebase
+            alert("E-mail eller kodeord er ugyldigt") // giver brugeren en fejl, hvis ikke den kender E-mail eller Kodeord.
+        }); 
     }
 
     return(
         <div className="log-in-container h1">
             <form onSubmit={Login}> {/* Kalder funktionen Login, som logger brugeren ind */}
-                <h1>Log ind</h1>
+                <h1>Log Ind</h1>
                 <p className="size login-overskrift">Indtast dine informationer i felterne.
                     Hvis du ikke har en bruger, kan du oprette en profil.
                 </p>
                 <div className="login">
+                <span className="line"></span>
                     <h6 className="size">E-mail</h6>
                     <input
                         className="input"
@@ -37,16 +39,17 @@ export default function Login() {
                         placeholder="Indtast din E-mail" 
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}>
-                    </input>
+                    </input> {/* bruges til at udfylde Email */} 
                     <h6 className="size">Kodeord</h6>
                     <input
                         className="input"
                         type="password" 
-                        placeholder="Indtast dit kodeord" 
+                        placeholder="Indtast dit Kodeord" 
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}>
-                    </input>
-                    <button type="submit" className="login-submit">Log ind</button>
+                    </input>  {/* bruges til at udfylde Kodeord */} 
+                    <button type="submit" className="login-submit">Log Ind</button>
+                     {/* logger ind på sin profil ved hjælp af firebase */} 
                 </div>
             </form>
         </div>
