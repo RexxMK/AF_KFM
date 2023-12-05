@@ -155,7 +155,7 @@ export default function Header() {
                         <div className="txt-menu" style={{ display: isMobile ? txtMenuDisplay : 'flex' }}>
                             <div className="menu-wrap">
                                 <a className="menupunkt">Forside</a>
-                                <NavLink to="/" className="menupunkt">Køb Bøger</NavLink>
+                                <NavLink to="/" className="menupunkt" onClick={toggleTxtMenu}>Køb Bøger</NavLink>
                                 <a className="menupunkt">Køb Moleskine</a>
                                 <a className="menupunkt">Bøger vi anbefaler</a>
                                 <a className="menupunkt info">
@@ -183,15 +183,15 @@ export default function Header() {
                                 </div>
                             </a>
                             <div className={logSlide || opretSlide ? 'profil-wrap active' : 'profil-wrap'}>
-                            <section className={logSlide ? 'sidebar active' : 'sidebar'}>
-                              <CloseSharpIcon onClick={showLogSlide}/>
-                              <Login />
-                            </section>
-                            <section className={opretSlide ? 'sidebar active' : 'sidebar'}>
-                              <CloseSharpIcon onClick={showOpretSlide}/>
-                              <Opret />
-                            </section>
-                            <span className="bg"></span>
+                              <section className={logSlide ? 'sidebar active' : 'sidebar'}>
+                                <CloseSharpIcon onClick={showLogSlide}/>
+                                <Login />
+                              </section>
+                              <section className={opretSlide ? 'sidebar active' : 'sidebar'}>
+                                <CloseSharpIcon onClick={showOpretSlide}/>
+                                <Opret />
+                              </section>
+                              <span className="bg"></span>
                             </div>
                             <NavLink to="/favoritside" className="iconpunkt">
                                 <p>Dine Favoritter</p>
