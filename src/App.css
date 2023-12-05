@@ -752,4 +752,8 @@ nav {
   .drop {
     right: -50px;
   }
+
+  .sidebar {
+    width: 100%;
+  }
 }
