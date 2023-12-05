@@ -1,9 +1,5 @@
-import { Authdetaljer } from "../components/Auth/AuthDetaljer";
-import Login from "../components/Auth/Login";
-import Opret from "../components/Auth/Opret";
 import { useEffect, useState } from "react";
 import KategoriUnderside from "../components/KategoriUnderside";
-import VenstreBokse from "../components/VenstreBokse";
 import Bogkort from "../components/bogkort";
 
 export default function Favoritside() {
@@ -39,6 +35,7 @@ export default function Favoritside() {
     getBooks();
   }, []);
 
+  // favoritListe defineres som et tomt array.
   let favoritListe = [];
 
   // Hvis der allerede er en favoritliste i localstorage, så indlæses den.
@@ -46,7 +43,7 @@ export default function Favoritside() {
     favoritListe = JSON.parse(localStorage.getItem("favoritter"));
   }
 
-  // Her filtrerer jeg de drinks fra, som står på favoritlisten
+  // Her filtrerer vi de bøger fra, som står på favoritlisten
   const skyggeFavoritListe = data.filter((book) =>
     favoritListe.includes(book.id)
   );
@@ -55,7 +52,6 @@ export default function Favoritside() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          <VenstreBokse />
           <div className="katUnderside">
             <KategoriUnderside
               headingText={"Mine favoritter"}
@@ -69,7 +65,7 @@ export default function Favoritside() {
                 ))}
               </div>
             ) : (
-              <p className="defaultText">
+              <p className="tomSideTxt">
                 Du har ikke tilføjet nogen favoritter
               </p>
             )}

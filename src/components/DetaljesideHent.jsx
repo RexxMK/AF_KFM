@@ -1,7 +1,8 @@
+// denne side er kodet af: Ellen Bager og RK
+
 import { useEffect, useState } from "react";
 import Detaljekort from "./Detaljekort";
 
-//RK
 export default function DetaljesideHent() {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
