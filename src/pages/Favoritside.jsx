@@ -4,4 +4,4 @@ export default function Favoritside() {
          <h1>Hej favoritter</h1>
         </>
     )
-}
+} 

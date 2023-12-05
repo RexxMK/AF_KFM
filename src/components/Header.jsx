@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState, useEffect } from "react"
 import Logo from "../img/kfm-logo.png"
 import FavoriteSharpIcon from '@mui/icons-material/FavoriteSharp';
@@ -6,10 +6,12 @@ import ShoppingCartSharpIcon from '@mui/icons-material/ShoppingCartSharp';
 import PersonSharpIcon from '@mui/icons-material/PersonSharp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import MenuSharpIcon from '@mui/icons-material/MenuSharp';
+import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 
 //SD
 export default function Header() {
     
+  //Burger Menu SD
     const [txtMenuDisplay, setTxtMenuDisplay] = useState('none');
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 950);
 
@@ -28,11 +30,27 @@ export default function Header() {
         };
     }, []);
 
+  //Dropdown
+    const [dropDownDisplay, setDropDownDisplay] = useState('none');
+
+    const dropDownMenu = () => {
+      setDropDownDisplay((preDisplay) => (preDisplay === 'none' ? 'flex' : 'none'));
+    };
+
+  //Slide in sidebar
+    const [logSlide, setLogSlide] = useState(false);
+
+    const showLogSlide = () => setLogSlide(!logSlide)
+
+    const [opretSlide, setOpretSlide] = useState(false);
+
+    const showOpretSlide = () => setOpretSlide(!opretSlide)
 
 
 
 
-    
+
+  //Søg  
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [books, setBooks] = useState([]);
@@ -146,10 +164,39 @@ export default function Header() {
                             </div>
                         </div>
                         <div className="icon-menu">
-                            <a className="iconpunkt">
+                            <a className="iconpunkt profil" onClick={dropDownMenu}>
                                 <p>Min Profil</p>
                                 <PersonSharpIcon/>
+                                <div style={{ display: dropDownDisplay }}>
+                                  <section className="drop">
+                                    <h1>Du er ikke logget ind</h1>
+                                    <Link className="profilbtn" to="#" onClick={showLogSlide}>Log Ind</Link>
+                                    <div className="eller">
+                                        <span></span>
+                                        <h2>eller</h2>
+                                        <span></span>
+                                    </div>
+                                    <Link className="profilbtn" to="#" onClick={showOpretSlide}>Opret Profil</Link>
+                                  </section>
+                                </div>
                             </a>
+                            <div className={logSlide || opretSlide ? 'profil-wrap active' : 'profil-wrap'}>
+                            <section className={logSlide ? 'sidebar active' : 'sidebar'}>
+                                <CloseSharpIcon onClick={showLogSlide}/>
+                                <h1>Log ind</h1>
+                                <p>Indtast dine informationer i felterne. <br></br>
+                                Hvis du ikke har en bruger, kan du oprette en profil.
+                                </p>
+                                <span className="line"></span>
+                            </section>
+                            <section className={opretSlide ? 'sidebar active' : 'sidebar'}>
+                                <CloseSharpIcon onClick={showOpretSlide}/>
+                                <h1>Opret Profil</h1>
+                                <p>Indtast dine informationer i felterne.</p>
+                                <span className="line"></span>
+                            </section>
+                            <span className="bg"></span>
+                            </div>
                             <NavLink to="/favoritside" className="iconpunkt">
                                 <p>Dine Favoritter</p>
                                 <FavoriteSharpIcon/>
