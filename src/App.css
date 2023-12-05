@@ -39,7 +39,7 @@ p {
 
 /* GENERELLE REGLER */
 .pageContainer {
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
 }
@@ -49,10 +49,19 @@ p {
   width: 1260px;
 }
 
+.pageDisplay {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* BODY */
 body {
   word-wrap: break-word;
   font-family: Helvetica, Arial, sans-serif;
+  font-size: 87.5%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /*====================HEADER====================*/
@@ -216,11 +225,6 @@ nav {
   border: 1px solid var(--headinggrey);
 }
 
-body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 87.5%;
-}
-
 /* ============================== VENSTRE SIDE KOMPONENT ============================== */
 
 .venstreBokse {
@@ -233,7 +237,6 @@ body {
   margin-bottom: 1em;
   padding-left: 10px;
   padding-right: 10px;
-  float: left;
 }
 
 .venstreBoksTitel {
@@ -353,6 +356,10 @@ body {
   position: absolute;
   scale: 3;
   cursor: pointer;
+}
+
+.tomSideTxt {
+  padding-left: 10px;
 }
 
 /* ------- DETALJESIDE ------- */
@@ -541,7 +548,7 @@ body {
   }
 }
 
-/*====================RESPONSIVE====================*/
+/*==================== RESPONSIVE ====================*/
 
 @media only screen and (max-width: 1165px) {
   .sog,

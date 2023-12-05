@@ -3,7 +3,6 @@ import Login from "../components/Auth/Login";
 import Opret from "../components/Auth/Opret";
 import { useEffect, useState } from "react";
 import KategoriUnderside from "../components/KategoriUnderside";
-import VenstreBokse from "../components/VenstreBokse";
 import Bogkort from "../components/bogkort";
 
 export default function Favoritside() {
@@ -56,7 +55,6 @@ export default function Favoritside() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          <VenstreBokse />
           <div className="katUnderside">
             <KategoriUnderside
               headingText={"Mine favoritter"}
@@ -70,7 +68,7 @@ export default function Favoritside() {
                 ))}
               </div>
             ) : (
-              <p>Du har ikke tilføjet nogen favoritter</p>
+              <p className="tomSideTxt">Du har ikke tilføjet nogen favoritter</p>
             )}
           </div>
         </div>

@@ -12,16 +12,17 @@ import signerede from "../images/signerede.png";
 import skonlitteratur from "../images/skonlitteratur.png";
 import spanding from "../images/spanding.png";
 import tilbud from "../images/tilbud.png";
-import VenstreBokse from "../components/VenstreBokse";
 
-//DK & RK
+
+// DK & RK
+
 
 export default function KoebBoeger() {
   return (
     <section>
       <div className="pageContainer">
         <div className="pageFlex">
-          <VenstreBokse />
+          
           <div className="kategoriOversigt">
             <h1 className="koebHeader">Udvalgte bøger fra KFM</h1>
             <div className="kategoriContainer">
@@ -50,7 +51,7 @@ export default function KoebBoeger() {
                 </div>
               </NavLink>
 
-              <NavLink to="signeredeboger" className="kategoriCard">
+              <NavLink to="signeredeboeger" className="kategoriCard">
                 <div className="kategoriCard">
                   <img
                     src={signerede}

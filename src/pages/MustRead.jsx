@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Bogkort from "../components/bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
-import VenstreBokse from "../components/VenstreBokse";
 
 
 // RK & DK
@@ -59,7 +58,7 @@ export default function MustRead() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          <VenstreBokse />
+          
           <div className="katUnderside">
             <KategoriUnderside
               headingText={"Must Read"}
