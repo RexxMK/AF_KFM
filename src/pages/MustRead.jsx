@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Bogkort from "../components/bogkort";
+import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
 
 

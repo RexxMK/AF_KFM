@@ -52,8 +52,6 @@ p {
 .pageDisplay {
   display: flex;
   justify-content: space-between;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 /* BODY */
@@ -366,11 +364,16 @@ nav {
 
 /* ------- DETALJESIDE ------- */
 
+.detaljekort {
+  display: flex;
+  flex-direction: column;
+}
 .detaljekortContainer {
   padding-left: 10px;
   padding-right: 10px;
   margin-bottom: 43px;
   display: flex;
+  flex-direction: row;
 }
 
 .detaljekortImg {
@@ -414,6 +417,17 @@ nav {
   margin-left: 15px;
 }
 
+.detaljekortPrisLike {
+  display: flex;
+  padding-bottom: 21px;
+}
+
+.detaljekortLike {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+}
+
 .detaljekortFlexbox {
   display: flex;
   flex-wrap: wrap;
@@ -430,6 +444,26 @@ nav {
 
 .koebantal {
   border: 1px solid var(--darkgrey);
+}
+
+.detaljesideDiv {
+  padding-left: 10px;
+  padding-right: 30px;
+}
+
+.beskrivelseHeader {
+  background-color: var(--katlightgrey);
+  width: fit-content;
+  padding: 7px;
+}
+
+.beskrivelseTxt {
+  background-color: var(--katlightgrey);
+  padding: 15px;
+}
+
+.relateredeDiv {
+  margin-top: 30px;
 }
 
 /* ------ LOGIN/OPRET PROFIL ------- */
@@ -512,7 +546,7 @@ nav {
   margin-left: 10px;
   border-bottom: 1px solid var(--katlightgrey);
   padding: 0 0 0.3em;
-  width: 80%;
+  width: 100%;
 }
 
 .kategoriTxt {

@@ -3,7 +3,10 @@ import { FaCartShopping } from "react-icons/fa6";
 import FavoritHjerte from "./FavoritHjerte";
 import { useNavigate } from "react-router-dom";
 
+
 // RK
+
+
 export default function Bogkort({ book }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
   // number holder værdien af tallet, som vil blive vist i den hvide boks, og isEditing styrer, om brugeren redigerer tallet i boksen.
@@ -24,14 +27,16 @@ export default function Bogkort({ book }) {
   // Den sætter isEditing til false, hvilket skifter boksen tilbage til visningstilstanden med tallet.
   const handleInputBlur = () => {
     setIsEditing(false);
-
-    let favoritListe = [];
-
-    // Hvis der allerede er en favoritliste i localstorage, så indlæses den.
-    if (localStorage.getItem("favoritter")) {
-      favoritListe = JSON.parse(localStorage.getItem("favoritter"));
-    }
   };
+
+
+  // DK & RK
+  let favoritListe = [];
+
+  // Hvis der allerede er en favoritliste i localstorage, så indlæses den.
+  if (localStorage.getItem("favoritter")) {
+    favoritListe = JSON.parse(localStorage.getItem("favoritter"));
+  }
 
 
   // DK

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import KategoriUnderside from "../components/KategoriUnderside";
-import Bogkort from "../components/bogkort";
+import Bogkort from "../components/Bogkort";
 
 export default function Favoritside() {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
@@ -52,14 +52,10 @@ export default function Favoritside() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          <div className="katUnderside">
-            <KategoriUnderside
-              headingText={"Mine favoritter"}
-              katText={""}
-              antalText={""}
-            />
+        <div className="katUnderside">
+        <h1 className="koebHeader">Mine favoritter</h1>
             {isBooks && skyggeFavoritListe.length > 0 ? (
-              <div>
+              <div className="bogkortFlexbox">
                 {skyggeFavoritListe.map((book) => (
                   <Bogkort key={book.id} book={book} />
                 ))}
@@ -68,8 +64,8 @@ export default function Favoritside() {
               <p className="tomSideTxt">Du har ikke tilføjet nogen favoritter</p>
             )}
           </div>
+          </div>
         </div>
-      </div>
     </>
   );
 }
