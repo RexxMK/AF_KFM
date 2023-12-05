@@ -63,8 +63,6 @@ function App() {
         </Routes>
       </div>
 
-      <VenstreBokse />
-
       <Footer />
     </>
   );
