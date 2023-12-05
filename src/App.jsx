@@ -48,14 +48,26 @@ function App() {
           <Route path="/gavekort" element={<Gavekort />} />
           <Route path="/moleskine" element={<Moleskine />} />
           <Route path="/detaljeside" element={<Detaljeside />} />
-          
+
           <Route path="/favoritside/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/mustread/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/ugenstilbud/seBog/:bookId" element={<Detaljeside />} />
-          <Route path="/nyegodeboeger/seBog/:bookId" element={<Detaljeside />} />
-          <Route path="/signeredeboeger/seBog/:bookId" element={<Detaljeside />} />
-          <Route path="/laeseklubbenlaeser/seBog/:bookId" element={<Detaljeside />} />
-          <Route path="/skoenlitteratur/seBog/:bookId" element={<Detaljeside />} />
+          <Route
+            path="/nyegodeboeger/seBog/:bookId"
+            element={<Detaljeside />}
+          />
+          <Route
+            path="/signeredeboeger/seBog/:bookId"
+            element={<Detaljeside />}
+          />
+          <Route
+            path="/laeseklubbenlaeser/seBog/:bookId"
+            element={<Detaljeside />}
+          />
+          <Route
+            path="/skoenlitteratur/seBog/:bookId"
+            element={<Detaljeside />}
+          />
           <Route path="/biografier/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/lyrik/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/spaending/seBog/:bookId" element={<Detaljeside />} />
