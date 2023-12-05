@@ -61,7 +61,9 @@ export default function Favoritside() {
                 ))}
               </div>
             ) : (
-              <p className="tomSideTxt">Du har ikke tilføjet nogen favoritter</p>
+              <p className="tomSideTxt">
+                Du har ikke tilføjet nogen favoritter
+              </p>
             )}
           </div>
           </div>
