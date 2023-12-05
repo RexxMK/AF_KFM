@@ -52,6 +52,8 @@ p {
 .pageDisplay {
   display: flex;
   justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* BODY */
@@ -510,6 +512,7 @@ nav {
   margin-left: 10px;
   border-bottom: 1px solid var(--katlightgrey);
   padding: 0 0 0.3em;
+  width: 80%;
 }
 
 .kategoriTxt {
