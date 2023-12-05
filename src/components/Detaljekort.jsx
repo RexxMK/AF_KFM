@@ -97,15 +97,15 @@ export default function Detaljekort({ book }) {
       <div className="detaljekortFooter">
         <div>
           <div className="detaljekortPrisLike">
-          <div className="detaljekortPris">
-            <h2>{book.pris}</h2>
-            <p>(inkl. moms)</p>
+            <div className="detaljekortPris">
+              <h2>{book.pris}</h2>
+              <p>(inkl. moms)</p>
+            </div>
+            <div className="detaljekortLike">
+              <FavoritHjerte bookid={book.id} />
+            </div>
           </div>
-          <div className="detaljekortLike">
-            <FavoritHjerte bookid={book.id} />
-          </div>
-          </div>
-          <div className="detaljekortLike"></div>
+          
         </div>
         <div className="lagerstatus">Lagerstatus: <FaCheck /> På lager</div>
         <div className="detaljekortFlex">

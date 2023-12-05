@@ -481,7 +481,8 @@ nav {
 .detaljekortLike {
   display: block;
   margin-left: auto;
-  margin-right: 0;
+  margin-right: 30px;
+  margin-top: 30px;
 }
 
 .detaljekortFlexbox {
