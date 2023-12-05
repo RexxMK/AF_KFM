@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Bogkort from "./bogkort";
+import Bogkort from "./Bogkort";
 
 //RK
 export default function BogkortHent() {
