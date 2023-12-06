@@ -450,10 +450,15 @@ nav {
   flex-direction: column;
   width: 489px;
   padding-left: 13px;
-  padding-right: 13px;
   padding-top: 18px;
   padding-bottom: 14px;
   overflow: hidden;
+}
+
+.detaljekortHeader {
+  line-height: 1.25;
+  font-size: 42px;
+  border-bottom: 1px solid var(--katlightgrey);
 }
 
 .detaljekortFooter {
@@ -468,27 +473,23 @@ nav {
 }
 
 .detaljekortPris {
-  padding-top: 18px;
-  padding-bottom: 31px;
+  line-height: 1.25;
   margin-left: 15px;
+  margin-left: 3px;
 }
 
 .detaljekortPrisLike {
   display: flex;
   padding-bottom: 21px;
+  margin-left: 13px;
+  border-bottom: 1px solid var(--katlightgrey);
 }
 
 .detaljekortLike {
   display: block;
   margin-left: auto;
   margin-right: 30px;
-  margin-top: 30px;
-}
-
-.detaljekortFlexbox {
-  display: flex;
-  flex-wrap: wrap;
-  padding-top: 15px;
+  margin-top: 17px;
 }
 
 .lagerstatus {
@@ -501,6 +502,17 @@ nav {
 
 .koebantal {
   border: 1px solid var(--darkgrey);
+}
+
+.detaljekortKobKnap {
+  background-color: var(--black);
+  font-size: 12.25px;
+  height: 32px;
+  width: 90px;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .detaljesideDiv {
@@ -962,4 +974,59 @@ nav {
   .sidebar {
     width: 100%;
   }
+
+  /* ======================== Detaljekort ========================= */
+
+  .detaljekortContainer {
+    flex-direction: column;
+  }
+
+  .detaljekortImg, .detaljekortTitel, .detaljekortFooter, .detaljesideDiv, .lagerstatus {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .detaljekortImg {
+    height: auto;
+  }
+
+  .detaljekortImg img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+  .detaljekort {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+  .detaljesideDiv {
+    padding-right: 0;
+  }
+  
+  .detaljekortLike {
+    position: relative;
+    right: 2%;
+    bottom: 380px;
+  }
+
+  .detaljekortHeader {
+    font-size: 1.5625em;
+    line-height: 1.35em;
+  }
+
+  .detaljekortTitel {
+    padding-left: 0;
+  }
+
+  .detaljekortPrisLike {
+    margin-left: 0;
+  }
+
+
+  
+
 }

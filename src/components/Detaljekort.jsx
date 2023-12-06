@@ -86,11 +86,11 @@ export default function Detaljekort({ book }) {
   <div className="detaljekort">
     <div className="detaljekortContainer">
       <div className="detaljekortImg">
-        <img src={book.billede} alt="Billede af bogcover" />
+        <img src={book.billede} alt="Billede af bogcover" className="bogcoverImg" />
       </div>
       <div>
       <div className="detaljekortTitel">
-        <h2 style={{fontSize: "42px"}}>
+        <h2 className="detaljekortHeader">
           {book.forfatter}, {book.titel}
         </h2>
       </div>
@@ -108,7 +108,7 @@ export default function Detaljekort({ book }) {
           
         </div>
         <div className="lagerstatus">Lagerstatus: <FaCheck /> På lager</div>
-        <div className="detaljekortFlex">
+        <div className="detaljekortFlex detaljekortKobSamlet">
           <div
             className="whiteBox koebantal"
             style={{
@@ -165,18 +165,7 @@ export default function Detaljekort({ book }) {
                   style={{ color: "var(--katlightgrey)", width: "15px" }}
                 />
               </div>
-              <div
-                style={{
-                  backgroundColor: "var(--black)",
-                  fontSize: "12.25px",
-                  height: "32px",
-                  width: "90px",
-                  color: "var(--white)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div className="detaljekortKobKnap">
                 Køb
               </div>
             </button>
