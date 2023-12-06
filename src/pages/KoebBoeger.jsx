@@ -45,7 +45,7 @@ export default function KoebBoeger() {
                 </div>
               </NavLink>
 
-              <NavLink to="nyegodeboger" className="kategoriCard">
+              <NavLink to="nyegodeboeger" className="kategoriCard">
                 <div className="kategoriCard">
                   <img src={nye} alt="Nye gode bøger" className="kategoriImg" />
                   <p className="kategoriTxt">Nye gode bøger</p>

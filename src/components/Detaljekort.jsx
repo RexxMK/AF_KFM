@@ -5,6 +5,10 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa6";
 import FavoritHjerte from "./FavoritHjerte";
 import Bogkort from "./Bogkort";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+
 
 export default function Detaljekort({ book }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
@@ -80,7 +84,12 @@ export default function Detaljekort({ book }) {
     }
 
 
-  
+  // For at links til relaterede bøger virker
+  const { bookId } = useParams();
+
+
+
+
 
   return (
   <div className="detaljekort">
@@ -198,7 +207,9 @@ export default function Detaljekort({ book }) {
               <div className="bogkortFlexbox">
 
                 {skyggeBogListe.map((book) => (
-                  <Bogkort key={book.id} book={book} />
+                  <Link key={book.id} to={`/detaljeside/${book.id}`} className="detaljesideLink">
+                    <Bogkort key={book.id} book={book} />
+                  </Link>
                 ))}
 
               </div>

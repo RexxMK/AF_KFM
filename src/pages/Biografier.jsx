@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
-import VenstreBokse from "../components/VenstreBokse";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 
 // DK & RK
@@ -56,15 +56,26 @@ export default function Biografier() {
 
 
   return (
-
     <>
-      
+      <div className="pageContainer">
+        <div className="pageFlex">
+          <div className="katUnderside">
+            <div className="breadcrumbsMobil">
+              <Breadcrumbs />
+            </div>
+            <KategoriUnderside
+              headingText={"Biografier"}
+              katText={""}
+              antalText={"Viser 48 af 81 produkter"}
+            />
+            <div className="bogkortFlexbox">
+              {kategoriListe.map((book) => (
+                <Bogkort key={book.id} book={book} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
     </>
-
-
-  )
-
-
-
-    
+  );
 }

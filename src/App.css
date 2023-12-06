@@ -421,6 +421,8 @@ nav {
 
 /* ------- DETALJESIDE ------- */
 
+
+
 .detaljekort {
   display: flex;
   flex-direction: column;
@@ -537,6 +539,10 @@ nav {
 
 .relateredeDiv {
   margin-top: 30px;
+}
+
+.detaljesideLink {
+  text-decoration: none;
 }
 
 /* ---------- LOGIN/OPRET PROFIL ----------- */
@@ -769,6 +775,10 @@ nav {
   font-size: 0.8rem;
 }
 
+.split {
+  padding: 0 5px 0 7px;
+
+}
 .breadcrumbs a::after {
   content: "/";
   margin-left: 4px;
@@ -1053,6 +1063,10 @@ nav {
 
   .detaljekortImg {
     height: auto;
+  }
+
+  .koebHeader {
+    font-size: 1.5625em;
   }
 
   .detaljekortImg img {
