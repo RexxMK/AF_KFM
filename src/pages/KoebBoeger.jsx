@@ -12,18 +12,19 @@ import signerede from "../images/signerede.png";
 import skonlitteratur from "../images/skonlitteratur.png";
 import spanding from "../images/spanding.png";
 import tilbud from "../images/tilbud.png";
-
+import Breadcrumbs from "../components/Breadcrumbs";
 
 // DK & RK
-
 
 export default function KoebBoeger() {
   return (
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          
           <div className="katUnderside">
+            <div className="breadcrumbsMobil">
+              <Breadcrumbs />
+            </div>
             <h1 className="koebHeader">Udvalgte bøger fra KFM</h1>
             <div className="kategoriContainer">
               <NavLink to="mustread" className="kategoriCard">
