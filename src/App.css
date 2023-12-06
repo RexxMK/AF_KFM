@@ -52,6 +52,7 @@ p {
   display: flex;
   width: 100%;
   justify-content: center;
+  margin-top: 6.1vh;
 }
 
 /* BODY */
@@ -580,38 +581,6 @@ nav {
   font-size: 19.25px;
 }
 
-/* ------ FOOTER ------- */
-
-.footer {
-  background-color: var(--footerblue);
-  color: var(--headinggrey);
-  width: 100%;
-  padding: 50px 400px;
-  font-size: 14px;
-  text-align: center;
-  line-height: 40px;
-}
-
-.text {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.social {
-  text-decoration: none;
-  color: var(--headinggrey);
-  padding: 2px;
-}
-
-.betaling {
-  width: 34px;
-  padding: 2px;
-}
-
 /* ============================== KØB BØGER ============================== */
 
 .koebHeader {
@@ -778,8 +747,12 @@ nav {
 .breadcrumbs {
   display: flex;
   flex-direction: row;
-  padding: 30px 12px;
+  /*padding: 30px 12px;*/
   align-items: center;
+  position: absolute;
+  top: 0;
+  margin-top: 32.2vh;
+  padding-left: 12px;
 }
 
 .breadcrumbs p {
@@ -807,6 +780,40 @@ nav {
 .breadcrumbs a:last-child:after {
   display: none;
 }
+
+/* ------ FOOTER ------- */
+
+.footer {
+  background-color: var(--footerblue);
+  color: var(--headinggrey);
+  width: 100%;
+  padding: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social {
+  text-decoration: none;
+  color: var(--headinggrey);
+  padding: 2px;
+}
+
+.betaling {
+  width: 34px;
+  padding: 2px;
+}
+
+.social :hover {
+  opacity: 0.8;
+}
+
 
 /*==================== RESPONSIVE ====================*/
 
@@ -841,6 +848,11 @@ nav {
   .drop {
     top: 49px;
     right: -100px;
+  }
+
+  /* ------- FOOTER ------- */
+  .footer {
+    padding: 30px 10px;
   }
 }
 

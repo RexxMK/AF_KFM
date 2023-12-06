@@ -22,11 +22,9 @@ import Footer from "./components/Footer";
 import Breadcrumbs from "./components/Breadcrumbs";
 
 function App() {
-  
   return (
     <>
       <Header />
-      <Breadcrumbs />
 
       <div className="pageDisplay">
         <VenstreBokse />
