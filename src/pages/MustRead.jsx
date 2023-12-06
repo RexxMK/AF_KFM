@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 // RK & DK
 
@@ -51,6 +52,9 @@ export default function MustRead() {
       <div className="pageContainer">
         <div className="pageFlex">
           <div className="katUnderside">
+            <div className="breadcrumbsMobil">
+              <Breadcrumbs />
+            </div>
             <KategoriUnderside
               headingText={"Must Read"}
               katText={"Månedens Must Read hos KFM"}
