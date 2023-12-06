@@ -132,6 +132,7 @@ export default function Header() {
 
     return (
             <header>
+              {/*Søg wrap = første stribe med søg feltet */}
                 <section className="sog-wrap">
                     <div className="sog">
                         <form>
@@ -140,16 +141,26 @@ export default function Header() {
                         </form>
                     </div>
                 </section>
+
+              {/*Striben med logo billedet*/}
                 <section className="logo">
                     <div className="logo-wrap">
                         <img src={Logo}/>
                     </div>
                 </section>
+
+              {/*Navigationen*/}
                 <nav>
                     <div className="header-wrap">
+                       
+                      {/*Knappen som åbner burger menu'en,
+                      Er kun synlig i mindre skærme*/}
                         <button className="burger-menu" onClick={toggleTxtMenu}>
                             <MenuSharpIcon />
                         </button>
+
+                      {/*Venstre side af navigatione,
+                      den med kun tekst*/}
                         <div className="txt-menu" style={{ display: isMobile ? txtMenuDisplay : 'flex' }}>
                             <div className="menu-wrap">
                                 <a className="menupunkt">Forside</a>
@@ -163,10 +174,19 @@ export default function Header() {
                                 <a className="menupunkt">Eventkalender</a>
                             </div>
                         </div>
+
+                      {/*Højre siden af navigationen,
+                      Den med ikonerne*/}
                         <div className="icon-menu">
-                            <a className="iconpunkt profil" onClick={dropDownMenu}>
+                            
+                          {/*Profil wrap med drop down*/}
+                            <div className="iconpunkt profil" onClick={dropDownMenu}>
+                                
+                              {/*Profil knappens context*/}
                                 <p>Min Profil</p>
                                 <PersonSharpIcon/>
+                                
+                              {/*Drop downen med log ind og opret knapperne*/}
                                 <div style={{ display: dropDownDisplay }}>
                                   <section className="drop">
                                     <h1>Du er ikke logget ind</h1>
@@ -179,18 +199,28 @@ export default function Header() {
                                     <Link className="profilbtn" to="#" onClick={showOpretSlide}>Opret Profil</Link>
                                   </section>
                                 </div>
-                            </a>
+                            </div>
+
+                          {/*Slide in wrap,
+                          med log ind og opret*/}
                             <div className={logSlide || opretSlide ? 'profil-wrap active' : 'profil-wrap'}>
+                          
+                          {/*Log in sidebar - Slide in*/}
                               <section className={logSlide ? 'sidebar active' : 'sidebar'}>
                                 <CloseSharpIcon onClick={showLogSlide}/>
                                 <Login />
                               </section>
+
+                          {/*Opret bruger sidebar - Slide in*/}
                               <section className={opretSlide ? 'sidebar active' : 'sidebar'}>
                                 <CloseSharpIcon onClick={showOpretSlide}/>
                                 <Opret />
                               </section>
+                          {/*Mørk baggrund*/}
                               <span className="bg"></span>
                             </div>
+
+                          {/*Favorit knap*/}
                             <NavLink to="/favoritside" className="iconpunkt">
                                 <p>Dine Favoritter</p>
                                 <FavoriteSharpIcon/>

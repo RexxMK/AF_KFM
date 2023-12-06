@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
         console.log('Current path:', path);
 
         switch (path) {
-          case '':
+          case '/':
             return 'Køb bøger';
           case '/favoritside':
             return 'Favoritter';
