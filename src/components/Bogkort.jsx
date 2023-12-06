@@ -3,9 +3,7 @@ import { FaCartShopping } from "react-icons/fa6";
 import FavoritHjerte from "./FavoritHjerte";
 import { useNavigate } from "react-router-dom";
 
-
 // RK
-
 
 export default function Bogkort({ book }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
@@ -29,7 +27,6 @@ export default function Bogkort({ book }) {
     setIsEditing(false);
   };
 
-
   // DK & RK
   let favoritListe = [];
 
@@ -37,7 +34,6 @@ export default function Bogkort({ book }) {
   if (localStorage.getItem("favoritter")) {
     favoritListe = JSON.parse(localStorage.getItem("favoritter"));
   }
-
 
   // DK
   // Når der klikkes på en bogs billede eller forfatter/titel, skal brugeren navigeres til detaljesiden for den pågældende bog.
@@ -47,6 +43,7 @@ export default function Bogkort({ book }) {
     navigate(`seBog/${book.id}`);
   }
 
+  // DK & RK
   return (
     <div className="bogkortContainer">
       <div className="bogkortLike">
