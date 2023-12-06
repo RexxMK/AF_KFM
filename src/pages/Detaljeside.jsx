@@ -3,8 +3,11 @@
 import React, { useEffect, useState } from "react";
 import Detaljekort from "../components/Detaljekort";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export default function Detaljeside() {
+
+  // DK
   // useParams bruges til at hente URL-parametre fra den aktuelle route. Her til ruten med den pågældende bogs id.
   const params = useParams();
   const navigate = useNavigate();
@@ -24,6 +27,7 @@ export default function Detaljeside() {
       const response = await fetch(url);
       const data = await response.json();
       
+
       // book opdateres med den pågældende bogs data.
       setBook(data);
     }
@@ -95,6 +99,11 @@ export default function Detaljeside() {
             <button onClick={handlePrevious} disabled={findBookIndex() === 0}>Forrige</button>
             <button onClick={handleNext} disabled={findBookIndex() === kategoriList.length - 1}>Næste</button>
           </div>
+          <div className="breadcrumbsMobil">
+            <Breadcrumbs />
+          </div>
+
+          <Detaljekort key={book.id} book={book} />
         </div>
       </div>
     </>

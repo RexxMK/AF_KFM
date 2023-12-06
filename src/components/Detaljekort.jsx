@@ -5,6 +5,10 @@ import { FaCartShopping } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa6";
 import FavoritHjerte from "./FavoritHjerte";
 import Bogkort from "./Bogkort";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
+
 
 export default function Detaljekort({ book }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
@@ -79,15 +83,29 @@ export default function Detaljekort({ book }) {
       favoritListe = JSON.parse(localStorage.getItem("favoritter"));
     }
 
+
+  // For at links til relaterede bøger virker
+  const { bookId } = useParams();
+
+
+
+
+
   return (
   <div className="detaljekort">
     <div className="detaljekortContainer">
-      <div className="detaljekortImg">
-        <img src={book.billede} alt="Billede af bogcover" />
-      </div>
+      
+        
+        <div className="detaljekortImg">
+          <div className="detaljekortLikeMobil">
+            <FavoritHjerte bookid={book.id} />
+          </div>
+          <img src={book.billede} alt="Billede af bogcover" className="bogcoverImg" />
+        </div>
+      
       <div>
       <div className="detaljekortTitel">
-        <h2 style={{fontSize: "42px"}}>
+        <h2 className="detaljekortHeader">
           {book.forfatter}, {book.titel}
         </h2>
       </div>
@@ -105,7 +123,7 @@ export default function Detaljekort({ book }) {
           
         </div>
         <div className="lagerstatus">Lagerstatus: <FaCheck /> På lager</div>
-        <div className="detaljekortFlex">
+        <div className="detaljekortFlex detaljekortKobSamlet">
           <div
             className="whiteBox koebantal"
             style={{
@@ -117,6 +135,7 @@ export default function Detaljekort({ book }) {
               padding: "6px 12px",
               cursor: "pointer",
               marginLeft: "15px",
+              marginRight: "20px",
             }}
             onClick={handleBoxClick}
           >
@@ -162,18 +181,7 @@ export default function Detaljekort({ book }) {
                   style={{ color: "var(--katlightgrey)", width: "15px" }}
                 />
               </div>
-              <div
-                style={{
-                  backgroundColor: "var(--black)",
-                  fontSize: "12.25px",
-                  height: "32px",
-                  width: "90px",
-                  color: "var(--white)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
+              <div className="detaljekortKobKnap">
                 Køb
               </div>
             </button>
@@ -194,12 +202,14 @@ export default function Detaljekort({ book }) {
 
         
             <div className="katUnderside">
-              <h1 className="koebHeader">Relaterede produkter</h1>
+              <h1 className="koebHeader relateredeHeader">Relaterede produkter</h1>
 
               <div className="bogkortFlexbox">
 
                 {skyggeBogListe.map((book) => (
-                  <Bogkort key={book.id} book={book} />
+                  <Link key={book.id} to={`/detaljeside/${book.id}`} className="detaljesideLink">
+                    <Bogkort key={book.id} book={book} />
+                  </Link>
                 ))}
 
               </div>

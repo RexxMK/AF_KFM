@@ -109,9 +109,7 @@ export default function Header() {
       const s2 = book.forfatter.toLowerCase().includes(soegeTekst.toLowerCase());
 
       // Med s3 tjekkes om søgeteksten er inkluderet i beskrivelsen af en bog.
-      const s3 = book.beskrivelse.find((ord) =>
-        ord.toLowerCase().includes(soegeTekst.toLowerCase())
-      );
+      const s3 = book.beskrivelse.forfatter.toLowerCase().includes(soegeTekst.toLowerCase());
 
       // Hvis enten s1, s2 eller s3 er sand, eksisterer søgeteksten i bogens titel, forfatter eller beskrivelse.
       return s1 || s2 || s3;

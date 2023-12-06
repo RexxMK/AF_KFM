@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
+import Breadcrumbs from "../components/Breadcrumbs";
+
 // RK & DK
 
-
 export default function MustRead() {
-
-
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [books, setBooks] = useState([]);
@@ -39,7 +38,6 @@ export default function MustRead() {
     getBooks();
   }, []);
 
-
   // Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
 
   /* books er en liste over alle bøger og deres attributter, herunder "kategori". 
@@ -50,13 +48,16 @@ export default function MustRead() {
   const kategoriListe = books.filter((book) => 
     book.kategori.includes("must")
   );
+  const kategoriListe = books.filter((book) => book.kategori.includes("must"));
 
   return (
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          
           <div className="katUnderside">
+            <div className="breadcrumbsMobil">
+              <Breadcrumbs />
+            </div>
             <KategoriUnderside
               headingText={"Must Read"}
               katText={"Månedens Must Read hos KFM"}
@@ -64,7 +65,7 @@ export default function MustRead() {
             />
             <div className="bogkortFlexbox">
               {kategoriListe.map((book) => (
-                    <Bogkort key={book.id} book={book} />
+                <Bogkort key={book.id} book={book} />
               ))}
             </div>
           </div>

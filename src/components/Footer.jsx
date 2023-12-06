@@ -16,17 +16,19 @@ export default function Footer() {
         <>
             <div className="footer">
                 <div className="text">
-                    <p style={{fontWeight:"bold"}}>Kristian F. Møller</p>
-                    <p>Store Torv 5</p>
-                    <p>8000 Aarhus C</p>
-                    <p>Telefonnr.: 86130699</p>
-                    <p>E-mail: kfm@kfm.dk</p>
-                    <p>CVR-nummer: 13901880</p>
-                    <p>Sitemap</p> 
+                    <p style={{fontWeight:"bold", paddingRight:"15px"}}>Kristian F. Møller</p>
+                    <p style={{paddingRight:"15px"}}>Store Torv 5</p>
+                    <p style={{paddingRight:"15px"}}>8000 Aarhus C</p>
+                    <p style={{paddingRight:"15px"}}>Telefonnr.: 86130699</p>
+                    <p style={{paddingRight:"15px"}}>E-mail: kfm@kfm.dk</p>
+                    <p style={{paddingRight:"15px"}}>CVR-nummer: 13901880</p>
+                    <p style={{paddingRight:"15px"}}>Sitemap</p> 
                 </div>
+                <br />
                 <a href="https://www.facebook.com/KFMboghandleren" className="social"><FaFacebookSquare /> Facebook</a>
                 <a href="https://www.instagram.com/kfmboghandleren/" className="social"><FaInstagram /> Instagram</a>
                 <div>
+                    <br />
                     <img src={Dk} alt="" className="betaling"/>
                     <img src={Visa} alt="" className="betaling"/>
                     <img src={Mastercard} alt="" className="betaling"/>

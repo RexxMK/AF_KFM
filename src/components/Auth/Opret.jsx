@@ -48,7 +48,9 @@ export default function Opret() {
     };
 
     const getName = (e) => {
+        const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
         localStorage.setItem("name", JSON.stringify(name)); //Gemmer "name" i localStorage
+        setName(formattedName);
     };
 
     return(
@@ -63,6 +65,7 @@ export default function Opret() {
                     <h1>Opret Profil</h1>
                     <p className="size login-overskrift">Indtast dine informationer i felterne.</p>
                     <div className="login">
+                        <span className="line"></span>
                         <h6 className="size">Navn</h6>
                         <input 
                             className="input"

@@ -22,11 +22,9 @@ import Footer from "./components/Footer";
 import Breadcrumbs from "./components/Breadcrumbs";
 
 function App() {
-  
   return (
     <>
       <Header />
-      <Breadcrumbs />
 
       <div className="pageDisplay">
         <VenstreBokse />
@@ -75,6 +73,8 @@ function App() {
           <Route path="/boerneboeger/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/gavekort/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/moleskine/seBog/:bookId" element={<Detaljeside />} />
+
+          <Route path="/detaljeside/:bookId" element={<Detaljeside />} />
         </Routes>
       </div>
 
