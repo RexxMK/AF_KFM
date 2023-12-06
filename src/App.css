@@ -39,19 +39,19 @@ p {
 
 /* GENERELLE REGLER */
 .pageContainer {
-  width: 80%;
   display: flex;
-  justify-content: center;
+  width: 996px;
 }
 
-.pageFlex {
+/*.pageFlex {
   display: flex;
   width: 1260px;
-}
+}*/
 
 .pageDisplay {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: center;
 }
 
 /* BODY */
@@ -575,7 +575,6 @@ nav {
 
 .loggedin {
   font-size: 19.25px;
-
 }
 
 /* ------ FOOTER ------- */
@@ -793,19 +792,18 @@ nav {
 }
 
 .breadcrumbs a::after {
-  content: '/';
+  content: "/";
   margin-left: 4px;
 }
 
 .breadcrumbs a::before {
-  content: '/';
+  content: "/";
   margin-right: 4px;
 }
 
 .breadcrumbs a:last-child:after {
   display: none;
 }
-
 
 /*==================== RESPONSIVE ====================*/
 
