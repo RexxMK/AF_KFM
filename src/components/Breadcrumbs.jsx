@@ -7,7 +7,7 @@ export default function Breadcrumbs() {
         console.log('Current path:', path);
 
         switch (path) {
-          case '/':
+          case '':
             return 'Køb bøger';
           case '/favoritside':
             return 'Favoritter';
@@ -37,6 +37,10 @@ export default function Breadcrumbs() {
             return 'Gavekort';
           case '/moleskine':
             return 'Moleskine';
+          case '/mustread/seBog/5':
+            return 'Lærke Kløvedal, Sømærke';
+          case '/mustread/seBog':
+            return '/';
             
           default:
             return path;
@@ -54,7 +58,6 @@ export default function Breadcrumbs() {
         return (
           <div className="crumb" key={crumb}>
             <Link to={currentPath}>{crumbName}</Link>
-            {index < crumbs.length - 1 && ' / '}
           </div>
         );
       });
@@ -62,6 +65,7 @@ export default function Breadcrumbs() {
   return (
     <div className="breadcrumbs">
       <p>Forside</p>
+      <p className="split">/</p>
       {breadcrumbElements}
     </div>
   );

@@ -420,6 +420,8 @@ nav {
 
 /* ------- DETALJESIDE ------- */
 
+
+
 .detaljekort {
   display: flex;
   flex-direction: column;
@@ -780,18 +782,8 @@ nav {
   font-size: 0.8rem;
 }
 
-.breadcrumbs a::after {
-  content: '/';
-  margin-left: 4px;
-}
-
-.breadcrumbs a::before {
-  content: '/';
-  margin-right: 4px;
-}
-
-.breadcrumbs a:last-child:after {
-  display: none;
+.split {
+  padding: 0 5px 0 7px;
 }
 
 

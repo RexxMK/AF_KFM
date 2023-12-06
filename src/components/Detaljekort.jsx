@@ -79,9 +79,6 @@ export default function Detaljekort({ book }) {
       favoritListe = JSON.parse(localStorage.getItem("favoritter"));
     }
 
-
-  
-
   return (
   <div className="detaljekort">
     <div className="detaljekortContainer">

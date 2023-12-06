@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
-
-
 // RK & DK
 
 
@@ -52,7 +50,6 @@ export default function MustRead() {
   const kategoriListe = books.filter((book) => 
     book.kategori.includes("must")
   );
-
 
   return (
     <>
