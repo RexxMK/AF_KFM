@@ -878,6 +878,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
   }
 
   .menu-wrap {
@@ -1022,6 +1023,10 @@ nav {
 
   .detaljekortImg {
     height: auto;
+  }
+
+  .koebHeader {
+    font-size: 1.5625em;
   }
 
   .detaljekortImg img {
