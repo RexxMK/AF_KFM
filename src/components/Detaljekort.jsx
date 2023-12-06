@@ -84,6 +84,7 @@ export default function Detaljekort({ book }) {
     }
 
 
+  // For at links til relaterede bøger virker
   const { bookId } = useParams();
 
 
