@@ -469,7 +469,6 @@ nav {
 
 .detaljekortFlex {
   display: flex;
-  justify-content: space-between;
   padding-bottom: 21px;
 }
 
@@ -491,6 +490,10 @@ nav {
   margin-left: auto;
   margin-right: 30px;
   margin-top: 17px;
+}
+
+.detaljekortLikeMobil {
+  display: none;
 }
 
 .lagerstatus {
@@ -518,7 +521,7 @@ nav {
 
 .detaljesideDiv {
   padding-left: 10px;
-  padding-right: 30px;
+  padding-right: 10px;
 }
 
 .beskrivelseHeader {
@@ -536,7 +539,7 @@ nav {
   margin-top: 30px;
 }
 
-/* ------ LOGIN/OPRET PROFIL ------- */
+/* ---------- LOGIN/OPRET PROFIL ----------- */
 
 .log-in-container {
   display: flex;
@@ -568,10 +571,12 @@ nav {
 
 .size {
   font-size: 19.25px;
+  text-align: left;
 }
 
 .login-overskrift {
   padding: 30px 0px 60px 0px;
+  text-align: center;
 }
 
 .loggedin {
@@ -1026,6 +1031,11 @@ nav {
     width: 60%;
   }
 
+  .detaljekortImg {
+    position: relative;
+    width: 100%;
+  }
+
   .detaljekort {
     margin-left: 2%;
     margin-right: 2%;
@@ -1036,14 +1046,20 @@ nav {
   }
 
   .detaljekortLike {
-    position: relative;
-    right: 2%;
-    bottom: 380px;
+    display: none;
+  }
+
+  .detaljekortLikeMobil {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 40px;
   }
 
   .detaljekortHeader {
     font-size: 1.5625em;
     line-height: 1.35em;
+    padding-bottom: 10px;
   }
 
   .detaljekortTitel {
@@ -1052,5 +1068,10 @@ nav {
 
   .detaljekortPrisLike {
     margin-left: 0;
+  }
+
+  .relateredeHeader {
+    font-size: 1.5625em;
+    padding-bottom: 10px;
   }
 }
