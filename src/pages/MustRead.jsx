@@ -48,7 +48,6 @@ export default function MustRead() {
   const kategoriListe = books.filter((book) => 
     book.kategori.includes("must")
   );
-  const kategoriListe = books.filter((book) => book.kategori.includes("must"));
 
   return (
     <>

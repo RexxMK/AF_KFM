@@ -779,19 +779,7 @@ nav {
   padding: 0 5px 0 7px;
 
 }
-.breadcrumbs a::after {
-  content: "/";
-  margin-left: 4px;
-}
 
-.breadcrumbs a::before {
-  content: "/";
-  margin-right: 4px;
-}
-
-.breadcrumbs a:last-child:after {
-  display: none;
-}
 
 .breadcrumbsMobil {
   display: none;

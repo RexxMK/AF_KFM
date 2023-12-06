@@ -1,5 +1,4 @@
 // denne side er kodet af: EB, DK & SD
-
 import React, { useEffect, useState } from "react";
 import Detaljekort from "../components/Detaljekort";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
@@ -27,7 +26,6 @@ export default function Detaljeside() {
       const response = await fetch(url);
       const data = await response.json();
       
-
       // book opdateres med den pågældende bogs data.
       setBook(data);
     }
@@ -94,16 +92,16 @@ export default function Detaljeside() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
+          <section>
+            <div className="navigationButtons">
+              <button onClick={handlePrevious} disabled={findBookIndex() === 0}>Forrige</button>
+              <button onClick={handleNext} disabled={findBookIndex() === kategoriList.length - 1}>Næste</button>
+            </div>
+          </section>
           <Detaljekort key={book.id} book={book} />
-          <div className="navigationButtons">
-            <button onClick={handlePrevious} disabled={findBookIndex() === 0}>Forrige</button>
-            <button onClick={handleNext} disabled={findBookIndex() === kategoriList.length - 1}>Næste</button>
-          </div>
           <div className="breadcrumbsMobil">
             <Breadcrumbs />
           </div>
-
-          <Detaljekort key={book.id} book={book} />
         </div>
       </div>
     </>
