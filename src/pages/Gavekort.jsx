@@ -60,7 +60,6 @@ export default function Gavekort() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          <VenstreBokse />
           <div className="katUnderside">
             <KategoriUnderside
               headingText={"Gavekort"}

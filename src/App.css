@@ -566,38 +566,6 @@ nav {
 
 }
 
-/* ------ FOOTER ------- */
-
-.footer {
-  background-color: var(--footerblue);
-  color: var(--headinggrey);
-  width: 100%;
-  padding: 50px 400px;
-  font-size: 14px;
-  text-align: center;
-  line-height: 40px;
-}
-
-.text {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.social {
-  text-decoration: none;
-  color: var(--headinggrey);
-  padding: 2px;
-}
-
-.betaling {
-  width: 34px;
-  padding: 2px;
-}
-
 /* ============================== KØB BØGER ============================== */
 
 .koebHeader {
@@ -794,6 +762,39 @@ nav {
   display: none;
 }
 
+/* ------ FOOTER ------- */
+
+.footer {
+  background-color: var(--footerblue);
+  color: var(--headinggrey);
+  width: 100%;
+  padding: 50px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social {
+  text-decoration: none;
+  color: var(--headinggrey);
+  padding: 2px;
+}
+
+.betaling {
+  width: 34px;
+  padding: 2px;
+}
+
+.social :hover {
+  opacity: 0.8;
+}
+
 
 /*==================== RESPONSIVE ====================*/
 
@@ -828,6 +829,11 @@ nav {
   .drop {
     top: 49px;
     right: -100px;
+  }
+
+  /* ------- FOOTER ------- */
+  .footer {
+    padding: 30px 10px;
   }
 }
 
