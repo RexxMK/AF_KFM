@@ -48,7 +48,9 @@ export default function Opret() {
     };
 
     const getName = (e) => {
+        const formattedName = name.charAt(0).toUpperCase() + name.slice(1);
         localStorage.setItem("name", JSON.stringify(name)); //Gemmer "name" i localStorage
+        setName(formattedName);
     };
 
     return(
