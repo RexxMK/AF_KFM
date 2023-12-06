@@ -468,7 +468,6 @@ nav {
 
 .detaljekortFlex {
   display: flex;
-  justify-content: space-between;
   padding-bottom: 21px;
 }
 
@@ -490,6 +489,10 @@ nav {
   margin-left: auto;
   margin-right: 30px;
   margin-top: 17px;
+}
+
+.detaljekortLikeMobil {
+  display: none;
 }
 
 .lagerstatus {
@@ -517,7 +520,7 @@ nav {
 
 .detaljesideDiv {
   padding-left: 10px;
-  padding-right: 30px;
+  padding-right: 10px;
 }
 
 .beskrivelseHeader {
@@ -996,6 +999,11 @@ nav {
     width: 60%;
   }
 
+  .detaljekortImg {
+    position: relative;
+    width: 100%;
+  }
+
   .detaljekort {
     margin-left: 2%;
     margin-right: 2%;
@@ -1004,16 +1012,22 @@ nav {
   .detaljesideDiv {
     padding-right: 0;
   }
-  
+
   .detaljekortLike {
-    position: relative;
-    right: 2%;
-    bottom: 380px;
+    display: none;
+  }
+  
+  .detaljekortLikeMobil {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 40px;
   }
 
   .detaljekortHeader {
     font-size: 1.5625em;
     line-height: 1.35em;
+    padding-bottom: 10px;
   }
 
   .detaljekortTitel {
@@ -1023,6 +1037,12 @@ nav {
   .detaljekortPrisLike {
     margin-left: 0;
   }
+
+  .relateredeHeader {
+    font-size: 1.5625em;
+    padding-bottom: 10px;
+  }
+
 
 
   

@@ -85,9 +85,15 @@ export default function Detaljekort({ book }) {
   return (
   <div className="detaljekort">
     <div className="detaljekortContainer">
-      <div className="detaljekortImg">
-        <img src={book.billede} alt="Billede af bogcover" className="bogcoverImg" />
-      </div>
+      
+        
+        <div className="detaljekortImg">
+          <div className="detaljekortLikeMobil">
+            <FavoritHjerte bookid={book.id} />
+          </div>
+          <img src={book.billede} alt="Billede af bogcover" className="bogcoverImg" />
+        </div>
+      
       <div>
       <div className="detaljekortTitel">
         <h2 className="detaljekortHeader">
@@ -120,6 +126,7 @@ export default function Detaljekort({ book }) {
               padding: "6px 12px",
               cursor: "pointer",
               marginLeft: "15px",
+              marginRight: "20px",
             }}
             onClick={handleBoxClick}
           >
@@ -186,7 +193,7 @@ export default function Detaljekort({ book }) {
 
         
             <div className="katUnderside">
-              <h1 className="koebHeader">Relaterede produkter</h1>
+              <h1 className="koebHeader relateredeHeader">Relaterede produkter</h1>
 
               <div className="bogkortFlexbox">
 
