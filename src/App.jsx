@@ -73,6 +73,8 @@ function App() {
           <Route path="/boerneboeger/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/gavekort/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/moleskine/seBog/:bookId" element={<Detaljeside />} />
+
+          <Route path="/detaljeside/:bookId" element={<Detaljeside />} />
         </Routes>
       </div>
 

@@ -539,6 +539,10 @@ nav {
   margin-top: 30px;
 }
 
+.detaljesideLink {
+  text-decoration: none;
+}
+
 /* ---------- LOGIN/OPRET PROFIL ----------- */
 
 .log-in-container {
