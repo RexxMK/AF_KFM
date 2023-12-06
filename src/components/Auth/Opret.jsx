@@ -65,6 +65,7 @@ export default function Opret() {
                     <h1>Opret Profil</h1>
                     <p className="size login-overskrift">Indtast dine informationer i felterne.</p>
                     <div className="login">
+                        <span className="line"></span>
                         <h6 className="size">Navn</h6>
                         <input 
                             className="input"
