@@ -290,6 +290,39 @@ nav {
   padding-bottom: 15px;
 }
 
+/* SORTERING */
+.katSort {
+  position: relative;
+  display: inline-block;
+}
+
+.katSort button {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.katSortBy {
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.katSortBy span {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.katSortBy span:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
 /* BOGKORT */
 .bogkortContainer {
   width: 249px;
@@ -446,7 +479,9 @@ nav {
   flex-direction: row;
 }
 
-.next, .pre, .deco-iconer  {
+.next,
+.pre,
+.deco-iconer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -455,7 +490,8 @@ nav {
   cursor: pointer;
 }
 
-.next p, .pre p {
+.next p,
+.pre p {
   color: var(--darkgrey);
   font-size: 0.65rem;
   background-color: var(--katlightgrey);
@@ -484,14 +520,16 @@ nav {
   padding-left: 12px;
 }
 
-.next svg, .pre svg {
-  font-size: 1.6rem; 
+.next svg,
+.pre svg {
+  font-size: 1.6rem;
   padding: 5px;
   color: var(--darkgrey);
   background-color: var(--katdarkgrey);
 }
 
-.next:disabled, .pre:disabled {
+.next:disabled,
+.pre:disabled {
   display: none;
 }
 
@@ -849,9 +887,7 @@ nav {
 
 .split {
   padding: 0 5px 0 7px;
-
 }
-
 
 .breadcrumbsMobil {
   display: none;
@@ -1179,37 +1215,40 @@ nav {
     font-size: 1.5625em;
     padding-bottom: 10px;
   }
-  
+
   .btn-wrap {
     flex-direction: column;
   }
-  
+
   .knapper {
     margin-bottom: 16px;
     width: 100%;
   }
-  
-  .deco-iconer  {
+
+  .deco-iconer {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .deco-iconer svg {
     margin-left: 0;
     width: 100%;
     margin-bottom: 10px;
   }
-  
-  .next, .pre {
+
+  .next,
+  .pre {
     width: 50%;
     justify-content: space-between;
   }
 
-  .next p, .pre p {
+  .next p,
+  .pre p {
     width: 100%;
-  } 
-  
-  .next:disabled, .pre:disabled {
+  }
+
+  .next:disabled,
+  .pre:disabled {
     display: none;
   }
 }

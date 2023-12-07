@@ -62,7 +62,7 @@ export default function Bogkort({ book }) {
       <div className="bogkortFooter">
         <div className="bogkortFlex">
           <div className="bogkortPris">
-            <h2>{book.pris}</h2>
+            <h2>{book.pris} DKK</h2>
             <p>(inkl. moms)</p>
           </div>
         </div>
