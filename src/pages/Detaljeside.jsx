@@ -39,7 +39,7 @@ export default function Detaljeside() {
   }, [url]);
 
 
-
+//SD
   useEffect(() => {
     const currentPath = location.pathname;
   
@@ -134,8 +134,8 @@ export default function Detaljeside() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-          <section className="bnt-sec">
-            <div className="bnt-wrap">
+          <section className="btn-sec">
+            <div className="btn-wrap">
             <section className="knapper">
               <button className="pre" onClick={handlePrevious} disabled={findBookIndex() === 0}>
                 <ArrowBackRoundedIcon />
@@ -151,7 +151,7 @@ export default function Detaljeside() {
               <FaDownload />
             </section>
             </div>
-            <span className="line"></span>
+            <span className="line" id="linje"></span>
           </section>
           <Detaljekort key={book.id} book={book} />
           <div className="breadcrumbsMobil">
