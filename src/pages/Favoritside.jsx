@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import KategoriUnderside from "../components/KategoriUnderside";
 import Bogkort from "../components/Bogkort";
 
 export default function Favoritside() {
