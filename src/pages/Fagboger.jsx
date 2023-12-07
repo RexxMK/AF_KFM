@@ -3,13 +3,9 @@ import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
 import Breadcrumbs from "../components/Breadcrumbs";
 
-
 // DK & RK
 
-
 export default function Fagboger() {
-
-    
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [books, setBooks] = useState([]);
@@ -42,7 +38,6 @@ export default function Fagboger() {
     getBooks();
   }, []);
 
-
   // Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
 
   /* books er en liste over alle bøger og deres attributter, herunder "kategori". 
@@ -50,10 +45,9 @@ export default function Fagboger() {
   Hvis en bog indeholder tekststrengen fagboger i kategoriattributten returneres true. Ellers false.
   Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
 
-  const kategoriListe = books.filter((book) => 
+  const kategoriListe = books.filter((book) =>
     book.kategori.includes("fagboger")
   );
-
 
   return (
     <>
@@ -68,11 +62,15 @@ export default function Fagboger() {
               katText={""}
               antalText={"Viser 48 af 199 produkter"}
             />
-            <div className="bogkortFlexbox">
-              {kategoriListe.map((book) => (
-                <Bogkort key={book.id} book={book} />
-              ))}
-            </div>
+            {isBooks ? (
+              <div className="bogkortFlexbox">
+                {kategoriListe.map((book) => (
+                  <Bogkort key={book.id} book={book} />
+                ))}
+              </div>
+            ) : (
+              <p className="tomSideTxt">Ingen bøger at vise</p>
+            )}
           </div>
         </div>
       </div>

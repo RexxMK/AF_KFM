@@ -45,10 +45,8 @@ export default function MustRead() {
   Hvis en bog indeholder tekststrengen must (vi har ingen gavekort i JSON-filen, så dette er bare som eksempel) i kategoriattributten returneres true. Ellers false.
   Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
 
-  const kategoriListe = books.filter((book) => 
-    book.kategori.includes("must")
-  );
   const kategoriListe = books.filter((book) => book.kategori.includes("must"));
+  /*const kategoriListe = books.filter((book) => book.kategori.includes("must"));*/
 
   return (
     <>
@@ -63,11 +61,15 @@ export default function MustRead() {
               katText={"Månedens Must Read hos KFM"}
               antalText={"Viser 18 produkter"}
             />
-            <div className="bogkortFlexbox">
-              {kategoriListe.map((book) => (
-                <Bogkort key={book.id} book={book} />
-              ))}
-            </div>
+            {isBooks ? (
+              <div className="bogkortFlexbox">
+                {kategoriListe.map((book) => (
+                  <Bogkort key={book.id} book={book} />
+                ))}
+              </div>
+            ) : (
+              <p className="tomSideTxt">Ingen bøger at vise</p>
+            )}
           </div>
         </div>
       </div>

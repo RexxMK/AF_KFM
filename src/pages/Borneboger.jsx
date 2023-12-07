@@ -3,13 +3,9 @@ import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
 import Breadcrumbs from "../components/Breadcrumbs";
 
-
 // DK & RK
 
-
 export default function Borneboger() {
-
-    
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [books, setBooks] = useState([]);
@@ -42,17 +38,14 @@ export default function Borneboger() {
     getBooks();
   }, []);
 
-// Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
+  // Der laves en skyggeliste for den pågældende kategori, som filterer efter kategori.
 
-/* books er en liste over alle bøger og deres attributter, herunder "kategori". 
+  /* books er en liste over alle bøger og deres attributter, herunder "kategori". 
   Med filter-metoden oprettes en ny liste ved at filtrere elementerne i books-listen baseret på betingelsen book.kategori.includes(" ").
   Hvis en bog indeholder tekststrengen barn i kategoriattributten returneres true. Ellers false.
   Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
 
-const kategoriListe = books.filter((book) => 
-    book.kategori.includes("barn")
-  );
-
+  const kategoriListe = books.filter((book) => book.kategori.includes("barn"));
 
   return (
     <>
@@ -67,11 +60,15 @@ const kategoriListe = books.filter((book) =>
               katText={""}
               antalText={"Viser 46 produkter"}
             />
-            <div className="bogkortFlexbox">
-              {kategoriListe.map((book) => (
-                <Bogkort key={book.id} book={book} />
-              ))}
-            </div>
+            {isBooks ? (
+              <div className="bogkortFlexbox">
+                {kategoriListe.map((book) => (
+                  <Bogkort key={book.id} book={book} />
+                ))}
+              </div>
+            ) : (
+              <p className="tomSideTxt">Ingen bøger at vise</p>
+            )}
           </div>
         </div>
       </div>
