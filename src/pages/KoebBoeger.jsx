@@ -27,6 +27,7 @@ export default function KoebBoeger() {
             </div>
             <h1 className="koebHeader">Udvalgte bøger fra KFM</h1>
             <div className="kategoriContainer">
+              
               <NavLink to="mustread" className="kategoriCard">
                 <div className="kategoriCard">
                   <img src={must} alt="Must read" className="kategoriImg" />
