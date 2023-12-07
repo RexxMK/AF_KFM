@@ -1,9 +1,12 @@
 // denne side er kodet af: EB, DK & SD
-
 import React, { useEffect, useState } from "react";
 import Detaljekort from "../components/Detaljekort";
 import { useParams, useNavigate, useLocation } from "react-router-dom";
 import Breadcrumbs from "../components/Breadcrumbs";
+import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
+import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
+import MailOutlineSharpIcon from '@mui/icons-material/MailOutlineSharp';
+import { FaDownload } from "react-icons/fa";
 
 export default function Detaljeside() {
 
@@ -27,7 +30,6 @@ export default function Detaljeside() {
       const response = await fetch(url);
       const data = await response.json();
       
-
       // book opdateres med den pågældende bogs data.
       setBook(data);
     }
@@ -36,20 +38,29 @@ export default function Detaljeside() {
     // useEffect-hooket skal køre hver gang værdien af url ændres, altså når der klikkes på et nyt bogkort.
   }, [url]);
 
+
+//SD
   useEffect(() => {
+    const currentPath = location.pathname;
+  
     async function getBooks() {
       const booksUrl =
         "https://advanced-frontend-71bba-default-rtdb.europe-west1.firebasedatabase.app/books.json";
       const response = await fetch(booksUrl);
       const data = await response.json();
+  
       if (data !== null) {
         const booksArray = Object.keys(data).map((key) => ({
           id: key,
           ...data[key],
         }));
+  
+        const currentCategory = getCategoryFromPath(currentPath);
+  
         const filteredList = booksArray.filter((book) =>
-          book.kategori.includes("must")
+          book.kategori.includes(currentCategory)
         );
+  
         if (filteredList.length > 0) {
           setKategoriList(filteredList);
           setIsBooks(true);
@@ -58,8 +69,11 @@ export default function Detaljeside() {
         }
       }
     }
+  
     getBooks();
-  }, []);
+  }, [location.pathname]);
+  
+  
 
   const findBookIndex = () => {
     return kategoriList.findIndex((b) => b.id === params.bookId);
@@ -90,20 +104,59 @@ export default function Detaljeside() {
     return "";
   };
 
+  const getCategoryFromPath = (pathname) => {
+    const parts = pathname.split("/");
+    const categoryIndex = parts.indexOf("");
+    if (categoryIndex !== -1 && categoryIndex < parts.length - 1) {
+      const urlCategory = parts[categoryIndex + 1];
+      console.log("URL Category:", urlCategory);
+      const categoryMappings = {
+        "mustread": "must",
+        "ugenstilbud": "tilbud",
+        "nyegodeboeger": "nye",
+        "signeredeboeger": "signeret",
+        "laeseklubbenlaeser": "klub",
+        "skoenlitteratur": "skonlitteratur",
+        "biografier": "biografier",
+        "lyrik": "lyrik",
+        "spaending": "spaending",
+        "fagboeger": "fagboger",
+        "boerneboeger": "barn",
+        "gavekort": "fagboger",
+        "moleskine": "barn"
+      };
+      return categoryMappings[urlCategory] || urlCategory;
+    }
+    return "";
+  };
+
   return (
     <>
       <div className="pageContainer">
         <div className="pageFlex">
+          <section className="btn-sec">
+            <div className="btn-wrap">
+            <section className="knapper">
+              <button className="pre" onClick={handlePrevious} disabled={findBookIndex() === 0}>
+                <ArrowBackRoundedIcon />
+                <p>Forrige</p>
+              </button>
+              <button className="next" onClick={handleNext} disabled={findBookIndex() === kategoriList.length - 1}>
+                <p>Næste</p>
+                <ArrowForwardRoundedIcon />
+              </button>
+            </section>
+            <section className="deco-iconer">
+              <MailOutlineSharpIcon />
+              <FaDownload />
+            </section>
+            </div>
+            <span className="line" id="linje"></span>
+          </section>
           <Detaljekort key={book.id} book={book} />
-          <div className="navigationButtons">
-            <button onClick={handlePrevious} disabled={findBookIndex() === 0}>Forrige</button>
-            <button onClick={handleNext} disabled={findBookIndex() === kategoriList.length - 1}>Næste</button>
-          </div>
           <div className="breadcrumbsMobil">
             <Breadcrumbs />
           </div>
-
-          <Detaljekort key={book.id} book={book} />
         </div>
       </div>
     </>

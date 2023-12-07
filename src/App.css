@@ -421,7 +421,79 @@ nav {
 
 /* ------- DETALJESIDE ------- */
 
+.btn-sec {
+  display: flex;
+  flex-direction: column;
+  width: 97.4%;
+  margin-bottom: 16px;
+  margin-left: 10px;
+}
 
+#linje {
+  width: 100%;
+}
+
+.btn-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.knapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.next, .pre, .deco-iconer  {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.next p, .pre p {
+  color: var(--darkgrey);
+  font-size: 0.65rem;
+  background-color: var(--katlightgrey);
+  padding: 6px 5px;
+  border: 1px solid var(--katdarkgrey);
+}
+
+.deco-iconer svg {
+  color: var(--darkgrey);
+  font-size: 1.5rem;
+  background-color: var(--katlightgrey);
+  border: 1px solid var(--katdarkgrey);
+  padding: 4px;
+  margin-left: 5px;
+}
+
+.deco-iconer svg:last-child {
+  padding: 6px;
+}
+
+.next p {
+  padding-right: 12px;
+}
+
+.pre p {
+  padding-left: 12px;
+}
+
+.next svg, .pre svg {
+  font-size: 1.6rem; 
+  padding: 5px;
+  color: var(--darkgrey);
+  background-color: var(--katdarkgrey);
+}
+
+.next:disabled, .pre:disabled {
+  display: none;
+}
 
 .detaljekort {
   display: flex;
@@ -779,19 +851,7 @@ nav {
   padding: 0 5px 0 7px;
 
 }
-.breadcrumbs a::after {
-  content: "/";
-  margin-left: 4px;
-}
 
-.breadcrumbs a::before {
-  content: "/";
-  margin-right: 4px;
-}
-
-.breadcrumbs a:last-child:after {
-  display: none;
-}
 
 .breadcrumbsMobil {
   display: none;
@@ -1118,5 +1178,38 @@ nav {
   .relateredeHeader {
     font-size: 1.5625em;
     padding-bottom: 10px;
+  }
+  
+  .btn-wrap {
+    flex-direction: column;
+  }
+  
+  .knapper {
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  
+  .deco-iconer  {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .deco-iconer svg {
+    margin-left: 0;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .next, .pre {
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .next p, .pre p {
+    width: 100%;
+  } 
+  
+  .next:disabled, .pre:disabled {
+    display: none;
   }
 }

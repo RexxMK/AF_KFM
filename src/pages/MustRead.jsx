@@ -46,7 +46,6 @@ export default function MustRead() {
   Hvis der returneres true, vises elementet i skyggelisten. Ellers ikke. */
 
   const kategoriListe = books.filter((book) => book.kategori.includes("must"));
-  /*const kategoriListe = books.filter((book) => book.kategori.includes("must"));*/
 
   return (
     <>
