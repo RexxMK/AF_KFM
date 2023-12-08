@@ -68,7 +68,7 @@ export default function Detaljekort({ book }) {
     getBooks();
   }, []);
 
-
+  
   // Vi laver en skyggeliste til visning af 4 relaterede produkter nederst på detaljesiden.
   useEffect(() => {
     const antalRelaterede = 4;

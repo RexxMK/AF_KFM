@@ -59,6 +59,8 @@ export default function Nye() {
               headingText={"Nye gode bøger"}
               katText={"Nye bøger vi glæder os til at læse - november"}
               antalText={"Viser 13 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

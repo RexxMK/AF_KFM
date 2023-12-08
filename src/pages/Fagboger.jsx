@@ -61,6 +61,8 @@ export default function Fagboger() {
               headingText={"Fagbøger"}
               katText={""}
               antalText={"Viser 48 af 199 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

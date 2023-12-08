@@ -275,7 +275,7 @@ nav {
   padding-right: 1em;
 }
 
-/* KATEGORI UNDERSIDE */
+/* ========================= KATEGORI UNDERSIDE ======================== */
 .katHeading {
   padding-left: 10px;
 }
@@ -290,7 +290,28 @@ nav {
   padding-bottom: 15px;
 }
 
-/* BOGKORT */
+/* ======================= SORTERING ======================= */
+.katSort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.katSortKnap {
+  display: flex;
+  justify-content: right;
+  margin-right: 10px;
+}
+
+.katSortKnap select {
+  width: 95px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--headinggrey);
+  margin-left: 5px;
+  position: relative;
+}
+
+/* ================== BOGKORT =================== */
 .bogkortContainer {
   width: 249px;
   padding-left: 10px;
@@ -401,7 +422,7 @@ nav {
   padding-top: 15px;
 }
 
-/* Hjerte */
+/* ====================== Hjerte ======================== */
 .bogkortLike {
   position: absolute;
   margin-left: 186px;
@@ -418,6 +439,14 @@ nav {
 .tomSideTxt {
   padding-left: 10px;
 }
+
+
+/* ==================== Favoritter ===================*/
+  
+.favoritMobilTxt {
+  display: none;
+}
+
 
 /* ------- DETALJESIDE ------- */
 
@@ -446,7 +475,9 @@ nav {
   flex-direction: row;
 }
 
-.next, .pre, .deco-iconer  {
+.next,
+.pre,
+.deco-iconer {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -455,7 +486,8 @@ nav {
   cursor: pointer;
 }
 
-.next p, .pre p {
+.next p,
+.pre p {
   color: var(--darkgrey);
   font-size: 0.65rem;
   background-color: var(--katlightgrey);
@@ -484,14 +516,16 @@ nav {
   padding-left: 12px;
 }
 
-.next svg, .pre svg {
-  font-size: 1.6rem; 
+.next svg,
+.pre svg {
+  font-size: 1.6rem;
   padding: 5px;
   color: var(--darkgrey);
   background-color: var(--katdarkgrey);
 }
 
-.next:disabled, .pre:disabled {
+.next:disabled,
+.pre:disabled {
   display: none;
 }
 
@@ -849,9 +883,7 @@ nav {
 
 .split {
   padding: 0 5px 0 7px;
-
 }
-
 
 .breadcrumbsMobil {
   display: none;
@@ -1040,6 +1072,37 @@ nav {
     font-size: 16px;
   }
 
+  /* ================== KATEGORI UNDERSIDE =================== */
+  .katHeading p {
+    padding-bottom: 5px;
+  }
+
+  .katSort {
+    flex-direction: column-reverse;
+  }
+
+  .katSortKnap {
+    flex-direction: column;
+    justify-content: left;
+    margin-right: 0;
+    padding-bottom: 0px;
+  }
+
+  .katSortKnap select {
+    width: 45vw;
+    height: 4vh;
+    font-size: 12px;
+    font-weight: 100;
+    padding-left: 8px;
+    margin: 0;
+    position: relative;
+    border: 1px solid var(--katlightgrey);
+  }
+
+  .katSortField {
+    height: 45px;
+  }
+
   /* ========= BREADCRUMBS ========== */
   .breadcrumbsMobil {
     display: block;
@@ -1185,42 +1248,51 @@ nav {
     font-size: 1.5625em;
     padding-bottom: 10px;
   }
-  
+
   .btn-wrap {
     flex-direction: column;
   }
-  
+
   .knapper {
     margin-bottom: 16px;
     width: 100%;
   }
-  
-  .deco-iconer  {
+
+  .deco-iconer {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .deco-iconer svg {
     margin-left: 0;
     width: 100%;
     margin-bottom: 10px;
   }
-  
-  .next, .pre {
+
+  .next,
+  .pre {
     width: 50%;
     justify-content: space-between;
   }
 
-  .next p, .pre p {
+  .next p,
+  .pre p {
     width: 100%;
-  } 
-  
-  .next:disabled, .pre:disabled {
+  }
+
+  .next:disabled,
+  .pre:disabled {
     display: none;
   }
 
   /* ======================== FAVORITSIDE ========================= */
   .pageContainer{
     min-height: 350px;
+  }
+  /* ==================== Favoritter ===================*/
+
+  .favoritMobilTxt {
+    display: block;
+    margin-bottom: 30px;
   }
 }

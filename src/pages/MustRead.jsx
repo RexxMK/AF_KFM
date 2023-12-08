@@ -59,6 +59,8 @@ export default function MustRead() {
               headingText={"Must Read"}
               katText={"Månedens Must Read hos KFM"}
               antalText={"Viser 18 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

@@ -61,6 +61,8 @@ export default function Tilbud() {
               headingText={"Ugens tilbud"}
               katText={"Ugens tilbud hos KFM"}
               antalText={"Viser 1 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

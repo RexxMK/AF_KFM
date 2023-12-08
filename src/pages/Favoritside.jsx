@@ -1,12 +1,16 @@
 import { useEffect, useState } from "react";
-import KategoriUnderside from "../components/KategoriUnderside";
 import Bogkort from "../components/Bogkort";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 export default function Favoritside() {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [data, setData] = useState([]);
   const [isBooks, setIsBooks] = useState(true);
+
+  const [anbefalingerListe, setAnbefalingerListe] = useState([]);
+  
 
   useEffect(() => {
     async function getBooks() {
@@ -25,6 +29,7 @@ export default function Favoritside() {
           ...data[key],
         }));
         setData(booksArray);
+        setAnbefalingerListe(booksArray);
       }
 
       //Hvis der ikke er nogen data tilgængelig, opdateres "isBooks" til "false" for at vise en meddelelse om, at der ikke er noget at vise.
@@ -34,6 +39,17 @@ export default function Favoritside() {
     }
     getBooks();
   }, []);
+
+
+  // Vi laver en skyggeliste til visning af 4 anbefalede produkter nederst på favoritsiden.
+  useEffect(() => {
+    const antalAnbefalinger = 4;
+    setAnbefalingerListe(data.slice(0, antalAnbefalinger));
+  }, [data]);
+
+  // For at links til anbefalede bøger virker
+  const { bookId } = useParams();
+
 
   // favoritListe defineres som et tomt array.
   let favoritListe = [];
@@ -52,22 +68,40 @@ export default function Favoritside() {
     <>
       <div className="pageContainer">
         <div className="pageFlex">
-        <div className="katUnderside">
-        <h1 className="koebHeader">Mine favoritter</h1>
+          <div className="katUnderside">
+            <h1 className="koebHeader">Mine favoritter</h1>
             {isBooks && skyggeFavoritListe.length > 0 ? (
-              <div className="bogkortFlexbox">
-                {skyggeFavoritListe.map((book) => (
-                  <Bogkort key={book.id} book={book} />
-                ))}
-              </div>
+              <div>
+                <div className="bogkortFlexbox">
+                  <p className="favoritMobilTxt tomSideTxt">Scroll ned for at se anbefalinger til dig.</p>
+                  {skyggeFavoritListe.map((book) => (
+                    <Bogkort key={book.id} book={book} />
+                  ))}
+                </div>
+
+                <div className="relateredeDiv">
+                  <div className="katUnderside">
+                    <h1 className="koebHeader relateredeHeader">Anbefalinger til dig</h1>
+                    <div className="bogkortFlexbox">
+                      {anbefalingerListe.map((book) => (
+                        <Link key={book.id} to={`/detaljeside/${book.id}`} className="detaljesideLink">
+                          <Bogkort key={book.id} book={book} />
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div> 
+              </div> 
+
+
             ) : (
               <p className="tomSideTxt">
-                Du har ikke tilføjet nogen favoritter
+                Du har ikke tilføjet nogen favoritter.
               </p>
             )}
           </div>
-          </div>
         </div>
+      </div>
     </>
   );
 }
