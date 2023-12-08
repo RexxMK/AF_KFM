@@ -61,6 +61,8 @@ export default function Gavekort() {
               headingText={"Gavekort"}
               katText={"Køb et gavekort til Kristian F. Møller"}
               antalText={"Viser 7 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

@@ -61,6 +61,8 @@ export default function Laseklub() {
                 "Vi lægger hus til tre læseklubber, som mødes en gang om måneden og taler om en fælles valgt bog. Her er et udpluk af hvad vi har læst. "
               }
               antalText={"Viser 23 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

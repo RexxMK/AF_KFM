@@ -59,6 +59,8 @@ export default function Lyrik() {
               headingText={"Lyrik"}
               katText={""}
               antalText={"Viser 32 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

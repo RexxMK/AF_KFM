@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoIosArrowDown } from "react-icons/io";
 
 // RK
 export default function KategoriUnderside({
@@ -43,16 +44,20 @@ export default function KategoriUnderside({
       <div className="katHeading">
         <h1>{headingText}</h1>
         <p>{katText}</p>
-        <p>{antalText}</p>
         <div className="katSort">
-          <p>Sorter efter:</p>
-          <select onChange={sortBooks} defaultValue="mostSold">
-            <option value="titel">Titel</option>
-            <option value="prisL">Pris (lav)</option>
-            <option value="prisH">Pris (høj)</option>
-            <option value="dato">Dato</option>
-            <option value="mostSold">Mest købte</option>
-          </select>
+          <p>{antalText}</p>
+          <div className="katSortKnap">
+            <p>Sorter efter:</p>
+            <div className="katSortField">
+              <select onChange={sortBooks} defaultValue="mostSold">
+                <option value="titel">Titel</option>
+                <option value="prisL">Pris (lav)</option>
+                <option value="prisH">Pris (høj)</option>
+                <option value="dato">Dato</option>
+                <option value="mostSold">Mest købte</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
     </div>

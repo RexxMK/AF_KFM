@@ -59,6 +59,8 @@ export default function Borneboger() {
               headingText={"Børnebøger"}
               katText={""}
               antalText={"Viser 46 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

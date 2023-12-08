@@ -61,6 +61,8 @@ export default function Spanding() {
               headingText={"Spænding"}
               katText={""}
               antalText={"Viser 22 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

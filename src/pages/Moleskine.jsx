@@ -59,6 +59,8 @@ export default function Moleskine() {
               headingText={"Moleskine notesbøger og kalendere"}
               katText={""}
               antalText={"Viser 7 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

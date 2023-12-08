@@ -61,6 +61,8 @@ export default function Skonlitteratur() {
               headingText={"Skønlitteratur"}
               katText={""}
               antalText={"Viser 48 af 339 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

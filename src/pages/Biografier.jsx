@@ -61,6 +61,8 @@ export default function Biografier() {
               headingText={"Biografier"}
               katText={""}
               antalText={"Viser 48 af 81 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">

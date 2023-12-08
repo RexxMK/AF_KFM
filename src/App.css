@@ -275,7 +275,7 @@ nav {
   padding-right: 1em;
 }
 
-/* KATEGORI UNDERSIDE */
+/* ========================= KATEGORI UNDERSIDE ======================== */
 .katHeading {
   padding-left: 10px;
 }
@@ -290,40 +290,28 @@ nav {
   padding-bottom: 15px;
 }
 
-/* SORTERING */
+/* ======================= SORTERING ======================= */
 .katSort {
+  display: flex;
+  justify-content: space-between;
+}
+
+.katSortKnap {
+  display: flex;
+  justify-content: right;
+  margin-right: 10px;
+}
+
+.katSortKnap select {
+  width: 95px;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--headinggrey);
+  margin-left: 5px;
   position: relative;
-  display: inline-block;
 }
 
-.katSort button {
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-
-.katSortBy {
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 120px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.katSortBy span {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: black;
-}
-
-.katSortBy span:hover {
-  background-color: #f1f1f1;
-  cursor: pointer;
-}
-
-/* BOGKORT */
+/* ================== BOGKORT =================== */
 .bogkortContainer {
   width: 249px;
   padding-left: 10px;
@@ -434,7 +422,7 @@ nav {
   padding-top: 15px;
 }
 
-/* Hjerte */
+/* ====================== Hjerte ======================== */
 .bogkortLike {
   position: absolute;
   margin-left: 186px;
@@ -1068,6 +1056,37 @@ nav {
 
   .kategoriTxt {
     font-size: 16px;
+  }
+
+  /* ================== KATEGORI UNDERSIDE =================== */
+  .katHeading p {
+    padding-bottom: 5px;
+  }
+
+  .katSort {
+    flex-direction: column-reverse;
+  }
+
+  .katSortKnap {
+    flex-direction: column;
+    justify-content: left;
+    margin-right: 0;
+    padding-bottom: 0px;
+  }
+
+  .katSortKnap select {
+    width: 45vw;
+    height: 4vh;
+    font-size: 12px;
+    font-weight: 100;
+    padding-left: 8px;
+    margin: 0;
+    position: relative;
+    border: 1px solid var(--katlightgrey);
+  }
+
+  .katSortField {
+    height: 45px;
   }
 
   /* ========= BREADCRUMBS ========== */

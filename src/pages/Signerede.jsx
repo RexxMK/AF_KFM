@@ -63,6 +63,8 @@ export default function Signerede() {
                 "Signerede bøger fra nogle af vores mange forfatterbesøg i boghandlen"
               }
               antalText={"Viser 8 produkter"}
+              books={books}
+              setBooks={setBooks}
             />
             {isBooks ? (
               <div className="bogkortFlexbox">
