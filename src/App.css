@@ -987,6 +987,12 @@ nav {
   .venstreBokse {
     display: none;
   }
+
+  /* ======================== FAVORITSIDE ========================= */
+
+  .pageContainer{
+    min-height: 400px;
+  }
 }
 
 @media only screen and (max-width: 766px) {
@@ -1211,5 +1217,10 @@ nav {
   
   .next:disabled, .pre:disabled {
     display: none;
+  }
+
+  /* ======================== FAVORITSIDE ========================= */
+  .pageContainer{
+    min-height: 350px;
   }
 }
