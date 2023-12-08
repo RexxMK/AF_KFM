@@ -440,13 +440,11 @@ nav {
   padding-left: 10px;
 }
 
-
 /* ==================== Favoritter ===================*/
-  
+
 .favoritMobilTxt {
   display: none;
 }
-
 
 /* ------- DETALJESIDE ------- */
 
@@ -1052,6 +1050,10 @@ nav {
     width: 130px;
   }
 
+  .header-wrap {
+    z-index: 1;
+  }
+
   /* ================== KØB BØGER ================== */
   .koebHeader {
     font-size: 22px;
@@ -1285,4 +1287,6 @@ nav {
     display: block;
     margin-bottom: 30px;
   }
+
+  /* ====================== DROPDOWN ======================== */
 }
