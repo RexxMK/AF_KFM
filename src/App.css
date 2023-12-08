@@ -440,6 +440,14 @@ nav {
   padding-left: 10px;
 }
 
+
+/* ==================== Favoritter ===================*/
+  
+.favoritMobilTxt {
+  display: none;
+}
+
+
 /* ------- DETALJESIDE ------- */
 
 .btn-sec {
@@ -1269,5 +1277,12 @@ nav {
   .next:disabled,
   .pre:disabled {
     display: none;
+  }
+
+  /* ==================== Favoritter ===================*/
+
+  .favoritMobilTxt {
+    display: block;
+    margin-bottom: 30px;
   }
 }
