@@ -86,7 +86,7 @@ export default function Detaljekort({ book, bookDetaljeId }) {
       <div className="detaljekortContainer">
         <div className="detaljekortImg">
           <div className="detaljekortLikeMobil">
-            <FavoritHjerte bookid={book.id} />
+            <FavoritHjerte bookid={bookDetaljeId} />
           </div>
           <img
             src={book.billede}
