@@ -35,6 +35,7 @@ export default function Detaljekort({ book, bookDetaljeId }) {
   const [books, setBooks] = useState([]);
   const [isBooks, setIsBooks] = useState(true);
 
+  // Til de 4 bøger, der skal vises som "Relaterede".
   const [skyggeBogListe, setSkyggeBogListe] = useState([]);
 
   useEffect(() => {
