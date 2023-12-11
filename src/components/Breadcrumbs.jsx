@@ -37,10 +37,33 @@ export default function Breadcrumbs() {
             return 'Gavekort';
           case '/moleskine':
             return 'Moleskine';
-          case '/mustread/seBog/5':
-            return 'Lærke Kløvedal, Sømærke';
           case '/mustread/seBog':
             return '/';
+          case '/ugenstilbud/seBog':
+            return '/';
+          case '/nyegodeboeger/seBog':
+            return '/';
+          case '/signeredeboeger/seBog':
+            return '/';
+          case '/laeseklubbenlaeser/seBog':
+            return '/';
+          case '/skoenlitteratur/seBog':
+            return '/';
+          case '/biografier/seBog':
+            return '/';
+          case '/lyrik/seBog':
+            return '/';
+          case '/spaending/seBog':
+            return '/';
+          case '/fagboeger/seBog':
+            return '/';
+          case '/boerneboeger/seBog':
+            return '/';
+          case '/gavekort/seBog':
+            return '/';
+          case '/moleskine/seBog':
+            return '/';
+
             
           default:
             return path;
