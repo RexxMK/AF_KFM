@@ -8,7 +8,7 @@ import Bogkort from "./Bogkort";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
-export default function Detaljekort({ book }) {
+export default function Detaljekort({ book, bookDetaljeId }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
   // number holder værdien af tallet, som vil blive vist i den hvide boks, og isEditing styrer, om brugeren redigerer tallet i boksen.
   const [number, setNumber] = useState(1);
@@ -35,6 +35,7 @@ export default function Detaljekort({ book }) {
   const [books, setBooks] = useState([]);
   const [isBooks, setIsBooks] = useState(true);
 
+  // Til de 4 bøger, der skal vises som "Relaterede".
   const [skyggeBogListe, setSkyggeBogListe] = useState([]);
 
   useEffect(() => {
@@ -86,7 +87,7 @@ export default function Detaljekort({ book }) {
       <div className="detaljekortContainer">
         <div className="detaljekortImg">
           <div className="detaljekortLikeMobil">
-            <FavoritHjerte bookid={book.id} />
+            <FavoritHjerte bookid={bookDetaljeId} />
           </div>
           <img
             src={book.billede}
@@ -109,7 +110,7 @@ export default function Detaljekort({ book }) {
                   <p>(inkl. moms)</p>
                 </div>
                 <div className="detaljekortLike">
-                  <FavoritHjerte bookid={book.id} />
+                  <FavoritHjerte bookid={bookDetaljeId} />
                 </div>
               </div>
             </div>

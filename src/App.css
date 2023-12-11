@@ -24,6 +24,7 @@ h1 {
   color: var(--headinggrey);
   font-size: 42px;
   font-weight: 300;
+  text-align: left;
 }
 
 h2 {
@@ -532,7 +533,7 @@ nav {
   display: none;
 }
 
-/* ------- DETALJESIDE ------- */
+/* ----------- DETALJESIDE ----------- */
 
 .btn-sec {
   display: flex;
@@ -763,6 +764,7 @@ nav {
   width: 157px;
   height: 41px;
   font-size: 20.6px;
+  margin-bottom: 20px;
 }
 
 .size {
@@ -772,11 +774,14 @@ nav {
 
 .login-overskrift {
   padding: 30px 0px 60px 0px;
-  text-align: center;
 }
 
 .loggedin {
   font-size: 19.25px;
+}
+
+.h1login {
+  margin-bottom: 40px;
 }
 
 /* ============================== KØB BØGER ============================== */
@@ -869,8 +874,8 @@ nav {
 .eller {
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  margin: 20px 0px;
 }
 
 .eller span {
@@ -973,7 +978,7 @@ nav {
   display: none;
 }
 
-/* ------ FOOTER ------- */
+/* ----------- FOOTER ------------ */
 
 .footer {
   background-color: var(--footerblue);
@@ -1124,7 +1129,7 @@ nav {
 
   /* ======================== FAVORITSIDE ========================= */
 
-  .pageContainer{
+  .pageContainer {
     min-height: 400px;
   }
 }
@@ -1392,7 +1397,7 @@ nav {
   }
 
   /* ======================== FAVORITSIDE ========================= */
-  .pageContainer{
+  .pageContainer {
     min-height: 350px;
   }
   /* ==================== Favoritter ===================*/

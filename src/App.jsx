@@ -19,6 +19,10 @@ import Moleskine from "./pages/Moleskine";
 import VenstreBokse from "./components/VenstreBokse";
 import Detaljeside from "./pages/Detaljeside";
 import Footer from "./components/Footer";
+import LoginDialog from "./components/Auth/LoginDialog";
+import OpretDialog from "./components/Auth/OpretDialog";
+import Login from "./components/Auth/Login";
+import Logout from "./components/Auth/Logout";
 
 function App() {
   return (
@@ -72,8 +76,12 @@ function App() {
           <Route path="/boerneboeger/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/gavekort/seBog/:bookId" element={<Detaljeside />} />
           <Route path="/moleskine/seBog/:bookId" element={<Detaljeside />} />
-
+          <Route path="/login" element={<Login />} />
+          <Route path="/logout" element={<Logout />} />
           <Route path="/detaljeside/:bookId" element={<Detaljeside />} />
+          <Route path="/loginDialog" element={<LoginDialog />} />
+          <Route path="/opretDialog" element={<OpretDialog />} />
+
         </Routes>
       </div>
 
