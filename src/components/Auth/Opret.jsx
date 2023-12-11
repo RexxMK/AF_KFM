@@ -54,7 +54,7 @@ export default function Opret() {
     };
 
     return(
-        <div className="log-in-container" style={{textAlign: "center"}}>
+        <div className="log-in-container">
             {loggedIn ? ( // Viser en besked, når brugeren er logget ind
                 <>
                     <p className="loggedin">Du er logget ind som {name}</p>
@@ -65,7 +65,6 @@ export default function Opret() {
                     <h1>Opret Profil</h1>
                     <p className="size login-overskrift">Indtast dine informationer i felterne.</p>
                     <div className="login">
-                        <span className="line"></span>
                         <h6 className="size">Navn</h6>
                         <input 
                             className="input"

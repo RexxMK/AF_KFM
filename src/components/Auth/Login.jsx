@@ -32,7 +32,9 @@ export default function Login() {
 
 
     return(
-        <div>
+        <div className="pageContainer">
+          <div className="katUnderside katHeading">
+          <div className="log-in-container">
             {loggedIn ? ( // Viser en besked, når brugeren er logget ind
                 <>
                     <div style={{ marginTop: "50px", color: "black" }}>Du er logget ind som {username}</div>
@@ -40,7 +42,7 @@ export default function Login() {
                 </>
             ) : (
                 <div>
-                    <h1>Du er ikke logget ind</h1>
+                    <h1 className="h1login">Du er ikke logget ind</h1>
                     <Link type="button" className="profilbtn" to="/LoginDialog">Log Ind</Link>
                     <div className="eller">
                         <span></span>
@@ -51,7 +53,8 @@ export default function Login() {
                 </div>
 
             )}
-
+        </div>
+        </div>
         </div>
     )
 }

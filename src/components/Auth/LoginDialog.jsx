@@ -1,3 +1,5 @@
+// denne side er kodet af: Ellen Bager
+
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../../Firebase";
@@ -25,13 +27,15 @@ export default function LoginDialog() {
 
     return (
         <section>
+            <div className="pageContainer">
+          <div className="katUnderside katHeading">
+            <div className="log-in-container">
             <form onSubmit={Login}>
                 <h1>Log Ind</h1>
                 <p className="size login-overskrift">Indtast dine informationer i felterne. <br />
                     Hvis du ikke har en bruger, kan du oprette en profil.
                 </p>
                 <div className="login">
-                    <span className="line"></span>
                     <h6 className="size">E-mail</h6>
                     <input
                         className="input"
@@ -51,7 +55,9 @@ export default function LoginDialog() {
                     <button type="submit" className="login-submit">Log Ind</button>
                 </div>
             </form >
-
+            </div>
+            </div>
+            </div>
         </section>
     )
 }
