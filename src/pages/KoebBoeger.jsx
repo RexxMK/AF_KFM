@@ -16,7 +16,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 
 // DK & RK
 
-export default function KoebBoeger() {
+export default function KoebBoeger({ book }) {
   return (
     <>
       <div className="pageContainer">

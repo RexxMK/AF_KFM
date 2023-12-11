@@ -337,6 +337,10 @@ nav {
   width: 153px;
 }
 
+.bogfooter-wrap {
+  position: relative;
+}
+
 .bogkortTitel {
   background-color: var(--white);
   width: 229px;
@@ -425,8 +429,8 @@ nav {
 /* ====================== Hjerte ======================== */
 .bogkortLike {
   position: absolute;
-  margin-left: 186px;
-  margin-top: 380px;
+  bottom: 126px;
+  right: 40px;
 }
 
 .hjerteIkon {
@@ -438,6 +442,88 @@ nav {
 
 .tomSideTxt {
   padding-left: 10px;
+}
+
+/* ================== BOGKORT / GRID =================== */
+.bogkortGrid {
+  width: 100%;
+  margin: 0 10px 41px 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid var(--katlightgrey);
+  position: relative;
+}
+
+.bogkortGrid .bogkortImg {
+  display: flex;
+  justify-content: center;
+  background-color: var(--katlightgrey);
+  height: 100%;
+  width: 232px;
+  cursor: pointer;
+}
+
+.bogkortGrid .bogfooter-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 50px;
+  position: relative;
+}
+
+.bogkortGrid .bogkortTitel {
+  width: 229px;
+  height: 100%;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 30px;
+  padding-bottom: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+}
+
+.bogkortGrid .bogkortFlex {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 21px;
+  background-color: var(--white);
+}
+
+.bogkortGrid .bogkortFooter {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.bogkortGrid .bogkortPris {
+  padding-top: 30px;
+  padding-bottom: 31px;
+  margin-right: 19px;
+}
+
+.bogkortGrid .whiteBox {
+  background-color: var(--white);
+  border: 1.5px solid var(--katlightgrey);
+  color: var(--darkgrey);
+  width: 51px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+/* ====================== HJERTE / GRID ======================== */
+.bogkortGrid .bogkortLike {
+  position: absolute;
+  bottom: 45px;
+  left: 77px;
 }
 
 /* ==================== Favoritter ===================*/
@@ -918,6 +1004,24 @@ nav {
 
 .social :hover {
   opacity: 0.8;
+}
+
+/*====================VIEW SKIFT====================*/
+
+.view-skift {
+  display: flex;
+  justify-content: end;
+  margin-right: 10px;
+}
+
+.view-skift button {
+  margin-left: 10px;
+  background-color: transparent;
+}
+
+.view-skift button svg {
+  font-size: 2rem;
+  color: var(--darkgrey);
 }
 
 /*==================== RESPONSIVE ====================*/

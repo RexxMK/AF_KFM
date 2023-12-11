@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 import Bogkort from "../components/Bogkort";
 import KategoriUnderside from "../components/KategoriUnderside";
 import Breadcrumbs from "../components/Breadcrumbs";
+import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
+import GridViewSharpIcon from '@mui/icons-material/GridViewSharp';
+import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
+import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
+
 
 // RK & DK
 
-export default function MustRead() {
+export default function MustRead({ book }) {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
   //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
   const [books, setBooks] = useState([]);
@@ -47,6 +52,14 @@ export default function MustRead() {
 
   const kategoriListe = books.filter((book) => book.kategori.includes("must"));
 
+  const [bogkortClassName, setBogkortClassName] = useState("bogkortContainer");
+
+  const updateBogkortClassName = (bogkortGrid) => {
+    setBogkortClassName(bogkortGrid);
+  };
+
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <div className="pageContainer">
@@ -62,10 +75,24 @@ export default function MustRead() {
               books={books}
               setBooks={setBooks}
             />
+            <section className="view-skift">
+            <button onClick={() => {
+              updateBogkortClassName("bogkortContainer");
+              setIsActive(!isActive); 
+            }}>
+              {isActive ? <GridViewOutlinedIcon /> : <GridViewSharpIcon />}
+            </button>
+            <button onClick={() => {
+              updateBogkortClassName("bogkortGrid");
+              setIsActive(!isActive); 
+            }}>
+              {isActive ? <ViewAgendaIcon /> : <ViewAgendaOutlinedIcon />}
+            </button>
+            </section>
             {isBooks ? (
               <div className="bogkortFlexbox">
                 {kategoriListe.map((book) => (
-                  <Bogkort key={book.id} book={book} />
+                  <Bogkort key={book.id} book={book} bogkortClassName={bogkortClassName}/>
                 ))}
               </div>
             ) : (
