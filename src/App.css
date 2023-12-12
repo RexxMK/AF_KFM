@@ -1282,12 +1282,12 @@ nav {
 
   /* ====================== Hjerte ====================== */
   .bogkortLike {
-    bottom: 100px;
-    right: 50px;
+    top: -260px;
+    right: 45px;
   }
 
   .hjerteIkon {
-    scale: 3.5;
+    scale: 4;
   }
 
   .drop {
