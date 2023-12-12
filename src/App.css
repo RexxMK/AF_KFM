@@ -1029,6 +1029,7 @@ nav {
 .view-skift button svg {
   font-size: 2rem;
   color: var(--darkgrey);
+  cursor: pointer;
 }
 
 /*==================== RESPONSIVE ====================*/
