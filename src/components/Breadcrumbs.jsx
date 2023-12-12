@@ -3,8 +3,12 @@ import { Link, useLocation } from "react-router-dom"
 //SD
 export default function Breadcrumbs() {
     
-    function mapPathToName(path) {
+    function mapPathToName(path, bookTitle) {
         console.log('Current path:', path);
+
+        if (bookTitle) {
+          return bookTitle;
+        }
 
         switch (path) {
           case '/':

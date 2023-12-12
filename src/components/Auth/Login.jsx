@@ -1,80 +1,60 @@
 // denne side er kodet af: Ellen Bager
 
-import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import React, { useEffect, useState } from "react";
-import { auth } from "../../Firebase";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
 
     // Jeg bruger 'useState' til at oprette tre tilstande: email, password og loggedIn
     // Email og password er en værdi der bruges til at logge ind
     // logedIn er en værdi som bruges til at give brugeren besked om at de er logget ind
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
     const [loggedIn, setLoggedIn] = useState(false); 
+    const [username, setUSername] = useState("");
+    const navigate = useNavigate();
 
     useEffect(() => { 
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
+        const auth = getAuth();
+        onAuthStateChanged(auth, (user) => {
             if (user) {
-                setLoggedIn(true); //Viser "loggedIn" hvis brugeren er logget ind. 
+                setLoggedIn(true);
+                setUSername(user.email);
             } else {
-                setLoggedIn(false); // viser ikke "loggedIn", hvis brugeren ikke er logget ind. Viser derfor "Log Ind"
+                setLoggedIn(false);
             }
         });
 
-        return () => unsubscribe();
-    }, []); // Dette kode gør at "loggedIn" altid vil blive vist, hvis brugeren er logget ind
+    }, [setLoggedIn]); // Dette kode gør at "loggedIn" altid vil blive vist, hvis brugeren er logget ind
 
-    const Login = (e) => {
-        e.preventDefault();
-        signInWithEmailAndPassword(auth, email, password)// funktion fra firebase authentication, som logger brugeren ind med indtastet email og password. 
-        .then((userCredential) => {
-            console.log(userCredential); //Hvis login er en succes, vil "userCredential" indeholde information om brugeren.
-            setLoggedIn(true);
-        })
-        .catch((error) => {
-            console.log(error); // giver en fejl i consollen hvis ikke email og password passer med en bruger oprettet i firebase
-            alert("E-mail eller kodeord er ugyldigt") // giver brugeren en fejl, hvis ikke den kender E-mail eller Kodeord.
-        }); 
+    function GaaTilLogoutside() {
+        navigate("/logout");
     }
 
 
     return(
-        <div className="log-in-container h1">
+        <div className="pageContainer">
+          <div className="katUnderside katHeading">
+          <div className="log-in-container">
             {loggedIn ? ( // Viser en besked, når brugeren er logget ind
                 <>
-                    <p className="loggedin">Du er logget ind som {name}</p>
-                    <button className="login-submit" onClick={() => setLoggedIn(false)}>Log ud</button>
+                    <div style={{ marginTop: "50px", color: "black" }}>Du er logget ind som {username}</div>
+                    <button type="button" className="login-submit" onClick={GaaTilLogoutside}>Log ud</button>
                 </>
             ) : (
-                <form onSubmit={Login}> {/* Kalder funktionen Login, som logger brugeren ind */}
-                    <h1>Log Ind</h1>
-                    <p className="size login-overskrift">Indtast dine informationer i felterne. <br/>
-                        Hvis du ikke har en bruger, kan du oprette en profil.
-                    </p>
-                    <div className="login">
-                    <span className="line"></span>
-                        <h6 className="size">E-mail</h6>
-                        <input
-                            className="input"
-                            type="email" 
-                            placeholder="Indtast din E-mail" 
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}>
-                        </input> {/* bruges til at udfylde Email */} 
-                        <h6 className="size">Kodeord</h6>
-                        <input
-                            className="input"
-                            type="password" 
-                            placeholder="Indtast dit Kodeord" 
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}>
-                        </input>  {/* bruges til at udfylde Kodeord */} 
-                        <button type="submit" className="login-submit">Log Ind</button>
-                         {/* logger ind på sin profil ved hjælp af firebase */} 
+                <div>
+                    <h1 className="h1login">Du er ikke logget ind</h1>
+                    <Link type="button" className="profilbtn" to="/LoginDialog">Log Ind</Link>
+                    <div className="eller">
+                        <span></span>
+                        <h2>eller</h2>
+                        <span></span>
                     </div>
-                </form>
+                    <Link type="button" className="profilbtn" to="/OpretDialog">Opret Profil</Link>
+                </div>
+
             )}
+        </div>
+        </div>
         </div>
     )
 }

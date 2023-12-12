@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import Bogkort from "../components/Bogkort";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import GridViewOutlinedIcon from '@mui/icons-material/GridViewOutlined';
+import GridViewSharpIcon from '@mui/icons-material/GridViewSharp';
+import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
+import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
 
 export default function Favoritside() {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".

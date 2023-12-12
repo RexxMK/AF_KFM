@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 // RK
 
-export default function Bogkort({ book }) {
+export default function Bogkort({ book, bogkortClassName }) {
   // Jeg bruger 'useState' til at oprette to tilstande: number og isEditing.
   // number holder værdien af tallet, som vil blive vist i den hvide boks, og isEditing styrer, om brugeren redigerer tallet i boksen.
   const [number, setNumber] = useState(1);
@@ -45,14 +45,15 @@ export default function Bogkort({ book }) {
 
   // DK & RK
   return (
-    <div className="bogkortContainer">
-      <div className="bogkortLike">
-        <FavoritHjerte bookid={book.id} />
-      </div>
+    <div className={`${bogkortClassName}`}>
       <div className="bogkortBog">
         <div className="bogkortImg" onClick={handleClick}>
           <img src={book.billede} alt="Billede af bogcover" />
         </div>
+      </div>
+      <div className="bogfooter-wrap">
+      <div className="bogkortLike">
+        <FavoritHjerte bookid={book.id} />
       </div>
       <div className="bogkortTitel" onClick={handleClick}>
         <h2>
@@ -89,6 +90,7 @@ export default function Bogkort({ book }) {
             </button>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
