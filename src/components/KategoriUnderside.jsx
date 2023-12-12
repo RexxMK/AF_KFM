@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 // RK
 
 // Komponenten modtager forskellige props som headingText, katText, antalText, books og setBooks.
@@ -11,9 +9,6 @@ export default function KategoriUnderside({
   books,
   setBooks,
 }) {
-  // Ved hjælp af 'useState' opretter jeg tilstanden 'sortBy', som holder styr på den aktuelle sorteringsrækkefølge af bøgerne.
-  const [sortBy, setSortBy] = useState(false);
-
   // Funktionen 'sortBooks' tager imod en egenskab (property) og sorterer bøgerne baseret på den valgte egenskab.
   // Denne funktion bruges som en event handler for ændring af <select>-elementet.
   const sortBooks = (property) => {

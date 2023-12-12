@@ -1,4 +1,4 @@
-/* BASIC CSS RESET */
+/* ======================== BASIC CSS RESET ======================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* FARVER */
+/* ========================== FARVER ========================== */
 :root {
   --headerblue: #235d70;
   --footerblue: #97d0de;
@@ -19,7 +19,7 @@
   --white: #ffffff;
 }
 
-/* FONTS */
+/* ========================= FONTS ============================ */
 h1 {
   color: var(--headinggrey);
   font-size: 42px;
@@ -38,7 +38,7 @@ p {
   color: var(--headinggrey);
 }
 
-/* GENERELLE REGLER */
+/* =================== GENERELLE REGLER ==================== */
 .pageContainer {
   display: flex;
   width: 996px;
@@ -56,7 +56,7 @@ p {
   margin-top: 6.1vh;
 }
 
-/* BODY */
+/* ============================== BODY ============================= */
 body {
   word-wrap: break-word;
   font-family: Helvetica, Arial, sans-serif;
@@ -65,7 +65,7 @@ body {
   overflow-x: hidden;
 }
 
-/*====================HEADER====================*/
+/*============================== HEADER ==============================*/
 .burger-menu {
   display: none;
 }
@@ -125,6 +125,7 @@ body {
   padding: 20px 10px;
 }
 
+/* ========================= NAVIGATION ======================== */
 nav {
   background-color: var(--headerblue);
   padding: 15px 0;
@@ -533,7 +534,7 @@ nav {
   display: none;
 }
 
-/* ----------- DETALJESIDE ----------- */
+/* =========================== DETALJESIDE ======================== */
 
 .btn-sec {
   display: flex;
@@ -736,7 +737,7 @@ nav {
   text-decoration: none;
 }
 
-/* ---------- LOGIN/OPRET PROFIL ----------- */
+/* ======================= LOGIN/OPRET PROFIL ======================= */
 
 .log-in-container {
   display: flex;
@@ -822,6 +823,19 @@ nav {
 }
 
 /*====================DROPDOWN====================*/
+@media only screen and (max-width: 1200px) {
+  .footer {
+    padding: 50px 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 50px 50px;
+  }
+}
+
+/*============================= DROPDOWN ==============================*/
 
 .drop {
   position: absolute;
@@ -872,7 +886,7 @@ nav {
   border: 0.5px solid var(--darkgrey);
 }
 
-/*====================SLIDE IN====================*/
+/*============================ SLIDE IN ============================*/
 
 .profil-wrap {
   position: relative;
@@ -933,7 +947,7 @@ nav {
   border: 0.5px solid var(--katdarkgrey);
 }
 
-/*====================BREADCRUMBS=====================*/
+/*============================ BREADCRUMBS =============================*/
 
 .breadcrumbs {
   display: flex;
@@ -966,7 +980,7 @@ nav {
   display: none;
 }
 
-/* ----------- FOOTER ------------ */
+/* ========================= FOOTER ========================= */
 
 .footer {
   background-color: var(--footerblue);
@@ -1064,7 +1078,7 @@ nav {
     right: -100px;
   }
 
-  /* ------- FOOTER ------- */
+  /* ======================== FOOTER ======================== */
   .footer {
     padding: 30px 10px;
   }
@@ -1266,7 +1280,7 @@ nav {
     width: 52.5vw;
   }
 
-  /* Hjerte */
+  /* ====================== Hjerte ====================== */
   .bogkortLike {
     bottom: 100px;
     right: 50px;
