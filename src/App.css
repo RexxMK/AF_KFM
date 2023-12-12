@@ -821,18 +821,6 @@ nav {
   width: 100%;
 }
 
-@media only screen and (max-width: 1200px) {
-  .footer {
-    padding: 50px 200px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .footer {
-    padding: 50px 50px;
-  }
-}
-
 /*====================DROPDOWN====================*/
 
 .drop {
@@ -1030,6 +1018,18 @@ nav {
 }
 
 /*==================== RESPONSIVE ====================*/
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    padding: 50px 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 50px 50px;
+  }
+}
 
 @media only screen and (max-width: 1165px) {
   .sog,
@@ -1268,13 +1268,12 @@ nav {
 
   /* Hjerte */
   .bogkortLike {
-    margin-top: 40px;
-    right: 0;
-    margin-right: 39px;
+    bottom: 100px;
+    right: 50px;
   }
 
   .hjerteIkon {
-    scale: 4;
+    scale: 3.5;
   }
 
   .drop {
@@ -1283,6 +1282,10 @@ nav {
 
   .sidebar {
     width: 100%;
+  }
+
+  .view-skift {
+    display: none;
   }
 
   /* ======================== Detaljekort ========================= */
@@ -1400,16 +1403,9 @@ nav {
   .pageContainer {
     min-height: 350px;
   }
-  /* ==================== Favoritter ===================*/
 
   .favoritMobilTxt {
     display: block;
     margin-bottom: 30px;
-  }
-
-  /* ====================== DROPDOWN ======================== */
-  .drop {
-    right: -100px;
-    width: 450px;
   }
 }

@@ -68,18 +68,40 @@ export default function Favoritside() {
     favoritListe.includes(book.id)
   );
 
+  const [bogkortClassName, setBogkortClassName] = useState("bogkortContainer");
+
+  const updateBogkortClassName = (bogkortGrid) => {
+    setBogkortClassName(bogkortGrid);
+  };
+
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <>
       <div className="pageContainer">
         <div className="pageFlex">
           <div className="katUnderside">
             <h1 className="koebHeader">Mine favoritter</h1>
+            <section className="view-skift">
+            <button onClick={() => {
+              updateBogkortClassName("bogkortContainer");
+              setIsActive(!isActive); 
+            }}>
+              {isActive ? <GridViewOutlinedIcon /> : <GridViewSharpIcon />}
+            </button>
+            <button onClick={() => {
+              updateBogkortClassName("bogkortGrid");
+              setIsActive(!isActive); 
+            }}>
+              {isActive ? <ViewAgendaIcon /> : <ViewAgendaOutlinedIcon />}
+            </button>
+            </section>
             {isBooks && skyggeFavoritListe.length > 0 ? (
               <div>
                 <div className="bogkortFlexbox">
                   <p className="favoritMobilTxt tomSideTxt">Scroll ned for at se anbefalinger til dig.</p>
                   {skyggeFavoritListe.map((book) => (
-                    <Bogkort key={book.id} book={book} />
+                    <Bogkort key={book.id} book={book} bogkortClassName={bogkortClassName}/>
                   ))}
                 </div>
 
@@ -89,7 +111,7 @@ export default function Favoritside() {
                     <div className="bogkortFlexbox">
                       {anbefalingerListe.map((book) => (
                         <Link key={book.id} to={`/detaljeside/${book.id}`} className="detaljesideLink">
-                          <Bogkort key={book.id} book={book} />
+                          <Bogkort key={book.id} book={book} bogkortClassName={bogkortClassName}/>
                         </Link>
                       ))}
                     </div>

@@ -11,10 +11,12 @@ export default function Breadcrumbs() {
         }
 
         switch (path) {
-          case '/':
+          case '':
             return 'Køb bøger';
           case '/favoritside':
             return 'Favoritter';
+          case '/login':
+            return 'Min Profil';
           case '/mustread':
             return 'Must Read';
           case '/ugenstilbud':
