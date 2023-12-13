@@ -1,4 +1,4 @@
-// denne side er kodet af: Ellen Bager
+// denne side er kodet af: EB
 
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";

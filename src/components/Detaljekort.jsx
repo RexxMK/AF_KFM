@@ -1,4 +1,4 @@
-// denne side er kodet af: Ellen Bager, RK & DK
+// denne side er kodet af: EB, RK & DK
 
 import { useState, useEffect } from "react";
 import { FaCartShopping } from "react-icons/fa6";
