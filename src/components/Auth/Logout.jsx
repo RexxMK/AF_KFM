@@ -15,17 +15,18 @@ export default function Logout() {
 
     }, []);
 
+    //HTML og CSS af SD
     return (
         <div className="pageContainer">
             <div className="katUnderside katHeading">
-                <h1>Du er logget ud.</h1>
-                <Link type="button" className="profilbtn" to="/LoginDialog">Log Ind</Link>
-                    <div className="eller">
-                        <span></span>
-                        <h2>eller</h2>
-                        <span></span>
-                    </div>
-                <Link type="button" className="profilbtn" to="/OpretDialog">Opret Profil</Link>
+                <section className="nonLogged">
+                    <h1>Du er ikke logget ind</h1>
+                    <p>Log ind for at fortsætte. <br></br><br></br>
+                    Hvis du er ny her, må du oprette en bruger for at fortsætte
+                    </p>
+                    <Link type="button" className="profilbtn" to="/LoginDialog">Log Ind</Link>
+                    <Link type="button" className="profilbtn" to="/OpretDialog">Opret Profil</Link>
+                </section>
             </div>
         </div>
     )

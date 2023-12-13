@@ -68,14 +68,21 @@ export default function Favoritside() {
     favoritListe.includes(book.id)
   );
 
+  //SD
+  //Her skriver vi hvad standard className'et er
   const [bogkortClassName, setBogkortClassName] = useState("bogkortContainer");
 
+  //Det her bruges til at skifte imellem to forskellige visningsindstillinger
+  //Det skifter classname hos bogkort
+  //fra standard classname til bogkortGrid
   const updateBogkortClassName = (bogkortGrid) => {
     setBogkortClassName(bogkortGrid);
   };
 
+  //Det her viser om en given visningsindstilling er aktiv eller ej
+  //Her sætter vi standard værdien til falsk
   const [isActive, setIsActive] = useState(false);
-
+  
   return (
     <>
       <div className="pageContainer">
@@ -83,12 +90,20 @@ export default function Favoritside() {
           <div className="katUnderside">
             <h1 className="koebHeader">Mine favoritter</h1>
             <section className="view-skift">
+            {/*Når du klikker på denne knap
+            skifter du classname til bogkortContainer
+            også bliver denne knap skiftes immelem to ikoner
+            når den er aktiv eller ej*/}
             <button onClick={() => {
               updateBogkortClassName("bogkortContainer");
               setIsActive(!isActive); 
             }}>
               {isActive ? <GridViewOutlinedIcon /> : <GridViewSharpIcon />}
             </button>
+            {/*Når du klikker på denne knap
+            skifter du classname til bogkortGrid
+            også bliver denne knap skiftes immelem to ikoner
+            når den er aktiv eller ej*/}
             <button onClick={() => {
               updateBogkortClassName("bogkortGrid");
               setIsActive(!isActive); 
@@ -111,6 +126,8 @@ export default function Favoritside() {
                     <div className="bogkortFlexbox">
                       {anbefalingerListe.map((book) => (
                         <Link key={book.id} to={`/detaljeside/${book.id}`} className="detaljesideLink">
+                          {/*her har vi givet bogkortet classname en prop
+                            så det er muligt at skifte CSS'en på bogkortet fra denne side*/}
                           <Bogkort key={book.id} book={book} bogkortClassName={bogkortClassName}/>
                         </Link>
                       ))}

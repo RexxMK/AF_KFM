@@ -8,7 +8,7 @@ import ViewAgendaOutlinedIcon from '@mui/icons-material/ViewAgendaOutlined';
 import ViewAgendaIcon from '@mui/icons-material/ViewAgenda';
 
 
-// RK & DK
+// RK & DK (SD)
 
 export default function MustRead({ book }) {
   // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
@@ -52,12 +52,19 @@ export default function MustRead({ book }) {
 
   const kategoriListe = books.filter((book) => book.kategori.includes("must"));
 
+  //SD
+  //Her skriver vi hvad standard className'et er
   const [bogkortClassName, setBogkortClassName] = useState("bogkortContainer");
 
+  //Det her bruges til at skifte imellem to forskellige visningsindstillinger
+  //Det skifter classname hos bogkort
+  //fra standard classname til bogkortGrid
   const updateBogkortClassName = (bogkortGrid) => {
     setBogkortClassName(bogkortGrid);
   };
 
+  //Det her viser om en given visningsindstilling er aktiv eller ej
+  //Her sætter vi standard værdien til falsk
   const [isActive, setIsActive] = useState(false);
 
   return (
@@ -76,12 +83,20 @@ export default function MustRead({ book }) {
               setBooks={setBooks}
             />
             <section className="view-skift">
+            {/*Når du klikker på denne knap
+            skifter du classname til bogkortContainer
+            også bliver denne knap skiftes immelem to ikoner
+            når den er aktiv eller ej*/}
             <button onClick={() => {
               updateBogkortClassName("bogkortContainer");
               setIsActive(!isActive); 
             }}>
               {isActive ? <GridViewOutlinedIcon /> : <GridViewSharpIcon />}
             </button>
+            {/*Når du klikker på denne knap
+            skifter du classname til bogkortGrid
+            også bliver denne knap skiftes immelem to ikoner
+            når den er aktiv eller ej*/}
             <button onClick={() => {
               updateBogkortClassName("bogkortGrid");
               setIsActive(!isActive); 
@@ -92,6 +107,8 @@ export default function MustRead({ book }) {
             {isBooks ? (
               <div className="bogkortFlexbox">
                 {kategoriListe.map((book) => (
+                  //her har vi givet bogkortet classname en prop
+                  //så det er muligt at skifte CSS'en på bogkortet fra denne side
                   <Bogkort key={book.id} book={book} bogkortClassName={bogkortClassName}/>
                 ))}
               </div>

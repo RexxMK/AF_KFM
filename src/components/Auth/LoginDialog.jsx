@@ -24,7 +24,8 @@ export default function LoginDialog() {
                 alert("E-mail eller kodeord er ugyldigt") // giver brugeren en fejl, hvis ikke den kender E-mail eller Kodeord.
             });
     }
-
+    
+    //HTML og CSS af SD
     return (
         <section>
             <div className="pageContainer">
@@ -32,7 +33,7 @@ export default function LoginDialog() {
             <div className="log-in-container">
             <form onSubmit={Login}>
                 <h1>Log Ind</h1>
-                <p className="size login-overskrift">Indtast dine informationer i felterne. <br />
+                <p>Indtast dine informationer i felterne. <br />
                     Hvis du ikke har en bruger, kan du oprette en profil.
                 </p>
                 <div className="login">

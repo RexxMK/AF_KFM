@@ -82,8 +82,6 @@ export default function Detaljekort({ book, bookDetaljeId }) {
   // For at links til relaterede bøger virker
   const { bookId } = useParams();
 
-  const [bogkortClassName, setBogkortClassName] = useState("bogkortContainer");
-
   return (
     <div className="detaljekort">
       <div className="detaljekortContainer">

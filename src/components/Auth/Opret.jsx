@@ -52,12 +52,20 @@ export default function Opret() {
         localStorage.setItem("name", JSON.stringify(name)); //Gemmer "name" i localStorage
         setName(formattedName);
     };
-
+    //HTML og CSS SD
     return(
         <div className="log-in-container">
             {loggedIn ? ( // Viser en besked, når brugeren er logget ind
                 <>
-                    <p className="loggedin">Du er logget ind som {name}</p>
+                    <div className="welcome" style={{ marginTop: "50px", color: "black" }}>
+                        <h1>Velkommen til din profil </h1>
+                        <h2>Du er logget ind som {name}</h2>
+                        <p>Her kan du få et overblik over dine tidligere og aktuelle ordre. <br></br>
+                        Har du brug for at lukke din konto, har du muligheden for at slette din profil. <br></br>
+                        Ellers kan du sikkert forlade din session ved at logge ud.</p>
+                    </div>
+                    <a className="mock-btn">Dine Ordrer</a>
+                    <a className="mock-btn">Slet Profil</a>
                     <button className="login-submit" onClick={() => setLoggedIn(false)}>Log ud</button>
                 </>
             ) : (

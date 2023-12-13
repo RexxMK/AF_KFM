@@ -741,7 +741,9 @@ nav {
 
 .log-in-container {
   display: flex;
+  flex-direction: column;
   color: var(--headinggrey);
+  margin-bottom: 100px;
 }
 
 .input {
@@ -768,6 +770,26 @@ nav {
   margin-bottom: 20px;
 }
 
+.mock-btn {
+  background-color: var(--katlightgrey);
+  color: var(--darkgrey);
+  border: 2px solid var(--katdarkgrey);
+  width: 157px;
+  height: 41px;
+  font-size: 20.6px;
+  margin-bottom: 20px;
+  padding-top: 7px;
+  text-align: center;
+}
+
+.welcome h2 {
+  padding-bottom: 10px;
+}
+
+.welcome p {
+  padding-bottom: 30px;
+}
+
 .size {
   font-size: 19.25px;
   text-align: left;
@@ -775,14 +797,43 @@ nav {
 
 .login-overskrift {
   padding: 30px 0px 60px 0px;
+  font-size: 14px;
+  color: var(--headinggrey);
 }
 
 .loggedin {
   font-size: 19.25px;
 }
 
-.h1login {
-  margin-bottom: 40px;
+.profilbtn {
+  background-color: var(--headerblue);
+  border: 1px solid var(--footerblue);
+  color: var(--katlightgrey);
+  font-size: 20.6px;
+  padding: 7px;
+  width: 150px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profilbtn:hover {
+  opacity: 0.9;
+}
+
+.line {
+  width: 600px;
+  border: 0.5px solid var(--katdarkgrey);
+}
+
+.nonLogged {
+  display: flex;
+  flex-direction: column;
+}
+
+.nonLogged p {
+  padding: 0 0 30px;
 }
 
 /* ============================== KØB BØGER ============================== */
@@ -820,131 +871,6 @@ nav {
 
 .kategoriImg {
   width: 100%;
-}
-
-/*====================DROPDOWN====================*/
-@media only screen and (max-width: 1200px) {
-  .footer {
-    padding: 50px 200px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .footer {
-    padding: 50px 50px;
-  }
-}
-
-/*============================= DROPDOWN ==============================*/
-
-.drop {
-  position: absolute;
-  top: 49px;
-  right: -150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-  gap: 1rem;
-  width: 420px;
-  height: 300px;
-  background-color: var(--white);
-  border: 2px solid var(--katlightgrey);
-}
-
-.drop h1 {
-  font-size: 25px;
-  padding: 2rem 0;
-}
-
-.profilbtn {
-  background-color: var(--headerblue);
-  border: 1px solid var(--footerblue);
-  color: var(--katlightgrey);
-  font-size: 20.6px;
-  padding: 7px;
-  width: 150px;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
-}
-
-.profilbtn:hover {
-  opacity: 0.9;
-}
-
-.eller {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin: 20px 0px;
-}
-
-.eller span {
-  width: 90px;
-  margin: 5px;
-  border: 0.5px solid var(--darkgrey);
-}
-
-/*============================ SLIDE IN ============================*/
-
-.profil-wrap {
-  position: relative;
-}
-
-.bg {
-  content: "";
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  background-color: var(--black);
-  opacity: 0.3;
-  top: 0;
-  left: 0;
-  display: none;
-  transition: 350ms;
-  z-index: 0;
-}
-
-.profil-wrap.active .bg {
-  display: block;
-}
-
-.sidebar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 760px;
-  height: 100%;
-  background-color: var(--white);
-  border: 2px solid var(--katlightgrey);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 2rem;
-  z-index: 1;
-  transition: 350ms;
-  transition-delay: 50ms;
-}
-
-.sidebar.active {
-  right: 0;
-}
-
-.sidebar svg {
-  font-size: 2.5rem;
-  color: var(--darkgrey);
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-}
-
-.line {
-  width: 600px;
-  border: 0.5px solid var(--katdarkgrey);
 }
 
 /*============================ BREADCRUMBS =============================*/
@@ -1033,6 +959,19 @@ nav {
 }
 
 /*==================== RESPONSIVE ====================*/
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    padding: 50px 200px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 50px 50px;
+  }
+}
+
 
 @media only screen and (max-width: 1200px) {
   .footer {
@@ -1422,5 +1361,10 @@ nav {
   .favoritMobilTxt {
     display: block;
     margin-bottom: 30px;
+  }
+
+  /* ======================== OPRET/LOG IND ========================= */
+  .nonLogged p {
+    padding: 0 0 30px;
   }
 }

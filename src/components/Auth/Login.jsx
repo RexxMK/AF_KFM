@@ -30,27 +30,33 @@ export default function Login() {
         navigate("/logout");
     }
 
-
+    //HTML og CSS af SD
     return(
         <div className="pageContainer">
           <div className="katUnderside katHeading">
           <div className="log-in-container">
             {loggedIn ? ( // Viser en besked, når brugeren er logget ind
                 <>
-                    <div style={{ marginTop: "50px", color: "black" }}>Du er logget ind som {username}</div>
+                    <div className="welcome" style={{ marginTop: "50px", color: "black" }}>
+                        <h1>Velkommen til din profil </h1>
+                        <h2>Du er logget ind som {username}</h2>
+                        <p>Her kan du få et overblik over dine tidligere og aktuelle ordre. <br></br>
+                        Har du brug for at lukke din konto, har du muligheden for at slette din profil. <br></br>
+                        Ellers kan du sikkert forlade din session ved at logge ud.</p>
+                    </div>
+                    <a className="mock-btn">Dine Ordrer</a>
+                    <a className="mock-btn">Slet Profil</a>
                     <button type="button" className="login-submit" onClick={GaaTilLogoutside}>Log ud</button>
                 </>
             ) : (
-                <div>
-                    <h1 className="h1login">Du er ikke logget ind</h1>
+                <section className="nonLogged">
+                    <h1>Du er ikke logget ind</h1>
+                    <p>Log ind for at fortsætte. <br></br><br></br>
+                    Hvis du er ny her, må du oprette en bruger for at fortsætte
+                    </p>
                     <Link type="button" className="profilbtn" to="/LoginDialog">Log Ind</Link>
-                    <div className="eller">
-                        <span></span>
-                        <h2>eller</h2>
-                        <span></span>
-                    </div>
                     <Link type="button" className="profilbtn" to="/OpretDialog">Opret Profil</Link>
-                </div>
+                </section>
 
             )}
         </div>

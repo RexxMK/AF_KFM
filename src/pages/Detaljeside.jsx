@@ -38,9 +38,15 @@ export default function Detaljeside() {
   }, [url]);
 
   //SD
+  //Denne useEffect lytter til ændringer i location.pathname
+  //og udfører handlinger, når den ændres
   useEffect(() => {
     const currentPath = location.pathname;
 
+    //Denne funktion henter bøgerne fra vore realtime database
+    //derefter filtrerer den bøgerne efter hden aktuelle kategori
+    //kategorien finder den fra URL'en 
+    //og opdaterer kategorilisten med den filtrerede liste
     async function getBooks() {
       const booksUrl =
         "https://advanced-frontend-71bba-default-rtdb.europe-west1.firebasedatabase.app/books.json";
@@ -75,6 +81,8 @@ export default function Detaljeside() {
     return kategoriList.findIndex((b) => b.id === params.bookId);
   };
 
+  //Denne funktion bruges til at håndtere navigationen til forrige bog
+  //Det er baseret på den aktuelle bog ID i URL'en
   const handlePrevious = () => {
     const currentIndex = findBookIndex();
     if (currentIndex > 0) {
@@ -83,6 +91,8 @@ export default function Detaljeside() {
     }
   };
 
+  //Denne funktion bruges til at håndtere navigationen til næste bog
+  //Det er baseret på den aktuelle bog ID i URL'en
   const handleNext = () => {
     const currentIndex = findBookIndex();
     if (currentIndex < kategoriList.length - 1) {
@@ -91,6 +101,8 @@ export default function Detaljeside() {
     }
   };
 
+  //Denne funktion bruges til at få en præfiksdel af URL'en 
+  //baseret på den aktuelle kategori i URL'en
   const getPrefix = () => {
     const parts = location.pathname.split("/");
     const prefixIndex = parts.indexOf("seBog");
@@ -100,6 +112,8 @@ export default function Detaljeside() {
     return "";
   };
 
+  //Denne funktion bruges til at hente kategorien fra URL'en 
+  //og mappe den til kategorien fra realtime databasen
   const getCategoryFromPath = (pathname) => {
     const parts = pathname.split("/");
     const categoryIndex = parts.indexOf("");
@@ -133,6 +147,7 @@ export default function Detaljeside() {
           <section className="btn-sec">
             <div className="btn-wrap">
               <section className="knapper">
+                {/*Funktionen bliver kalt ved klik af knappen*/}
                 <button
                   className="pre"
                   onClick={handlePrevious}

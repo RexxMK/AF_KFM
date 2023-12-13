@@ -14,10 +14,16 @@ export default function Header() {
   const [txtMenuDisplay, setTxtMenuDisplay] = useState('none');
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 950);
 
+  //Her er en toggle function
+  //det bruges til menu knappen
+  //ved tryk af menuknappen skifter display fra none til flex
   const toggleTxtMenu = () => {
     setTxtMenuDisplay((prevDisplay) => (prevDisplay === 'none' ? 'flex' : 'none'));
   };
 
+  //Denne function virker efter størrelsen af skærmen
+  //Når skærmen er ligmed eller mindre end 950px
+  //Så opdaterer det imellem isMobile og txtmenuDisplay 
   const handleResize = () => {
     setIsMobile(window.innerWidth <= 950);
   };
@@ -29,44 +35,7 @@ export default function Header() {
     };
   }, []);
 
-  //Søg  
-  // Her opretter jeg to tilstandsvariabler ved hjælp af "useState".
-  //"books" bruges til at lagre listen over bøger, og "isBooks" bruges til at kontrollere, om der er bøger at vise.
-  const [books, setBooks] = useState([]);
-  const [isBooks, setIsBooks] = useState(true);
-
-  // Til søgefunktion
-  const [soegeTekst, setSoegeTekst] = useState("");
-  const [skyggeBogListe, setSkyggeBogListe] = useState([]);
-
-  useEffect(() => {
-    async function getBooks() {
-      //Der defineres en URL til at hente bøgerne data fra vores Firebase-database.
-      const url =
-        "https://advanced-frontend-71bba-default-rtdb.europe-west1.firebasedatabase.app/books.json";
-
-      //Her bruges "fetch" til hente bøgernes data fra vores Firebase-database og konverterer dem til JSON-format.
-      const response = await fetch(url);
-      const data = await response.json();
-
-      //Hvis der er data tilgængelig, laves dataerne til et array og opdaterer "books" til at indeholde denne liste af bøger.
-      if (data !== null) {
-        const booksArray = Object.keys(data).map((key) => ({
-          id: key,
-          ...data[key],
-        }));
-        setBooks(booksArray);
-        setSkyggeBogListe(booksArray);
-
-      }
-
-      //Hvis der ikke er nogen data tilgængelig, opdateres "isBooks" til "false" for at vise en meddelelse om, at der ikke er noget at vise.
-      else {
-        setIsBooks(false);
-      }
-    }
-    getBooks();
-  }, []);
+ 
 
 
   return (
@@ -75,7 +44,7 @@ export default function Header() {
       <section className="sog-wrap">
         <div className="sog">
           <form>
-            <input type="search" required value={soegeTekst} placeholder="Indtast søgning" onChange={(e) => setSoegeTekst(e.target.value)} />
+            <input type="search" placeholder="Indtast søgning"/>
             <button>Søg</button>
           </form>
         </div>
@@ -93,16 +62,19 @@ export default function Header() {
         <div className="header-wrap">
 
           {/*Knappen som åbner burger menu'en,
-                      Er kun synlig i mindre skærme*/}
+          Er kun synlig i mindre skærme
+          Functionen virker ved at klikke på knappen*/}
           <button className="burger-menu" onClick={toggleTxtMenu}>
             <MenuSharpIcon />
           </button>
 
           {/*Venstre side af navigatione,
-                      den med kun tekst*/}
+            den med kun tekst*/}
+            {/*Display skiftes efter skærm størrelsen*/}
           <div className="txt-menu" style={{ display: isMobile ? txtMenuDisplay : 'flex' }}>
             <div className="menu-wrap">
               <a className="menupunkt">Forside</a>
+              {/*Functionen virker ved at klikke på knappen*/}
               <NavLink to="/" className="menupunkt" onClick={toggleTxtMenu}>Køb Bøger</NavLink>
               <a className="menupunkt">Køb Moleskine</a>
               <a className="menupunkt">Bøger vi anbefaler</a>

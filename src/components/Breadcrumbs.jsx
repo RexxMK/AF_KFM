@@ -1,14 +1,15 @@
 import { Link, useLocation } from "react-router-dom"
 
 //SD
+//Breadcrumb ved hjælp af react-router-dom
 export default function Breadcrumbs() {
     
-    function mapPathToName(path, bookTitle) {
+    //Breadcrumbs som bliver vist er efter navnet på URL-stien
+    //Eftersom man ikke kan bruge bokstaver som æ, ø og å på en URL
+    //Så bruger vi denne funktion at returnere en streng, der repræsenterer navnet 
+    //til brødkrummen baseret på den givne sti 
+    function mapPathToName(path) {
         console.log('Current path:', path);
-
-        if (bookTitle) {
-          return bookTitle;
-        }
 
         switch (path) {
           case '':
@@ -16,6 +17,12 @@ export default function Breadcrumbs() {
           case '/favoritside':
             return 'Favoritter';
           case '/login':
+            return 'Min Profil';
+          case '/logout':
+            return 'Min Profil';
+          case '/LoginDialog':
+            return 'Min Profil';
+          case '/OpretDialog':
             return 'Min Profil';
           case '/mustread':
             return 'Must Read';
@@ -76,10 +83,15 @@ export default function Breadcrumbs() {
         }
       }
     
+      //Vi bruger useLocation til at få den actuelle placering
       const location = useLocation();
 
+      //Derefter ekstraherer den de individuelle dele af stien
+      //ved at bruge split('/') og filtrere tomme strenge
       const crumbs = location.pathname.split('/').filter(crumb => crumb !== '');
     
+      //For hver breadcrumb mapper den over hver breadcrumb
+      //og opretter et Link til hver breadcrumb
       const breadcrumbElements = crumbs.map((crumb, index) => {
         const currentPath = `/${crumbs.slice(0, index + 1).join('/')}`;
         const crumbName = mapPathToName(currentPath);

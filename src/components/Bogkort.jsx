@@ -45,6 +45,9 @@ export default function Bogkort({ book, bogkortClassName }) {
 
   // DK & RK
   return (
+    //SD - Gør ClassName til en prop,
+    //så det kan skiftes imellem to classNames
+    //på siden komponenten er tilføjet til
     <div className={`${bogkortClassName}`}>
       <div className="bogkortBog">
         <div className="bogkortImg" onClick={handleClick}>

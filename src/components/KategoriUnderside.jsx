@@ -45,7 +45,6 @@ export default function KategoriUnderside({
   };
 
   return (
-    <div>
       <div className="katHeading">
         <h1>{headingText}</h1>
         <p>{katText}</p>
@@ -65,6 +64,5 @@ export default function KategoriUnderside({
           </div>
         </div>
       </div>
-    </div>
   );
 }

@@ -75,12 +75,20 @@ export default function Borneboger({ book }) {
               setBooks={setBooks}
             />
             <section className="view-skift">
+            {/*Når du klikker på denne knap
+            skifter du classname til bogkortContainer
+            også bliver denne knap skiftes immelem to ikoner
+            når den er aktiv eller ej*/}
             <button onClick={() => {
               updateBogkortClassName("bogkortContainer");
               setIsActive(!isActive); 
             }}>
               {isActive ? <GridViewOutlinedIcon /> : <GridViewSharpIcon />}
             </button>
+            {/*Når du klikker på denne knap
+            skifter du classname til bogkortGrid
+            også bliver denne knap skiftes immelem to ikoner
+            når den er aktiv eller ej*/}
             <button onClick={() => {
               updateBogkortClassName("bogkortGrid");
               setIsActive(!isActive); 
@@ -91,6 +99,8 @@ export default function Borneboger({ book }) {
             {isBooks ? (
               <div className="bogkortFlexbox">
                 {kategoriListe.map((book) => (
+                  //her har vi givet bogkortet classname en prop
+                  //så det er muligt at skifte CSS'en på bogkortet fra denne side
                   <Bogkort key={book.id} book={book} bogkortClassName={bogkortClassName}/>
                 ))}
               </div>
