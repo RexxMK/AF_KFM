@@ -147,7 +147,9 @@ export default function Detaljeside() {
           <section className="btn-sec">
             <div className="btn-wrap">
               <section className="knapper">
-                {/*Funktionen bliver kalt ved klik af knappen*/}
+                {/*Funktionen bliver kalt ved klik af knappen
+                Vi siger også hvornår knappen er disabled
+                så den kan få en serlig styling når den er disabled*/}
                 <button
                   className="pre"
                   onClick={handlePrevious}

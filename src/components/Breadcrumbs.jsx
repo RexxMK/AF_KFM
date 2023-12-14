@@ -76,7 +76,6 @@ export default function Breadcrumbs() {
             return '/';
           case '/moleskine/seBog':
             return '/';
-
             
           default:
             return path;
