@@ -1,4 +1,4 @@
-// denne side er kodet af: Ellen Bager
+// denne side er kodet af: EB
 
 import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";

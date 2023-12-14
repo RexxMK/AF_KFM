@@ -1,4 +1,4 @@
-// denne side er kodet af: Ellen Bager og RK
+// denne side er kodet af: EB og RK
 
 import { useEffect, useState } from "react";
 import Detaljekort from "./Detaljekort";

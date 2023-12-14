@@ -1,4 +1,4 @@
-// denne side er kodet af: Ellen Bager
+// denne side er kodet af: EB
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";

@@ -1,4 +1,4 @@
-// denne side er kodet af: Ellen Bager
+// denne side er kodet af: EB
 
 import { getAuth, signOut } from "firebase/auth";
 import { useEffect } from "react";
@@ -8,9 +8,9 @@ export default function Logout() {
     useEffect(() => {
         const auth = getAuth();
         signOut(auth).then(() => {
-            console.log("Bruger er logget ud");
+            console.log("Bruger er logget ud"); // giver besked når brugeren er logget ud
         }).catch((error) => {
-            console.log("Fejl ved log ud");
+            console.log("Fejl ved log ud"); // giver brugeren besked hvis der opstår en fejl når de logger ud. 
         });
 
     }, []);
